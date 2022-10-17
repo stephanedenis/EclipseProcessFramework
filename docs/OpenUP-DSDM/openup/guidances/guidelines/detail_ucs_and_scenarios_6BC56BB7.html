@@ -1,0 +1,418 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr" xml:lang="fr" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Guideline: Detail Use Cases and Scenarios</title>
+<meta name="uma.type" content="Guideline">
+<meta name="uma.name" content="detail_ucs_and_scenarios">
+<meta name="uma.presentationName" content="Detail Use Cases and Scenarios">
+<meta name="element_type" content="other">
+<meta name="filetype" content="description">
+<meta name="role" content="none">
+<link rel="StyleSheet" href="./../../../css/default.css" type="text/css">
+<script src="./../../../scripts/ContentPageResource.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSubSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageToolbar.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/contentPage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_4BJ_YCxSEdqjsdw1QLH_6Q"></div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td class="pageTitle" nowrap="true">Guideline: Detail Use Cases and Scenarios</td><td width="100%">
+<div align="right" id="contentPageToolbar"></div>
+</td><td width="100%" class="expandCollapseLink" align="right"><a name="mainIndex" href="./../../../index.htm"></a><script language="JavaScript" type="text/javascript" src="./../../../scripts/treebrowser.js"></script></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="pageTitleSeparator"><img src="./../../../images/shim.gif" alt="" title="" height="1"></td>
+</tr>
+</table>
+<div class="overview">
+<table width="97%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50"><img src="./../../../images/guidance.gif" alt="" title=""></td><td>
+<table class="overviewTable" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top">This guideline provides help on detailing use cases and scenarios.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../openup/tasks/detail_requirements_9747F71E.html" guid="_0e1mIMlgEdmt3adZL5Dmdw">Detail Requirements</a>
+</li>
+<li>
+<a href="./../../../dsdm_openup/tasks/dsdm_detail_requirements_634A4D86.html" guid="_RJ10cFk1Edul8L-IGeA7TA">Detail Requirements</a>
+</li>
+<li>
+<a href="./../../../dsdm_openup/disciplines/dsdm_requirements_3B9AAD55.html" guid="_xoSZgFn1Edug9t_2UE7UhQ">Requirements</a>
+</li>
+<li>
+<a href="./../../../openup/guidances/guidelines/uc_model_4C64E97D.html" guid="_0VAUsMlgEdmt3adZL5Dmdw">Use-Case Model</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h1>
+    Most efficient way to write use cases
+</h1>
+<p>
+    Because use cases model requirements, they are highly dynamic by nature. The more we examine a scenario, the more we
+    learn and the more things change. To further complicate the issue, changes to one use case can lead to changes in
+    others. Therefore, we want a flexible, highly efficient method for writing use cases that maximizes stakeholder value
+    and minimizes risk early in the project and minimizes costly rework later.
+</p>
+<p>
+    An iterative, breadth-before-depth approach is best. This breadth-first approach involves two aspects: finding and
+    outlining use cases and detailing individual use cases.
+</p>
+<h2>
+    Finding and outlining&nbsp;use cases
+</h2>
+<p>
+    Use cases exist in sets, and the relationships between the various use cases and Actors are important. As you learn
+    more about the Actors, you also learn more about the system's boundaries and transactions. Likewise, as you learn more
+    about the system's transactions, you learn more about its Actors. Therefore, it is more efficient to capture and
+    outline the primary use cases before detailing individual use cases. This way, you can identify and understand the
+    importance and risk associated with each use case before committing time to detailing them.&nbsp; This aspect of the
+    breadth-before-depth approach is embodied in the process by the explicit separation of two tasks <a class="elementLink" href="./../../../openup/tasks/find_and_outline_requirements_90D272B9.html" guid="_P9cMUPV_EdmdHa9MmVPgqQ">Find and Outline Requirements</a>&nbsp;and <a class="elementLink" href="./../../../openup/tasks/detail_requirements_9747F71E.html" guid="_0e1mIMlgEdmt3adZL5Dmdw">Detail Requirements</a>.&nbsp;
+</p>
+<h2>
+    Detailing individual use cases
+</h2>
+<p>
+    Similarly, it makes sense to write each individual use case iteratively. Start by detailing the main scenario.&nbsp; As
+    you do this, you can identify various alternative and error flows that the use case might follow, and then evaluate,
+    rearrange, or eliminate them and prioritize them before detailing the surviving scenarios, so you can focus your effort
+    in the right place.
+</p>
+<p>
+    The level of detail that you capture depends on several factors. See <a class="elementLinkWithType" href="./../../../openup/guidances/guidelines/use_case_formats_FF4AE425.html" guid="_qq0GMAXkEduj_7BEUj1JfQ">Guideline: Use Case Formats</a> for guidance on selecting the correct format for your use cases.
+</p>
+<h3>
+    Detail the basic flow of events (main scenario)
+</h3>
+<p>
+    As a starting point, use the step-by-step description of the main scenario that you created during <a class="elementLinkWithType" href="./../../../openup/tasks/find_and_outline_requirements_90D272B9.html" guid="_P9cMUPV_EdmdHa9MmVPgqQ">Task: Find and Outline Requirements</a>. Then, gradually add details to this scenario,
+    describing <strong>what</strong> the use case does, <strong>not how</strong> to solve problems internal to the system.
+</p>
+<p>
+    A flow of events description covers:
+</p>
+<ul>
+    <li>
+        How and when the use case starts
+    </li>
+    <li>
+        When the use case interacts with the Actors and what data they exchange
+    </li>
+    <li>
+        When the use case uses data stored in the system or stores data in the system
+    </li>
+    <li>
+        How and when the use case ends
+    </li>
+</ul>
+<p>
+    It does not describe:
+</p>
+<ul>
+    <li>
+        The GUI
+    </li>
+    <li>
+        Technical details of hardware or software
+    </li>
+    <li>
+        Design issues
+    </li>
+</ul>
+<p>
+    Describe the flow of events for the main scenario in the form:
+</p>
+<ol>
+    <li>
+        The use case starts when &lt;Actor name&gt; &lt;does something&gt;.
+    </li>
+    <li>
+        The system &lt;does something in response&gt;.
+    </li>
+    <li>
+        The &lt;Actor name&gt; does something else.
+    </li>
+</ol>
+<p>
+    See Section 4 of&nbsp;<a class="elementLinkWithType" href="./../../../openup/guidances/examples/use_case_spec_CD5DD9B1.html" guid="_JLOiIMNvEdu2IdAIaWZyAw">Example: Use-Case Specification</a> for a sample completed basic flow.
+</p>
+<h3>
+    Detail alternate flows
+</h3>
+<p>
+    A use case consists of a number of scenarios, each representing specific instances of the use case that correspond to
+    specific inputs from the Actor or to specific conditions in the environment. Each scenario describes alternate ways
+    that the system behaves, or it may describe failure or exception cases.
+</p>
+<p>
+    Review the list of alternative flows that you captured during <a class="elementLinkWithType" href="./../../../openup/tasks/find_and_outline_requirements_90D272B9.html" guid="_P9cMUPV_EdmdHa9MmVPgqQ">Task: Find and Outline Requirements</a>. As you detail the main scenario, you may identify additional alternate flows by asking these
+    questions:
+</p>
+<ul>
+    <li>
+        Are there different options available, depending on input from the Actor? (Example: If the Actor enters an invalid
+        PIN number while accessing an ATM.)
+    </li>
+    <li>
+        What business rules may come into play? (Example: The Actor requests more money from the ATM than is available in
+        her account.)
+    </li>
+    <li>
+        What could go wrong? (Example: No network connection available when required to perform a transaction.)
+    </li>
+</ul>
+<p>
+    It is best to develop these scenarios iteratively, as well.
+</p>
+<ol>
+    <li>
+        Begin by identifying them.
+    </li>
+    <li>
+        Examine each possible scenario to determine whether it is relevant, that it can actually happen, and that it is
+        distinct from other scenarios.
+    </li>
+    <li>
+        Eliminate redundant or unnecessary scenarios.
+    </li>
+    <li>
+        Prioritize the remaining scenarios and start detailing the more important ones.
+    </li>
+</ol>
+<p>
+    In addition to the detailing the flow of events of each alternative flow in the form described above, each alternative
+    flow should describe:
+</p>
+<ul>
+    <li>
+        Where the alternative flow can be inserted in the basic flow of events
+    </li>
+    <li>
+        The condition that needs to be fulfilled for the alternative behavior to start
+    </li>
+    <li>
+        How and where the basic flow of events is resumed, or how the use case ends
+    </li>
+</ul>
+<p>
+    See Section 5 of&nbsp;<a class="elementLinkWithType" href="./../../../openup/guidances/examples/use_case_spec_CD5DD9B1.html" guid="_JLOiIMNvEdu2IdAIaWZyAw">Example: Use-Case Specification</a> for examples of completed alternative flows.
+</p>
+<h2>
+    Structure the use case
+</h2>
+<p>
+    It is useful to structure the use case according to scenarios. This helps both to simplify communication and
+    maintenance and to permit the use cases to be implemented iteratively. Name and describe each key scenario so that
+    these may be prioritized, assigned to an iteration and an individual, and referenced from the&nbsp;<a class="elementLink" href="./../../../openup/workproducts/work_items_list_39D03CC8.html" guid="_rGNWsCbSEdqh1LYUOGRh2A">Work Items List</a> for implementation.
+</p>
+<p>
+    In addition to structuring the use cases according to scenarios, it is often useful to structure the scenarios
+    themselves into subflows. This provides an additional level of granularity for planning work and tracking progress.
+    Unless a subflow involves only a minor part of the complete flow of events (which can be described in the body of the
+    text), describe each subflow in a separate section of the Flow of Events section. Subflows that should be in a separate
+    section include these examples:
+</p>
+<ul>
+    <li>
+        Subflows that occupy a large segment of a given flow of events.
+    </li>
+    <li>
+        Exceptional and alternative flows of events. This helps the use case's basic flow of events to stand out more
+        clearly.
+    </li>
+    <li>
+        Any subflow that can be run at several intervals in the same flow of events.
+    </li>
+</ul>
+<p>
+    If there are subflows identified that are common to multiple use cases, you can re-factor your use-case model to
+    include these. See&nbsp;<a class="elementLinkWithType" href="./../../../openup/guidances/concepts/use_case_model_CD178AF9.html" guid="_2jyfUAhVEduRe8TeoBmuGg">Concept: Use-Case Model</a> for more information on the &lt;&lt;include&gt;&gt;
+    dependency.
+</p>
+<p>
+    For more information on structuring the use case, see the "Flow of Events - Structure" section&nbsp;in <a class="elementLinkWithType" href="./../../../openup/guidances/concepts/use_case_BB199D1B.html" guid="_KudM0NcJEdqz_d2XWoVt6Q">Concept: Use Case</a>.
+</p>
+<p>
+    The&nbsp;<a class="elementLinkWithType" href="./../../../openup/guidances/templates/uc_specification_E97E98B0.html" guid="_0cpNwMlgEdmt3adZL5Dmdw">Template: Use-Case Specification</a> provides a suggested structure for the use case
+    specification. See&nbsp;<a class="elementLinkWithType" href="./../../../openup/guidances/examples/uc_model_evolve_960F136B.html" guid="_t4QdAMNqEdu2IdAIaWZyAw">Example: Evolution of the Use-Case Model</a> and&nbsp;<a class="elementLinkWithType" href="./../../../openup/guidances/examples/use_case_spec_CD5DD9B1.html" guid="_JLOiIMNvEdu2IdAIaWZyAw">Example: Use-Case Specification</a> for examples of structuring the use-case model and use case specifications, respectively.
+</p>
+<h2>
+    Detail special requirements
+</h2>
+<p>
+    Be sure to also capture any requirements that are related to the use case but are not taken into consideration in the
+    flow of events of the use case.&nbsp;These requirements include business rules, design constraints, usability
+    requirements, performance requirements, reliability requirements, supportability requirements, and interface
+    requirements. These requirements all influence the implementation and associated cost as much as the flow of events.
+    Therefore, they must be agreed upon and prioritized.
+</p>
+<p>
+    Typically, nonfunctional requirements that refer to a specific use case are captured in the Special Requirements
+    section of the use case. For more information, see the "Special Requirements" section in <a class="elementLinkWithType" href="./../../../openup/guidances/concepts/use_case_BB199D1B.html" guid="_KudM0NcJEdqz_d2XWoVt6Q">Concept: Use Case</a>.
+</p>
+<p>
+    If there are nonfunctional requirements that apply to more than one use case, capture these in the <a class="elementLinkWithType" href="./../../../openup/workproducts/supporting_requirements_spec_7D9DD47C.html" guid="_BVh9cL-CEdqb7N6KIeDL8Q">Artifact: Supporting Requirements Specification</a>. For more information on supporting
+    requirements, see <a class="elementLinkWithType" href="./../../../openup/guidances/concepts/supporting_requirements_B2C4D610.html" guid="_VXZ5wO0IEdqHTdbLTmC5IQ">Concept: Supporting Requirements</a>.
+</p>
+<p>
+    For guidance in writing clear, concise, unambiguous special and supporting requirements, see&nbsp;guidelines <a class="elementLink" href="./../../../openup/guidances/guidelines/writing_good_requirements_48248536.html" guid="_6jXzYNcKEdqz_d2XWoVt6Q">Writing Good Requirements</a>&nbsp;and <a class="elementLink" href="./../../../openup/guidances/guidelines/requirement_pitfalls_14EE9652.html" guid="_1AOsMO0JEdqHTdbLTmC5IQ">Requirement Pitfalls</a>.
+</p>
+<p>
+    See Section 8 of&nbsp;<a class="elementLinkWithType" href="./../../../openup/guidances/examples/use_case_spec_CD5DD9B1.html" guid="_JLOiIMNvEdu2IdAIaWZyAw">Example: Use-Case Specification</a> for examples of special requirements.
+</p>
+<h2>
+    Describe preconditions and post-conditions
+</h2>
+<p>
+    A <strong>precondition</strong> of a use case explains the state that the system must be in for the use case to be able
+    to start. Be careful in describing the system state. Avoid describing the detail of other, incidental activities that
+    may already have taken place.
+</p>
+<p>
+    A <strong>post-condition</strong> of a use case lists possible states that the system can be in after the use case
+    runs. The system must be in one of those states. A post-condition also states actions that the system performs at the
+    end of the use case, regardless of what occurred in the use case. Post-conditions may be categorized as Minimal
+    Guarantees&nbsp;or Success Guarantees:
+</p>
+<ul>
+    <li>
+        <b>Minimal Guarantees</b> represent conditions that will be true when the use cases end, regardless of how they
+        terminate.
+    </li>
+    <li>
+        <b>Success Guarantees</b> represent condition that will be true when the use cases end successfully, regardless of
+        which paths they took.
+    </li>
+</ul>
+<p>
+    Consider the following when specifying preconditions and post-condition:
+</p>
+<ul>
+    <li>
+        The states described by pre- or post-conditions should be states that the user can observe. "The user has logged on
+        to the system" or "The user has opened the document" are examples of observable states.
+    </li>
+    <li>
+        A precondition is a constraint on when a use case can start. It is not the event that starts the use case.
+    </li>
+    <li>
+        A precondition for a use case is not a precondition for only one subflow, although you can define preconditions and
+        post-conditions at the subflow level.
+    </li>
+    <li>
+        A post-condition for a use case should be true regardless of which alternative flows were executed; it should not
+        be true only for the main flow. If something could fail, you would cover that in the post-condition by saying "The
+        action has completed," or if something failed, "The action was not performed," rather than just "The action is
+        completed."&nbsp;
+    </li>
+</ul>
+<p>
+    For more information, see the "Preconditions Post-conditions" section in <a class="elementLinkWithType" href="./../../../openup/guidances/concepts/use_case_BB199D1B.html" guid="_KudM0NcJEdqz_d2XWoVt6Q">Concept: Use Case</a>.
+</p>
+<p>
+    See Section 7 of&nbsp;<a class="elementLinkWithType" href="./../../../openup/guidances/examples/use_case_spec_CD5DD9B1.html" guid="_JLOiIMNvEdu2IdAIaWZyAw">Example: Use-Case Specification</a> for example pre- and post-conditions.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">More Information</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Concepts</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../openup/guidances/concepts/supporting_requirements_B2C4D610.html" guid="_VXZ5wO0IEdqHTdbLTmC5IQ">Supporting Requirements</a>
+</li>
+<li>
+<a href="./../../../openup/guidances/concepts/use_case_BB199D1B.html" guid="_KudM0NcJEdqz_d2XWoVt6Q">Use Case</a>
+</li>
+<li>
+<a href="./../../../openup/guidances/concepts/use_case_model_CD178AF9.html" guid="_2jyfUAhVEduRe8TeoBmuGg">Use-Case Model</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Examples</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../openup/guidances/examples/uc_model_evolve_960F136B.html" guid="_t4QdAMNqEdu2IdAIaWZyAw">Evolution of the Use-Case Model</a>
+</li>
+<li>
+<a href="./../../../openup/guidances/examples/use_case_spec_CD5DD9B1.html" guid="_JLOiIMNvEdu2IdAIaWZyAw">Use-Case Specification</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Guidelines</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../openup/guidances/guidelines/work_items_list_32AC6ABD.html" guid="_7vEXEMA4EdqSgKaj2SZBmg">Managing Work Items</a>
+</li>
+<li>
+<a href="./../../../openup/guidances/guidelines/requirement_pitfalls_14EE9652.html" guid="_1AOsMO0JEdqHTdbLTmC5IQ">Requirement Pitfalls</a>
+</li>
+<li>
+<a href="./../../../openup/guidances/guidelines/use_case_formats_FF4AE425.html" guid="_qq0GMAXkEduj_7BEUj1JfQ">Use Case Formats</a>
+</li>
+<li>
+<a href="./../../../openup/guidances/guidelines/writing_good_requirements_48248536.html" guid="_6jXzYNcKEdqz_d2XWoVt6Q">Writing Good Requirements</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table class="copyright" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+     <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License v1.0</a> which
+    accompanies this distribution.
+</p><p/><p>
+    <a class="elementLink" href="./../../../openup/guidances/supportingmaterials/openup_copyright_C3031062.html" guid="_UaGfECcTEduSX6N2jUafGA">OpenUP Copyright</a>.
+</p><p/><p>
+    <a class="elementLink" href="./../../../dsdm_openup/guidances/supportingmaterials/copyright_dsdm_2D6C0C.html" guid="_Rph5oDGYEdyrsZhCyzLMxw">OpenUP/DSDM Copyright</a>.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

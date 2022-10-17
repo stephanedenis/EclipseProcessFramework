@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr" xml:lang="fr" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Guideline: Determine Architecturally Significant Requirements</title>
+<meta name="uma.type" content="Guideline">
+<meta name="uma.name" content="determine_architecturally_significant_requirements">
+<meta name="uma.presentationName" content="Determine Architecturally Significant Requirements">
+<meta name="element_type" content="other">
+<meta name="filetype" content="description">
+<meta name="role" content="none">
+<link rel="StyleSheet" href="./../../../css/default.css" type="text/css">
+<script src="./../../../scripts/ContentPageResource.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSubSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageToolbar.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/contentPage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_D3JXMNvKEduv2KOT-Teh6w"></div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td class="pageTitle" nowrap="true">Guideline: Determine Architecturally Significant Requirements</td><td width="100%">
+<div align="right" id="contentPageToolbar"></div>
+</td><td width="100%" class="expandCollapseLink" align="right"><a name="mainIndex" href="./../../../index.htm"></a><script language="JavaScript" type="text/javascript" src="./../../../scripts/treebrowser.js"></script></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="pageTitleSeparator"><img src="./../../../images/shim.gif" alt="" title="" height="1"></td>
+</tr>
+</table>
+<div class="overview">
+<table width="97%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50"><img src="./../../../images/guidance.gif" alt="" title=""></td><td>
+<table class="overviewTable" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top">This guideline explains techniques for identifying and prioritizing architecturally <br/>&#xD;&#xA;significant requirements.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../dsdm_openup/disciplines/dsdm_architecture_9B022905.html" guid="_aGgW4CfdEdyUdMkzl9_UtA">Architecture</a>
+</li>
+<li>
+<a href="./../../../openup/tasks/design_solution_A97CE9EA.html" guid="_0fshwMlgEdmt3adZL5Dmdw">Design the Solution</a>
+</li>
+<li>
+<a href="./../../../openup/tasks/outline_the_architecture_FF123A81.html" guid="_0f-1oMlgEdmt3adZL5Dmdw">Outline the Architecture</a>
+</li>
+<li>
+<a href="./../../../dsdm_openup/tasks/dsdm_outline_the_architecture_18B0A7EC.html" guid="_0L2kkCfcEdyUdMkzl9_UtA">Outline the Architecture</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p> The selection of requirements that are considered "architecturally significant" 
+  is driven by several key driving factors:</p>
+<ul>
+    
+  <li> The benefit of the requirement to stakeholders: critical, <b>important</b>, 
+    or<b> useful</b>. </li>
+  <li> The architectural impact of the requirement:<b> none</b>, <b>extends</b>, 
+    or <b>modifies</b>. There may be critical requirements that have little or 
+    no impact on the architecture and low-benefit requirements that have a big 
+    impact. Low-benefit requirements with big architectural impacts should be 
+    reviewed by the project manager for possible removal from the scope of the 
+    project.</li>
+    
+  <li> The risks to be mitigated: performance, availability of a product, and 
+    suitability of a component. </li>
+    <li>
+        The completion of the coverage of the architecture.
+    </li>
+    
+  <li> Other tactical objectives or constraints, such as demonstration to the 
+    user, and so on. </li>
+</ul>
+<p> There may be two requirements that hit the same components and address similar 
+  risks. If you implement A first, then B is not architecturally significant. 
+  If you implement B first, then A is not architecturally significant. Thus these 
+  attributes can depend on the iteration order and should be re-evaluated when 
+  the order changes, as well as when the requirements themselves change. </p>
+<p>
+    Architecturally significant requirements that are poorly understood or likely to change should be prioritized for
+    clarification and stabilization. In some cases, this means further requirements analysis should be done before
+    implementing the requirement. In other cases, some form of prototyping may be best.
+</p></td>
+</tr>
+</table>
+</div>
+<table class="copyright" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+     <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License v1.0</a> which
+    accompanies this distribution.
+</p><p/><p>
+    <a class="elementLink" href="./../../../openup/guidances/supportingmaterials/openup_copyright_C3031062.html" guid="_UaGfECcTEduSX6N2jUafGA">OpenUP Copyright</a>.
+</p><p/><p>
+    <a class="elementLink" href="./../../../dsdm_openup/guidances/supportingmaterials/copyright_dsdm_2D6C0C.html" guid="_Rph5oDGYEdyrsZhCyzLMxw">OpenUP/DSDM Copyright</a>.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

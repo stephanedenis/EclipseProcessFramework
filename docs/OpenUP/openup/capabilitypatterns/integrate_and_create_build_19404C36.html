@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr" xml:lang="fr" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Task Descriptor: Integrate and Create Build</title>
+<meta name="uma.type" content="TaskDescriptor">
+<meta name="uma.name" content="integrate_and_create_build">
+<meta name="uma.presentationName" content="Integrate and Create Build">
+<meta name="uma.guid" content="_6QwpgA1SEdyKD8XBf_Hbrw">
+<meta name="element_type" content="TaskDescriptor">
+<meta name="filetype" content="description">
+<meta name="role" content="">
+<link rel="StyleSheet" href="./../../css/default.css" type="text/css">
+<script src="./../../scripts/ContentPageResource.js" type="text/javascript" language="JavaScript"></script><script src="./../../scripts/ContentPageSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../scripts/ContentPageSubSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../scripts/ActivityTreeTable.js" type="text/javascript" language="JavaScript"></script><script src="./../../scripts/ProcessElementPage.js" type="text/javascript" language="JavaScript"></script><script src="./../../scripts/ContentPageToolbar.js" type="text/javascript" language="JavaScript"></script><script src="./../../scripts/contentPage.js" type="text/javascript" language="JavaScript"></script><script src="./../../scripts/processElementData.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					var defaultQueryStr = '?proc=_0nz79clgEdmt3adZL5Dmdw&path=_0nz79clgEdmt3adZL5Dmdw,_6QwpgA1SEdyKD8XBf_Hbrw';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, true, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_6QwpgA1SEdyKD8XBf_Hbrw"></div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td class="pageTitle" nowrap="true">Task Descriptor: Integrate and Create Build</td><td width="100%">
+<div align="right" id="contentPageToolbar"></div>
+</td><td width="100%" class="expandCollapseLink" align="right"><a name="mainIndex" href="./../../index.htm"></a><script language="JavaScript" type="text/javascript" src="./../../scripts/treebrowser.js"></script></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="pageTitleSeparator"><img src="./../../images/shim.gif" alt="" title="" height="1"></td>
+</tr>
+</table>
+<div class="overview">
+<table width="97%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50"><img src="./../../images/taskdes_lg_dgm32.gif" alt="" title=""></td><td>
+<table class="overviewTable" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top">This task describes how to integrate all changes made by developers into the code base and perform the minimal testing to validate the build.</td>
+</tr>
+<tr>
+<td>Based on Method Task: <a href="./../../openup/tasks/integrate_and_create_build_A94C616F.html" guid="_Dq0GQAIoEdyLh7vsrHZ4YA">Integrate and Create Build</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Roles</th><td class="sectionTableCell" width="30%"><span class="sectionTableCellHeading">Primary:
+								</span>
+<ul>
+<li>
+<a href="./../../openup/capabilitypatterns/developer_600F7DE6.html" guid="_Xrrj0ASqEdy6Meh4O3uDnA">Developer</a>
+</li>
+</ul>
+</td><td class="sectionTableCell" width="30%"><span class="sectionTableCellHeading">Additional:
+								</span></td><td class="sectionTableCell"><span class="sectionTableCellHeading">Assisting:
+								</span></td>
+</tr>
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Inputs</th><td class="sectionTableCell" width="30%"><span class="sectionTableCellHeading">Mandatory:
+								</span>
+<ul>
+<li>
+<a href="./../../openup/capabilitypatterns/developer_test_1277405C.html" guid="_6Qwpgg1SEdyKD8XBf_Hbrw">Developer Test</a>
+</li>
+<li>
+<a href="./../../openup/capabilitypatterns/implementation_23DE2C46.html" guid="_6QwpgQ1SEdyKD8XBf_Hbrw">Implementation</a>
+</li>
+<li>
+<a href="./../../openup/capabilitypatterns/test_script_56F46221.html" guid="_a_F1YFY2EdqI9sTOt2pjHw">Test Script</a>
+</li>
+</ul>
+</td><td class="sectionTableCell" width="30%"><span class="sectionTableCellHeading">Optional:
+								</span>
+<ul>
+<li>None</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">External:
+								</span>
+<ul>
+<li>None</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Outputs</th><td class="sectionTableCell" colspan="3">
+<ul>
+<li>
+<a href="./../../openup/capabilitypatterns/build_BA125429.html" guid="_ny2fQL3SEdqfrv3k16plXw">Build</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Steps</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading">Integrate implemented elements</div>
+<div class="stepContent">
+<table class="stepTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td><p>
+    In&nbsp;the relevant&nbsp;<a class="elementLink" href="./../../openup/guidances/concepts/workspace_722BBA90.html" guid="_0cEmAMlgEdmt3adZL5Dmdw">Workspace</a>, combine all completed&nbsp;<a class="elementLink" href="./../../openup/guidances/concepts/change_set_430BF233.html" guid="_1QU9MAIoEdyLh7vsrHZ4YA">Change Set</a>s that are
+    not in the latest baseline. Resolve any conflicting versions of the artifacts by either removing one of the change sets
+    that created the conflict&nbsp;or by creating a new change set that includes merged versions of the conflicting
+    artifacts.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Create build</div>
+<div class="stepContent">
+<table class="stepTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td><p>
+
+    Create the build.&nbsp;The details of this step depend upon the implementation language and development environment and
+
+    may involve compiling and linking (in the case of compiled languages) and/or other processes that result in an
+
+    executable increment of the system.
+
+</p>
+
+<p>
+
+    Examples of these steps&nbsp;include:
+
+</p>
+
+<ol>
+
+    <li>
+
+        Compiling and linking the source artifacts to create an executable
+
+    </li>
+
+    <li>
+
+        Loading binary objects on a test bench or simulator
+
+    </li>
+
+    <li>
+
+        Running a script to load/update database schemas
+
+    </li>
+
+    <li>
+
+        Packaging and deploying web applications<br />
+
+    </li>
+
+</ol></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Test integrated elements</div>
+<div class="stepContent">
+<table class="stepTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td><p>
+
+    <a class="elementLink" href="./../../openup/tasks/run_developer_tests_73D7DBC4.html" guid="_0iYCUMlgEdmt3adZL5Dmdw">Run Developer Tests</a>&nbsp;against the integrated elements to verify that they behave the same as they did in isolation.
+
+    Ensure that the scope of these&nbsp;tests is as broad as possible, which ensures that the latest change sets did not
+
+    cause failing developer tests in other areas of the system.
+
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Run "Smoke Tests"</div>
+<div class="stepContent">
+<table class="stepTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td><p>
+
+    Several builds will be created in each iteration. For each build, this step is performed only when change sets have
+
+    been delivered to satisfy the requirements of that build.
+
+</p>
+
+<p>
+
+    Execute a sub-set of the system tests to ensure that the build is suitable prior to committing resources to the full
+
+    scope of system testing.&nbsp;While the level of testing will vary, focus on gaining confidence that the increment is
+
+    of sufficient quality to establish a baseline for system testing.
+
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Create a baseline</div>
+<div class="stepContent">
+<table class="stepTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td><p>
+
+    Several builds will be created in each iteration. For each build, this step is performed only when change sets have
+
+    been delivered to satisfy the requirements of that build.
+
+</p>
+
+<p>
+
+    The&nbsp;procedure for this step depends on the&nbsp;configuration management tools in use.
+
+</p>
+
+<p>
+
+    Create a baseline that unambiguously identifies the configuration for the build that is ready for system testing.
+
+    Identify the version of each implementation element and supporting artifacts that were used to create&nbsp;this build.
+
+</p></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Properties</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row" id="property_Multiple Occurrences" abbr="Multiple Occurrences">Multiple Occurrences</th><td class="sectionTableCell" align="left" headers="property_Multiple Occurrences"><img width="20" height="15" alt="" title="" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th class="sectionTableHeading" scope="row" id="property_Event Driven" abbr="Event Driven">Event Driven</th><td class="sectionTableCell" align="left" headers="property_Event Driven"><img width="20" height="15" alt="" title="" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th class="sectionTableHeading" scope="row" id="property_Ongoing" abbr="Ongoing">Ongoing</th><td class="sectionTableCell" align="left" headers="property_Ongoing"><img width="20" height="15" alt="" title="" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th class="sectionTableHeading" scope="row" id="property_Optional" abbr="Optional">Optional</th><td class="sectionTableCell" align="left" headers="property_Optional"><img width="20" height="15" alt="" title="" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th class="sectionTableHeading" scope="row" id="property_Planned" abbr="Planned">Planned</th><td class="sectionTableCell" align="left" headers="property_Planned"><img width="20" height="15" alt="" title="" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th class="sectionTableHeading" scope="row" id="property_Repeatable" abbr="Repeatable">Repeatable</th><td class="sectionTableCell" align="left" headers="property_Repeatable"><img width="20" height="15" alt="" title="" src="./../../images/indent.gif"></td>
+</tr>
+</table>
+</div>
+<table class="copyright" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+     <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License v1.0</a> which
+    accompanies this distribution.
+</p><p/><p>
+    <a class="elementLink" href="./../../openup/guidances/supportingmaterials/openup_copyright_C3031062.html" guid="_UaGfECcTEduSX6N2jUafGA">OpenUP Copyright</a>.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr" xml:lang="fr" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Concept: Refactoring</title>
+<meta name="uma.type" content="Concept">
+<meta name="uma.name" content="refactoring_xp_programming">
+<meta name="uma.presentationName" content="Refactoring">
+<meta name="element_type" content="concept">
+<meta name="filetype" content="description">
+<meta name="role" content="none">
+<link rel="StyleSheet" href="./../../../css/default.css" type="text/css">
+<script src="./../../../scripts/ContentPageResource.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSubSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageToolbar.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/contentPage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.4410217108363206E-306"></div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td class="pageTitle" nowrap="true">Concept: Refactoring</td><td width="100%">
+<div align="right" id="contentPageToolbar"></div>
+</td><td width="100%" class="expandCollapseLink" align="right"><a name="mainIndex" href="./../../../index.htm"></a><script language="JavaScript" type="text/javascript" src="./../../../scripts/treebrowser.js"></script></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="pageTitleSeparator"><img src="./../../../images/shim.gif" alt="" title="" height="1"></td>
+</tr>
+</table>
+<div class="overview">
+<table width="97%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50"><img src="./../../../images/concept.gif" alt="" title=""></td><td>
+<table class="overviewTable" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../xp/roles/xp_programmer_D005E927.html" guid="{08A6AF28-69B1-42DC-A957-2E6CDCB436C1}">XP Programmer</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="XE_xp__refactoring" name="XE_xp__refactoring"></a><a id="XE_refactoring__practice_of" name="XE_refactoring__practice_of"></a><a id="XE_engineering_practices__refactoring" name="XE_engineering_practices__refactoring"></a> 
+<h3>
+    Description
+</h3>
+<p>
+    Refactoring is the practice of improving the design of a system without changing its behavior. Refactoring is a
+    critical practice and skill in iterative development. The programmer is either adding a new feature or refactoring. XP
+    programmers consciously choose between refactoring and adding new functionality on a minute-by-minute basis. Some
+    refactorings are trivial, such as renaming or moving things. Other refactorings allow you to exchange procedural logic
+    with polymorphism, and still larger refactorings exist to introduce design patterns.
+</p>
+<p>
+    While processes like Extreme Programming rely on refactoring to let the design emerge, the usefulness of refactoring
+    extends beyond the Agile Methodologies. As feature requests and bug fixes require changes to a system, refactoring
+    techniques allow the programmers to maintain a good design. Refactoring can also be used to improve the design of an
+    existing system.
+</p>
+<p>
+    Refactoring is not new. Developers have been refactoring for years, though only recently have people started to catalog
+    refactorings. Refactoring has become such an important part of development that professional-level Integrated
+    Development Environments (IDEs) either include built-in tools or have plug-ins to provide refactoring support.
+</p>
+<p>
+    If your system isn't being refactored as it is modified, your design deteriorates; methods become longer, classes take
+    on more responsibility, more code gets cut and pasted around your system, previously cut-and-pasted code has to be
+    modified in several places.
+</p>
+<p>
+    If your system becomes brittle and inflexible, your developers will have to spend more time and money to add features
+    or fix bugs. As the design continues to deteriorate, fixing one bug creates two more, or the cost of adding a new
+    feature out weighs the benefit of having it because so much of the system has to be modified. There are many analogies
+    to describe this battle against entropy; from cleaning as you go to design debt.
+</p>
+<p>
+    Knowing the refactorings isn't enough. Developers must be able to identify problem areas of the program design (often
+    referred to as "smells"). These are the places where refactoring can be used to improve the design of the code. Design
+    skill and experience are needed to recognize bad code smells.
+</p>
+<p>
+    Automated tests provide a safety net when making changes. The automated tests report when the functionality of the
+    system changes. Make a structural change to the software; see that the tests still pass. You can confidently refactor.
+</p>
+<p>
+    Where do all these tests come from? In XP, they are developed using <a class="elementLinkWithUserText" href="./../../../xp/guidances/concepts/test_driven_development_DACEB1AF.html" guid="1.620567348185129E-306">Test-Driven Development</a>. It is possible to refactor without tests, but you run the
+    risk of unknowingly introducing bugs or breaking existing functionality.
+</p>
+<h3>
+    Benefits
+</h3>
+<ul>
+    <li>
+        Allows the design to emerge over time.
+    </li>
+    <li>
+        Keeps the design from rotting.
+    </li>
+    <li>
+        Reduces cost of change.
+    </li>
+</ul>
+<h3>
+    Related Information
+</h3>
+<p>
+    &nbsp;See the <a class="elementLinkWithUserText" href="./../../../xp/guidances/guidelines/refactoring_3FE6DCA.html" guid="8.137126904637637E-306">Refactoring Guidelines</a>.
+</p></td>
+</tr>
+</table>
+</div>
+<table class="copyright" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="copyright">Copyright (c) 2002, 2006 IBM Corporation and Object Mentor. All rights reserved. <br />
+This program and the accompanying materials are made available under the terms of the Eclipse Public License v1.0 which
+accompanies this distribution, and is available at <a href="http://www.eclipse.org/legal/epl-v10.html" target="_blank">http://www.eclipse.org/legal/epl-v10.html</a>. <br />
+Contributors: IBM Corporation and Object Mentor - initial implementation<br /></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

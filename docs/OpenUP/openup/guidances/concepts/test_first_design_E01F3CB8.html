@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr" xml:lang="fr" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Concept: Test-first Design</title>
+<meta name="uma.type" content="Concept">
+<meta name="uma.name" content="test_first_design">
+<meta name="uma.presentationName" content="Test-first Design">
+<meta name="element_type" content="concept">
+<meta name="filetype" content="description">
+<meta name="role" content="none">
+<link rel="StyleSheet" href="./../../../css/default.css" type="text/css">
+<script src="./../../../scripts/ContentPageResource.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSubSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageToolbar.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/contentPage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_s7YkUBD2EdyfbNOwzwtrjw"></div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td class="pageTitle" nowrap="true">Concept: Test-first Design</td><td width="100%">
+<div align="right" id="contentPageToolbar"></div>
+</td><td width="100%" class="expandCollapseLink" align="right"><a name="mainIndex" href="./../../../index.htm"></a><script language="JavaScript" type="text/javascript" src="./../../../scripts/treebrowser.js"></script></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="pageTitleSeparator"><img src="./../../../images/shim.gif" alt="" title="" height="1"></td>
+</tr>
+</table>
+<div class="overview">
+<table width="97%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50"><img src="./../../../images/concept.gif" alt="" title=""></td><td>
+<table class="overviewTable" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top">This concept describes a technique to bring test design chronologically in-line with software design.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../openup/disciplines/development_B5D1D8A.html" guid="_0TeDoMlgEdmt3adZL5Dmdw">Development</a>
+</li>
+<li>
+<a href="./../../../openup/tasks/impl_developer_tests_F186F76F.html" guid="_0iL1EMlgEdmt3adZL5Dmdw">Implement Developer Tests</a>
+</li>
+<li>
+<a href="./../../../openup/tasks/implement_solution_5D5698C8.html" guid="_0hyzgMlgEdmt3adZL5Dmdw">Implement the Solution</a>
+</li>
+<li>
+<a href="./../../../openup/tasks/run_developer_tests_73D7DBC4.html" guid="_0iYCUMlgEdmt3adZL5Dmdw">Run Developer Tests</a>
+</li>
+<li>
+<a href="./../../../openup/guidances/guidelines/test_first_design_21C77ADF.html" guid="_0Y6kUMlgEdmt3adZL5Dmdw">Test-first Design</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    Test-first design is the practice of writing&nbsp;developer tests and&nbsp;implementation code concurrently and at a
+    very fine level of granularity.
+</p>
+<p>
+    In test-first design, the developer first writes a small portion of a&nbsp;developer test, and then writes just
+    enough&nbsp;implementation code to make that&nbsp;developer test compile and execute. Then they write a little bit more
+    of the test and then add enough code to make that new bit compile and pass. This cycle can last somewhere between 30
+    seconds and five minutes. Rarely does it grow to ten minutes. In each cycle, the tests come first. Once a unit test is
+    done, the&nbsp;developer goes on to the next test until there are no more tests to be written for the implementation of
+    the work item currently under development.
+</p>
+<p>
+    The practice of test-first&nbsp;design changes how&nbsp;the developer&nbsp;thinks. Tests are not written as an
+    afterthought. Instead, developer tests are written as part of the everyday, every minute way of building software.
+</p>
+<p>
+    What are&nbsp;the advantages of test-first design?
+</p>
+<ol>
+    <li>
+        Assumptions in the design are analyzed before the implementation code is written. To write developer tests, an
+        examination must be made of the behavior of each piece of code to be written, correct and incorrect behaviors must
+        be defined. In&nbsp;a way, writing the tests before the code can be considered a version of detailed design.
+    </li>
+    <li>
+        Code units designed&nbsp;for testability up front are cleaner and more loosely coupled.
+    </li>
+    <li>
+        Errors&nbsp;are found earlier. Errors or gaps in the requirements and design are identified before coding begins
+        when it could be more tempting to move ahead based on assumptions.
+    </li>
+    <li>
+        A clearer&nbsp;collaboration strategy between the developer and others that might be responsible for the
+        requirements, architecture, and design is put in place.&nbsp;During the creation of the tests, there must be a
+        meeting of the minds as to what&nbsp;has been specified. After that, the implementation can carry on with
+        confidence that there is a shared vision of what the code should do.
+    </li>
+    <li>
+        There are unambiguous criteria for completion of the code. When the tests pass, the code is working as specified.
+        Non-functional quality dimensions can be dealt with separately, but there is a clear moment when the code behaves
+        correctly.
+    </li>
+    <li>
+        The technique drives the developer to work in smaller increments with faster quality feedback. At any time the
+        developer is just one test away from having error-free code.
+    </li>
+    <li>
+        There is a separation of concerns and effort between getting code working and improving the quality of the code
+        that already runs correctly. Separating out these two areas of concern provides focus and time management support
+        to a developer who in one pass over the implementation makes it pass the tests as simply as possible and then in a
+        subsequent pass, looks for areas to improve.
+    </li>
+</ol></td>
+</tr>
+</table>
+</div>
+<table class="copyright" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+     <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License v1.0</a> which
+    accompanies this distribution.
+</p><p/><p>
+    <a class="elementLink" href="./../../../openup/guidances/supportingmaterials/openup_copyright_C3031062.html" guid="_UaGfECcTEduSX6N2jUafGA">OpenUP Copyright</a>.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

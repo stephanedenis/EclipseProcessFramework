@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr" xml:lang="fr" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Checklist: Implementation</title>
+<meta name="uma.type" content="Checklist">
+<meta name="uma.name" content="implementation">
+<meta name="uma.presentationName" content="Implementation">
+<meta name="element_type" content="Checklist">
+<meta name="filetype" content="description">
+<meta name="role" content="none">
+<link rel="StyleSheet" href="./../../../css/default.css" type="text/css">
+<script src="./../../../scripts/ContentPageResource.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSubSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageToolbar.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/contentPage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', true, false, false);
+					
+					//override the subsection text
+					contentPage.subSection.expandAllText = 'Expand All Check Items';
+					contentPage.subSection.collapseAllText = 'Collapse All Check Items';					
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_OhJKUNWsEduaE6F4-SvXzg"></div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td class="pageTitle" nowrap="true">Checklist: Implementation</td><td width="100%">
+<div align="right" id="contentPageToolbar"></div>
+</td><td width="100%" class="expandCollapseLink" align="right"><a name="mainIndex" href="./../../../index.htm"></a><script language="JavaScript" type="text/javascript" src="./../../../scripts/treebrowser.js"></script></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="pageTitleSeparator"><img src="./../../../images/shim.gif" alt="" title="" height="1"></td>
+</tr>
+</table>
+<div class="overview">
+<table width="97%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50"><img src="./../../../images/checklist.gif" alt="" title=""></td><td>
+<table class="overviewTable" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top">This checklist provides questions to verify that the implementation is created in a consistent and complete manner.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../openup/disciplines/development_B5D1D8A.html" guid="_0TeDoMlgEdmt3adZL5Dmdw">Development</a>
+</li>
+<li>
+<a href="./../../../openup/workproducts/implementation_917CA61E.html" guid="_0YoQcMlgEdmt3adZL5Dmdw">Implementation</a>
+</li>
+<li>
+<a href="./../../../openup/guidances/guidelines/refactoring_33F165CA.html" guid="_OlyWoOX7Edu8VZPtlaU33g">Refactoring</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    The items in this checklist represent good practices for creating a high-quality implementation. Try to address every
+    item to the greatest extent possible to create the best implementation. It may not be possible to address every item,
+    and you may be able to address some items to only a limited extent. In these cases, be sure that there are good reasons
+    for only partially addressing an item or not addressing an item at all.
+</p>
+<p>
+    This checklist is not something that should be considered only for heavyweight code reviews. Each developer should keep
+    the quality criteria embodied in these check items in mind while coding. When developers work together, the review
+    against these criteria should be done in real time so that quality is ensured up front as they are writing the code.
+</p>
+<p>
+    Appropriate divergence from the quality criteria described here could be worthy of a comment in the implementation so
+    that developers examining the code in the future know why the exception occurred.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Check Items</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading">Does the implementation conform to the architecture and design?</div>
+<div class="stepContent">
+<table class="stepTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td><ul>
+  <li> Is the implementation structured as specified in the design? </li>
+  <li> Are all of the functions in the design implemented? </li>
+  <li> Are all of the interfaces in the design implemented according to their 
+    specifications? </li>
+  <li> Does the implementation adhere to all design and architectural constraints? 
+  </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Is the implementation testable?</div>
+<div class="stepContent">
+<table class="stepTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td><ul>
+  <li> Can you test the expected behavior at the unit level? </li>
+  <li> Is the code written in a way that all paths can be exercised? </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Is the implementation correct?</div>
+<div class="stepContent">
+<table class="stepTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td><ul>
+  <li> Does the implementation pass all of the developer tests? </li>
+  <li> Does the implementation support the acceptance criteria of the test cases? 
+  </li>
+  <li> Is all code executable (no dead code areas)? </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Is the implementation understandable?</div>
+<div class="stepContent">
+<table class="stepTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td><ul>
+  <li> Does the implementation clearly state the intention of the developer? </li>
+  <li> Does the code adhere to the Coding Guidelines? If a set of Coding Guidelines 
+    has not been identified, the code should be checked for a variety of consistency 
+    issues, such as naming conventions, indentation, spacing, and so forth.</li>
+  <li> Are the names of the variables easy to understand? Do they describe the 
+    purpose of the variable? </li>
+  <li> Are all of the comments necessary to be able to understand the associated 
+    code? Comments should enhance the understanding of the code rather than merely 
+    repeat it. </li>
+  <li> Are all comments correct? </li>
+  <li> Does the implementation match the documentation? </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Is there no redundancy?</div>
+<div class="stepContent">
+<table class="stepTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td><p> Is there no redundancy in the implementation? (Identify candidates for refactoring.) 
+</p></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="copyright" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+     <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License v1.0</a> which
+    accompanies this distribution.
+</p><p/><p>
+    <a class="elementLink" href="./../../../openup/guidances/supportingmaterials/openup_copyright_C3031062.html" guid="_UaGfECcTEduSX6N2jUafGA">OpenUP Copyright</a>.
+</p><p/><p>
+    <a class="elementLink" href="./../../../dsdm_openup/guidances/supportingmaterials/copyright_dsdm_2D6C0C.html" guid="_Rph5oDGYEdyrsZhCyzLMxw">OpenUP/DSDM Copyright</a>.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

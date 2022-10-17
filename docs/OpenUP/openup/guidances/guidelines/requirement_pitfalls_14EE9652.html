@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr" xml:lang="fr" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Guideline: Requirement Pitfalls</title>
+<meta name="uma.type" content="Guideline">
+<meta name="uma.name" content="requirement_pitfalls">
+<meta name="uma.presentationName" content="Requirement Pitfalls">
+<meta name="element_type" content="other">
+<meta name="filetype" content="description">
+<meta name="role" content="none">
+<link rel="StyleSheet" href="./../../../css/default.css" type="text/css">
+<script src="./../../../scripts/ContentPageResource.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSubSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageToolbar.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/contentPage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_1AOsMO0JEdqHTdbLTmC5IQ"></div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td class="pageTitle" nowrap="true">Guideline: Requirement Pitfalls</td><td width="100%">
+<div align="right" id="contentPageToolbar"></div>
+</td><td width="100%" class="expandCollapseLink" align="right"><a name="mainIndex" href="./../../../index.htm"></a><script language="JavaScript" type="text/javascript" src="./../../../scripts/treebrowser.js"></script></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="pageTitleSeparator"><img src="./../../../images/shim.gif" alt="" title="" height="1"></td>
+</tr>
+</table>
+<div class="overview">
+<table width="97%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50"><img src="./../../../images/guidance.gif" alt="" title=""></td><td>
+<table class="overviewTable" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top">This guideline describes common pitfalls to avoid in defining and writing requirements.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../openup/tasks/detail_requirements_9747F71E.html" guid="_0e1mIMlgEdmt3adZL5Dmdw">Detail Requirements</a>
+</li>
+<li>
+<a href="./../../../openup/guidances/guidelines/detail_ucs_and_scenarios_6BC56BB7.html" guid="_4BJ_YCxSEdqjsdw1QLH_6Q">Detail Use Cases and Scenarios</a>
+</li>
+<li>
+<a href="./../../../openup/tasks/find_and_outline_requirements_90D272B9.html" guid="_P9cMUPV_EdmdHa9MmVPgqQ">Find and Outline Requirements</a>
+</li>
+<li>
+<a href="./../../../openup/disciplines/requirements_4467C860.html" guid="_0TR2ZMlgEdmt3adZL5Dmdw">Requirements</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    Research and experience shows that requirements errors are very common, accounting for as much as 56% of all errors
+    made during development <a class="elementLinkWithUserText" href="./../../../openup/guidances/supportingmaterials/references_6CCF393.html#TAV84" guid="_9ToeIB83Edqsvps02rpOOg">[TAV84]</a>.&nbsp; Compounding this problem is the fact that the cost of correcting
+    requirements errors increases exponentially throughout the software development lifecycle <a class="elementLinkWithUserText" href="./../../../openup/guidances/supportingmaterials/references_6CCF393.html#BOE88" guid="_9ToeIB83Edqsvps02rpOOg">[BOE88]</a>.
+</p>
+<p>
+    Frederick Brooks summarized this situation nicely:
+</p>
+<blockquote>
+    The hardest single part of building a software system is deciding what to build. No other part of the conceptual work
+    is as difficult as establishing the detailed technical requirements…. No other part of the work so cripples the
+    resulting system if done wrong. No other part is as difficult to rectify later.<a class="elementLinkWithUserText" href="./../../../openup/guidances/supportingmaterials/references_6CCF393.html#BRO87" guid="_9ToeIB83Edqsvps02rpOOg">[BRO87]</a>
+</blockquote>
+<p>
+    Therefore, it is critical that you detect requirements errors as early as possible, before they propagate to design,
+    implementation, and test artifacts.
+</p>
+<h1>
+    What to avoid when writing requirements
+</h1>
+<p>
+    Although there is sure way to eliminate requirements errors in general, there are common pitfalls in writing
+    requirements that are relatively easy to avoid <a href="./../../../openup/guidances/supportingmaterials/references_6CCF393.html#TEL06" guid="_9ToeIB83Edqsvps02rpOOg">[TEL06]</a>.
+</p>
+<h2>
+    Ambiguity
+</h2>
+<p>
+    Avoiding ambiguity is one of the most difficult mandates in writing requirements. Try to write as clearly and
+    explicitly as possible. Be specific. If you must use vague or ambiguous terms, make sure that you define them in the
+    glossary.
+</p>
+<p>
+    Have several colleagues and stakeholders review your requirements to ensure a consistent, common understanding.
+    Although there is no definitive test for ambiguity, other than consensus, some dangerous ambiguities can be caused by
+    the use of the words <b>for, or</b>, and <strong>unless</strong>.&nbsp;
+</p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+    <b>Example</b> 
+    <p>
+        "The same subsystem shall also be able to generate a visible or audible caution/warning signal for the attention of
+        the co-pilot or navigator."
+    </p>
+    <p>
+        Which subsystem? Is the signal to be visible, audible, or both? Is this both a caution and a warning, just a
+        caution, or just a warning? Is it for both the co-pilot and the navigator or just one of them? If just one of them,
+        which one and under what conditions?
+    </p>
+</blockquote>
+<h2>
+    Multiple requirements
+</h2>
+<p>
+    Requirements that contain conjunctions (words that join independent clauses together) are dangerous. Problems arise
+    when readers try to figure out which part applies, especially if the different clauses seem to conflict or if the
+    individual parts apply separately. Multiple requirements also make verification more complex.
+</p>
+<p>
+    Dangerous conjunctions include: <b>and, or, but</b>.
+</p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+    <b>Example</b> 
+    <p>
+        "The battery low warning lamp shall light up when the voltage drops below 3.6 Volts, and the current workspace or
+        input data shall be saved."
+    </p>
+    <p>
+        Should the battery low-warning lamp light up when the voltage drops and when the workspace is saved? Should the
+        battery low warning lamp light up and the workspace be saved when the voltage drops?
+    </p>
+</blockquote>
+<h2>
+    Let-out or escape&nbsp;clauses
+</h2>
+<p>
+    Requirements that include options or exceptions are dangerous. They seem to ask for something definite, but at the last
+    moment, they back down and allow other options. Problems arise when the requirements are to be tested, and someone has
+    to decide what (if anything) could prove that the requirement was met.
+</p>
+<p>
+    Dangerous words that imply exceptions include: <b>if, when, but, except, unless, although</b>.
+</p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+    <b>Examples</b> 
+    <p>
+        "The forward passenger doors shall open automatically when the aircraft has halted, except when the rear ramp is
+        deployed."
+    </p>
+    <p>
+        "The fire alarm shall always be sounded when smoke is detected, unless the alarm is being tested or the engineer
+        has suppressed the alarm."
+    </p>
+    <p>
+        The latter sentence is a truly dangerous requirement!
+    </p>
+</blockquote>
+<h2>
+    Rambling
+</h2>
+<p>
+    Long, rambling sentences, especially when combined with arcane language or references to unreachable documents, quickly
+    lead to confusion and error.
+</p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+    <b>Example</b> 
+    <p>
+        "Provided that the designated input signals from the specified devices are received in the correct order where the
+        system is able to differentiate the designators, the output signal shall comply with the required framework of
+        section 3.1.5 to indicate the desired input state."
+    </p>
+</blockquote>
+<h2>
+    Premature design
+</h2>
+<p>
+    Requirements should specify the design envelope without unnecessary constraints on a specific design. If we supply too
+    much detail, we start to design the system. Going too far is tempting for designers, especially when they come to their
+    favorite bits.
+</p>
+<p>
+    Danger signs include <b>names of components, materials, software objects</b> or <b>procedures</b>, and <b>database
+    fields</b>.
+</p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+    <b>Example</b> 
+    <p>
+        "The antenna shall be capable of receiving FM signals, using a copper core with nylon covering and a waterproof
+        hardened rubber shield."
+    </p>
+    <p>
+        Specifying design rather than actual need increases the cost of systems by placing needless constraints on
+        development and manufacture. Often, knowing <i>why</i> is much better than knowing <i>what</i>.
+    </p>
+</blockquote>
+<h2>
+    Mixing different kinds of requirements
+</h2>
+<p>
+    The user requirements form a complete model of what users want. They need to be organized coherently to show gaps and
+    overlaps. The same applies to system requirements, which form a complete functional model of the proposed system. A
+    quick road to confusion is to mix up requirements for users, systems, and how the system should be designed, tested, or
+    installed.
+</p>
+<p>
+    Danger signs are any references to <b>system, design, testing</b>, or <b>installation</b>.
+</p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+    <b>Example</b> 
+    <p>
+        "The user shall be able to view the currently selected channel number which shall be displayed in 14pt Swiss type
+        on an LCD panel tested to Federal Regulation Standard 567-89 and mounted with shockproof rubber washers."
+    </p>
+</blockquote>
+<h2>
+    Speculation
+</h2>
+<p>
+    Requirements are part of a contract between customer and developer. There is no room for wish lists, meaning general
+    terms about things that somebody probably wants.
+</p>
+<p>
+    Danger signs include vagueness about <b>which type of user is speaking</b> and generalizations, such as <b>usually,
+    generally, often, normally, typically</b>.
+</p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+    <b>Example</b> 
+    <p>
+        "Users normally require early indication of intrusion into the system."
+    </p>
+</blockquote>
+<h2>
+    Vague, undefined terms
+</h2>
+<p>
+    Many words used informally to indicate system quality are too vague for use in requirements. Vague terms include, among
+    others: <b>user-friendly, versatile, flexible, approximately, as possible</b>.
+</p>
+<p>
+    Requirements using these terms are unverifiable, because there is no definitive test to show whether the system has the
+    indicated property.
+</p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+    <b>Examples</b> 
+    <p>
+        "The print dialog shall be versatile and user-friendly."
+    </p>
+    <p>
+        "The OK status indicator lamp shall be illuminated as soon as possible after the system self-check is completed."
+    </p>
+</blockquote>
+<h2>
+    Expressing mere possibilities
+</h2>
+<p>
+    Suggestions that are not explicitly stated as requirements are invariably ignored by developers.
+</p>
+<p>
+    "Possible options" are indicated with terms such as <b>may, might, should, ought, could, perhaps, probably</b>.
+</p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+    <b>Example</b> 
+    <p>
+        "The reception subsystem probably ought to be powerful enough to receive a signal inside a steel-framed building."
+    </p>
+</blockquote>
+<h2>
+    Wishful thinking
+</h2>
+<p>
+    Wishful thinking means asking for the impossible. Engineering is a real-world activity, and no system or component is
+    perfect.
+</p>
+<p>
+    Wishful-thinking terms include <b>reliable, safe, handle all unexpected failures, please all users, run on all
+    platforms, never fail, upgradeable to all future situations</b>.
+</p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+    <b>Examples</b> 
+    <p>
+        "The gearbox shall be 100% safe in normal operation."
+    </p>
+    <p>
+        "The network shall handle all unexpected errors without crashing."
+    </p>
+</blockquote></td>
+</tr>
+</table>
+</div>
+<table class="copyright" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+     <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License v1.0</a> which
+    accompanies this distribution.
+</p><p/><p>
+    <a class="elementLink" href="./../../../openup/guidances/supportingmaterials/openup_copyright_C3031062.html" guid="_UaGfECcTEduSX6N2jUafGA">OpenUP Copyright</a>.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr" xml:lang="fr" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Guideline: Find and Outline Actors and Use Cases</title>
+<meta name="uma.type" content="Guideline">
+<meta name="uma.name" content="find_and_outline_actors_and_ucs">
+<meta name="uma.presentationName" content="Find and Outline Actors and Use Cases">
+<meta name="element_type" content="other">
+<meta name="filetype" content="description">
+<meta name="role" content="none">
+<link rel="StyleSheet" href="./../../../css/default.css" type="text/css">
+<script src="./../../../scripts/ContentPageResource.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSubSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageToolbar.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/contentPage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_eyL0wCu-EdqSxKAVa9kmvA"></div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td class="pageTitle" nowrap="true">Guideline: Find and Outline Actors and Use Cases</td><td width="100%">
+<div align="right" id="contentPageToolbar"></div>
+</td><td width="100%" class="expandCollapseLink" align="right"><a name="mainIndex" href="./../../../index.htm"></a><script language="JavaScript" type="text/javascript" src="./../../../scripts/treebrowser.js"></script></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="pageTitleSeparator"><img src="./../../../images/shim.gif" alt="" title="" height="1"></td>
+</tr>
+</table>
+<div class="overview">
+<table width="97%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50"><img src="./../../../images/guidance.gif" alt="" title=""></td><td>
+<table class="overviewTable" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top">This guideline describes how to find and outline Actors and use cases.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../openup/tasks/find_and_outline_requirements_90D272B9.html" guid="_P9cMUPV_EdmdHa9MmVPgqQ">Find and Outline Requirements</a>
+</li>
+<li>
+<a href="./../../../dsdm_openup/tasks/dsdm_find_and_outline_requirements_D5B6A25C.html" guid="_LKlnwFk1Edul8L-IGeA7TA">Find and Outline Requirements</a>
+</li>
+<li>
+<a href="./../../../dsdm_openup/disciplines/dsdm_requirements_3B9AAD55.html" guid="_xoSZgFn1Edug9t_2UE7UhQ">Requirements</a>
+</li>
+<li>
+<a href="./../../../openup/guidances/guidelines/uc_model_4C64E97D.html" guid="_0VAUsMlgEdmt3adZL5Dmdw">Use-Case Model</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h1> Finding Actors </h1>
+<p> Find the external entities with which the system under development must interact. 
+  Candidates include groups of users who will require help from the system to 
+  perform their tasks and to execute the system's primary or secondary functions, 
+  as well as external hardware, software, and other systems. </p>
+<p> Define each candidate Actor by naming it and writing a brief description. 
+  Include the Actor's area of responsibility and the goals that the Actor will 
+  attempt to accomplish when using the system. Eliminate Actor candidates who 
+  do not have any goals. For more information on Actors and their properties, 
+  see <a class="elementLinkWithType" href="./../../../openup/guidances/concepts/actor_411726C.html" guid="_zGqO0MDpEduTGJ8i4u8TMw">Concept: Actor</a>. </p>
+<p> These questions are useful for identifying Actors: </p>
+<ul>
+    <li>
+        Who will supply, use, or remove information from the system?
+    </li>
+    <li>
+        Who will use the system?
+    </li>
+    <li>
+        Who is interested in a certain feature or service provided by the system?
+    </li>
+    <li>
+        Who will support and maintain the system?
+    </li>
+    <li>
+        What are the system's external resources?
+    </li>
+    <li>
+        What other systems will need to interact with the system under development?
+    </li>
+</ul>
+<p> Review the list of stakeholders that you captured in the Vision Statement. 
+  Not all stakeholders will be Actors (meaning, they will not all interact directly 
+  with the system under development), but this list of stakeholders is useful 
+  for identifying candidates for Actors. </p>
+<h1> Finding likely use cases </h1>
+<p>
+    The best way to find use cases is to consider what each Actor requires of the system. For each Actor, human or not,
+    ask:
+</p>
+<ul>
+    
+  <li> What are the goals that the Actor will attempt to achieve with the system? 
+  </li>
+    <li>
+        What are the primary tasks that the Actor wants the system to perform?
+    </li>
+    <li>
+        Will the Actor create, store, change, remove, or read data in the system?
+    </li>
+    <li>
+        Will the Actor need to inform the system about sudden external changes?
+    </li>
+    
+  <li> Does the Actor need to be informed about certain occurrences in the system, 
+    such as unavailability of a network? </li>
+    <li>
+        Will the Actor perform a system startup or shutdown?
+    </li>
+</ul>
+<p>
+    Understanding how&nbsp;the target&nbsp;organization works and how this information system might be incorporated into
+    existing operations gives an idea of system's surroundings. That information may reveal other use case candidates.
+</p>
+<p> Give a unique name and brief description that clearly describes the goals 
+  for each use case. If the candidate use case does not have goals, ask yourself 
+  why it exists, and then either identify a purpose for it or eliminate the use 
+  case. For more information on use cases and their properties, see <a class="elementLinkWithType" href="./../../../openup/guidances/concepts/use_case_BB199D1B.html" guid="_KudM0NcJEdqz_d2XWoVt6Q">Concept: Use Case</a>. </p>
+<h1> Outlining use cases </h1>
+<p> Without going into details, write a first draft of the flow of events of the 
+  use cases identified as high-priority. Initially, write a simple step-by-step 
+  description of the basic flow of the use case. The step-by-step description 
+  is a simple ordered list of interactions between the Actor and the system. For 
+  example, the description of the basic flow of the Withdraw Cash use case of 
+  an automated teller machine (ATM) would be something like this: </p>
+<ol>
+    <li>
+        The&nbsp;customer inserts a bank card.
+    </li>
+    <li>
+        The system validates the card and prompts the person to enter a personal identification number (PIN).
+    </li>
+    <li>
+        The customer&nbsp;enters a PIN.
+    </li>
+    <li>
+        The system validates the PIN and prompts the customer to select an action.
+    </li>
+    <li>
+        The customer selects Withdraw Cash.
+    </li>
+    <li>
+        The system prompts the customer to choose which account.
+    </li>
+    <li>
+        The customer selects the checking account.
+    </li>
+    <li>
+        The system prompts for an amount.
+    </li>
+    <li>
+        The customer enters the amount to withdraw.
+    </li>
+    
+  <li> The system validates the amount (assuming sufficient funds), and then issues 
+    cash and a receipt. </li>
+    <li>
+        The customer takes the cash and receipt, and then retrieves the bank card.
+    </li>
+    <li>
+        The use case ends.
+    </li>
+</ol>
+<p> As you create this step-by-step description of the basic flow of events, you 
+  may discover alternative and exceptional flows. For example, what happens if 
+  the customer enters an invalid PIN? Capture each alternative flow that you identified 
+  so that you don't forget them. You can fill in the details later. See <a class="elementLinkWithType" href="./../../../openup/guidances/examples/uc_model_evolve_960F136B.html" guid="_t4QdAMNqEdu2IdAIaWZyAw">Example: Evolution of the Use-Case Model</a>&nbsp;for more information on how the use 
+  cases evolve. </p>
+<h1> Relationships between Actors and use cases </h1>
+<p> The relationship between Actors and use cases should be captured, or documented&nbsp; 
+  There are several ways to do this. If you are using a use-case model on the 
+  project, you can create use-case diagrams to show how&nbsp;Actors and use cases&nbsp;relate 
+  to each other. See <a href="./../../../openup/guidances/guidelines/uc_model_4C64E97D.html" guid="_0VAUsMlgEdmt3adZL5Dmdw">Guideline: 
+  Use-Case Model</a>&nbsp;for more information. </p>
+<p>
+    If you are not using a use-case model for the project, make sure that each use case identifies the associated primary
+    and secondary Actors.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">More Information</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Concepts</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../openup/guidances/concepts/actor_411726C.html" guid="_zGqO0MDpEduTGJ8i4u8TMw">Actor</a>
+</li>
+<li>
+<a href="./../../../openup/guidances/concepts/use_case_BB199D1B.html" guid="_KudM0NcJEdqz_d2XWoVt6Q">Use Case</a>
+</li>
+<li>
+<a href="./../../../openup/guidances/concepts/use_case_model_CD178AF9.html" guid="_2jyfUAhVEduRe8TeoBmuGg">Use-Case Model</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Examples</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../openup/guidances/examples/uc_model_evolve_960F136B.html" guid="_t4QdAMNqEdu2IdAIaWZyAw">Evolution of the Use-Case Model</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table class="copyright" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+     <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License v1.0</a> which
+    accompanies this distribution.
+</p><p/><p>
+    <a class="elementLink" href="./../../../openup/guidances/supportingmaterials/openup_copyright_C3031062.html" guid="_UaGfECcTEduSX6N2jUafGA">OpenUP Copyright</a>.
+</p><p/><p>
+    <a class="elementLink" href="./../../../dsdm_openup/guidances/supportingmaterials/copyright_dsdm_2D6C0C.html" guid="_Rph5oDGYEdyrsZhCyzLMxw">OpenUP/DSDM Copyright</a>.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr" xml:lang="fr" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Guideline: Test Suite</title>
+<meta name="uma.type" content="Guideline">
+<meta name="uma.name" content="test_suite">
+<meta name="uma.presentationName" content="Test Suite">
+<meta name="element_type" content="other">
+<meta name="filetype" content="description">
+<meta name="role" content="none">
+<link rel="StyleSheet" href="./../../../css/default.css" type="text/css">
+<script src="./../../../scripts/ContentPageResource.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSubSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageToolbar.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/contentPage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_0aDz0MlgEdmt3adZL5Dmdw"></div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td class="pageTitle" nowrap="true">Guideline: Test Suite</td><td width="100%">
+<div align="right" id="contentPageToolbar"></div>
+</td><td width="100%" class="expandCollapseLink" align="right"><a name="mainIndex" href="./../../../index.htm"></a><script language="JavaScript" type="text/javascript" src="./../../../scripts/treebrowser.js"></script></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="pageTitleSeparator"><img src="./../../../images/shim.gif" alt="" title="" height="1"></td>
+</tr>
+</table>
+<div class="overview">
+<table width="97%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50"><img src="./../../../images/guidance.gif" alt="" title=""></td><td>
+<table class="overviewTable" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top">This guideline discusses how to organize test scripts into groups for simpler planning and communication.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../openup/tasks/implement_test_scripts_26F00282.html" guid="_0jO98MlgEdmt3adZL5Dmdw">Implement Test Scripts</a>
+</li>
+<li>
+<a href="./../../../openup/tasks/run_tests_49698054.html" guid="_0jVEkMlgEdmt3adZL5Dmdw">Run Tests</a>
+</li>
+<li>
+<a href="./../../../dsdm_openup/tasks/dsdm_run_tests_F584D700.html" guid="_Ji8x4FqxEduPD_03X_F_pA">Run Tests</a>
+</li>
+<li>
+<a href="./../../../dsdm_openup/disciplines/dsdm_test_4654149E.html" guid="_34GgwFqwEduPD_03X_F_pA">Test</a>
+</li>
+<li>
+<a href="./../../../openup/workproducts/test_script_39A30BA2.html" guid="_0ZfMEMlgEdmt3adZL5Dmdw">Test Script</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    Test suites help manage the complexity of the test implementation. Many system test efforts fail because testers get
+    lost in the minutia of all of the detailed tests, and struggle to organize work and communicate results at an
+    appropriate level of detail. Much like UML packages, test suites provide a hierarchy of encapsulating containers to
+    help manage the test implementation. They collect tests together in related groups that can be planned, managed, and
+    assessed in a meaningful way.
+</p>
+<p>
+    This might be one or more automated regression test suites, but a test suite can also be a work plan for implementing a
+    set of related manual test scripts. Test suites can be nested hierarchically, so one test suite can contain others.
+</p>
+<p>
+    Consider creating test suites that arrange the available test scripts, in addition to other test suites, in many
+    different combinations: the more variations you have, the more you'll increase coverage and the potential for finding
+    errors. Give thought to a variety of test suites that will cover the breadth and depth of the target test items.
+    Remember that a single test script (or test suite) may appear in many different test suites, so your tools should
+    prevent unnecessarily repeated runs of the same test.
+</p>
+<p>
+    At a minimum, it's a good practice to start by organizing suites along the lines of major functional areas in the
+    application. However, test suites might also relate directly to a subsystem or other system design element, or to
+    requirements such as quality dimensions,&nbsp;standards compliance, and other requirements&nbsp;concerns that cut
+    across the internal system elements.&nbsp;
+</p>
+<p>
+    Some test automation tools provide the ability to automatically generate or assemble test suites.
+</p></td>
+</tr>
+</table>
+</div>
+<table class="copyright" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+     <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License v1.0</a> which
+    accompanies this distribution.
+</p><p/><p>
+    <a class="elementLink" href="./../../../openup/guidances/supportingmaterials/openup_copyright_C3031062.html" guid="_UaGfECcTEduSX6N2jUafGA">OpenUP Copyright</a>.
+</p><p/><p>
+    <a class="elementLink" href="./../../../dsdm_openup/guidances/supportingmaterials/copyright_dsdm_2D6C0C.html" guid="_Rph5oDGYEdyrsZhCyzLMxw">OpenUP/DSDM Copyright</a>.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr" xml:lang="fr" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Guideline: Architectural Mechanisms</title>
+<meta name="uma.type" content="Guideline">
+<meta name="uma.name" content="architectural_mechanisms">
+<meta name="uma.presentationName" content="Architectural Mechanisms">
+<meta name="element_type" content="other">
+<meta name="filetype" content="description">
+<meta name="role" content="none">
+<link rel="StyleSheet" href="./../../../css/default.css" type="text/css">
+<script src="./../../../scripts/ContentPageResource.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSubSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageToolbar.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/contentPage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_J6BKgNvIEduv2KOT-Teh6w"></div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td class="pageTitle" nowrap="true">Guideline: Architectural Mechanisms</td><td width="100%">
+<div align="right" id="contentPageToolbar"></div>
+</td><td width="100%" class="expandCollapseLink" align="right"><a name="mainIndex" href="./../../../index.htm"></a><script language="JavaScript" type="text/javascript" src="./../../../scripts/treebrowser.js"></script></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="pageTitleSeparator"><img src="./../../../images/shim.gif" alt="" title="" height="1"></td>
+</tr>
+</table>
+<div class="overview">
+<table width="97%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50"><img src="./../../../images/guidance.gif" alt="" title=""></td><td>
+<table class="overviewTable" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top">This guideline describes how to evolve architectural mechanisms from definition to implementation.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../openup/guidances/concepts/arch_mech_2932DFB6.html" guid="_mzxI0A4LEduibvKwrGxWxA">Architectural Mechanism</a>
+</li>
+<li>
+<a href="./../../../openup/disciplines/architecture_1F9C65DA.html" guid="_0TX9AMlgEdmt3adZL5Dmdw">Architecture</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    Architectural mechanisms represent key technical concepts that&nbsp;will be standardized across the solution. They are
+    refined&nbsp;during the project through three states, represented by the three categories of Architectural Mechanisms:
+</p>
+<ul>
+    <li>
+        <strong>Analysis Mechanisms</strong>, which give the mechanism a name, brief description and some basic
+        attributes&nbsp;derived from&nbsp;the project requirements
+    </li>
+    <li>
+        <strong>Design Mechanisms</strong>, which are more concrete and assume some details of the implementation
+        environment
+    </li>
+    <li>
+        <strong>Implementation Mechanisms</strong>, which specify the&nbsp;exact implementation of&nbsp;each mechanism
+    </li>
+</ul>
+<p>
+    When the <a class="elementLink" href="./../../../openup/roles/architect_E7A12309.html" guid="_0X9iEMlgEdmt3adZL5Dmdw">Architect</a> initially identifies an&nbsp;architectural mechanism they are putting down
+    a marker that says to the team, "We are going to handle this aspect of the system in a standard way. We'll figure out
+    the details later." As the project proceeds, the architectural mechanisms are gradually refined until they become part
+    of the software.
+</p>
+<h4>
+    Analysis Mechanisms
+</h4>
+<p>
+    Analysis mechanisms&nbsp;are the initial state for an architectural mechanism. They are identified early in the project
+    and represent&nbsp;bookmarks for future software development. They allow the&nbsp;team to focus on understanding the
+    requirements without getting distracted by the specifics of a complex implementation. Analysis mechanisms are
+    discovered by surveying the requirements and looking for recurrent technical concepts.&nbsp;Security, persistence and
+    legacy interface are some examples of these. In effect, the <a class="elementLink" href="./../../../openup/roles/architect_E7A12309.html" guid="_0X9iEMlgEdmt3adZL5Dmdw">Architect</a> is collating the
+    requirements that describe&nbsp;architecturally significant topics bringing them together in a single list. This makes
+    them easier to manage.
+</p>
+<p>
+    Analysis mechanisms are described in simple terms:
+</p>
+<ul>
+    <li>
+        <strong>Name:</strong> Identifies the mechanism.
+    </li>
+    <li>
+        <strong>Basic attributes:</strong> Define the requirements of the mechanism. These attributes can vary depending
+        upon the mechanism being analyzed. Refer to <a class="elementLinkWithType" href="./../../../openup/guidances/examples/architectural_mechanism_attributes_B0ECA2F7.html" guid="_eQ_s8Om5Edupia_tZIXEqg">Example: Architectural Mechanism Attributes</a>&nbsp;for more guidance.
+    </li>
+</ul>
+<p>
+    Once the list of analysis mechanisms has been defined it can be prioritized and the mechanisms refined in line
+    with&nbsp;iteration&nbsp;objectives. It is not necessary to develop the entire set of architecture mechanisms into
+    working software in a single pass. It is often more sensible to develop only those mechanisms required to support the
+    functionality to be delivered in the current iteration.
+</p>
+<h4>
+    Design Mechanisms
+</h4>
+<p>
+    Design mechanisms&nbsp;represent decisions about the concrete technologies that are going to be used to&nbsp;develop
+    architectural mechanisms. For example, the decision to use an RDBMS for persistence. It's often no more complicated
+    than that (though of course, the effort involved in making the decision can sometimes be quite complex).
+</p>
+<p>
+    The decision on when to refine an architectural mechanism from an analysis state to a design state is largely
+    arbitrary. Often there will be constraints on the project that&nbsp;force the decision on some of these issues. For
+    example, there may be a corporate standard for databases which mean that the decision&nbsp;for the&nbsp;persistence
+    mechanism can be made on day 1 of the project.
+</p>
+<p>
+    On other occasions the decision may point to products that the project team has not yet acquired.&nbsp;If so,&nbsp;the
+    decision needs to be made in time to enable the required products to be made available to the team.
+</p>
+<p>
+    It can often be useful to develop some prototype code to prove that these decisions are sound. The <a class="elementLink" href="./../../../openup/roles/architect_E7A12309.html" guid="_0X9iEMlgEdmt3adZL5Dmdw">Architect</a> should
+    be confident that the technologies being selected are able to fulfill the requirements. The attributes captured against
+    the corresponding analysis mechanisms should be used as criteria to prove the validity of the decisions.
+</p>
+<h4>
+    Implementation Mechanism
+</h4>
+<p>
+    An implementation mechanism&nbsp;specifies the actual implementation for the architectural mechanism (hence the
+    name).&nbsp;It can be modeled as a design pattern or presented as&nbsp;example code.
+</p>
+<p>
+    The best time to&nbsp;produce the&nbsp;implementation mechanism is usually when the first piece of functionality that
+    needs it is scheduled for development. The <a class="elementLink" href="./../../../openup/roles/architect_E7A12309.html" guid="_0X9iEMlgEdmt3adZL5Dmdw">Architect</a> and <a class="elementLink" href="./../../../openup/roles/developer_C633AB7.html" guid="_0YDosMlgEdmt3adZL5Dmdw">Developer</a> work together to develop this.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">More Information</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Concepts</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../openup/guidances/concepts/arch_mech_2932DFB6.html" guid="_mzxI0A4LEduibvKwrGxWxA">Architectural Mechanism</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Examples</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../openup/guidances/examples/architectural_mechanism_attributes_B0ECA2F7.html" guid="_eQ_s8Om5Edupia_tZIXEqg">Architectural Mechanism Attributes</a>
+</li>
+<li>
+<a href="./../../../openup/guidances/examples/architectural_mechanisms_415C32A3.html" guid="_O39h0O9pEdu635i_iQ5Jag">Architectural Mechanisms</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table class="copyright" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+     <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License v1.0</a> which
+    accompanies this distribution.
+</p><p/><p>
+    <a class="elementLink" href="./../../../openup/guidances/supportingmaterials/openup_copyright_C3031062.html" guid="_UaGfECcTEduSX6N2jUafGA">OpenUP Copyright</a>.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

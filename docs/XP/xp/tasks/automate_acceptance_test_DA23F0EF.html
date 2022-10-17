@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr" xml:lang="fr" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Task: Automate Customer Test</title>
+<meta name="uma.type" content="Task">
+<meta name="uma.name" content="automate_acceptance_test">
+<meta name="uma.presentationName" content="Automate Customer Test">
+<meta name="element_type" content="activity">
+<meta name="filetype" content="description">
+<meta name="role" content="XP Tester">
+<link rel="StyleSheet" href="./../../css/default.css" type="text/css">
+<script src="./../../scripts/ContentPageResource.js" type="text/javascript" language="JavaScript"></script><script src="./../../scripts/ContentPageSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../scripts/ContentPageSubSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../scripts/ContentPageToolbar.js" type="text/javascript" language="JavaScript"></script><script src="./../../scripts/contentPage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo, '', true, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top">
+<div id="page-guid" value="{E614ED93-AE72-4FD1-B459-C508CE1C536F}"></div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td class="pageTitle" nowrap="true">Task: Automate Customer Test</td><td width="100%">
+<div align="right" id="contentPageToolbar"></div>
+</td><td width="100%" class="expandCollapseLink" align="right"><a name="mainIndex" href="./../../index.htm"></a><script language="JavaScript" type="text/javascript" src="./../../scripts/treebrowser.js"></script></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="pageTitleSeparator"><img src="./../../images/shim.gif" alt="" title="" height="1"></td>
+</tr>
+</table>
+<div class="overview">
+<table width="97%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50"><img src="./../../images/task.gif" alt="" title=""></td><td>
+<table class="overviewTable" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Purpose</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="XE_automate_customer_test__activity_definition" name="XE_automate_customer_test__activity_definition"></a> 
+<ul>
+    <li>
+        Transform the acceptance criteria of a user story into executable form.
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Roles</th><td class="sectionTableCell" width="42%"><span class="sectionTableCellHeading">Primary Performer:
+								</span>
+<ul>
+<li>
+<a href="./../../xp/roles/xp_tester_44877D41.html" guid="{FB65D00B-8304-4CF7-9969-52CE82F503DC}">XP Tester</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Additional Performers:
+								</span></td>
+</tr>
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Outputs</th><td class="sectionTableCell" colspan="2">
+<ul>
+<li>
+<a href="./../../xp/workproducts/xp_customer_test_84F6982E.html" guid="{DF0EDBC7-4AAD-438D-89AA-64ECFE2416F5}">XP Customer Test</a>
+</li>
+</ul>
+<ul></ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Steps</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="sectionTableSingleCell">
+<div class="stepHeading"> General </div>
+<div class="stepContent">
+<table class="stepTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td><a id="Prep" name="Prep"></a> 
+<p>
+    XP teams represent detailed requirements as automated customer tests. Automating the tests insures they are detailed,
+    unambiguous, and executable. Typically, each acceptance criteria is translated into at least one automated test.
+</p>
+<p>
+    There are lots of ways to do this:
+</p>
+<ul>
+    <li>
+        For a batch program reading inputs and producing outputs: create test input files, capture actual output, and
+        compare it against expected output.
+    </li>
+    <li>
+        Write functional tests as programs. You can use a unit testing framework as a base or create a little scripting
+        language the programmers can use.
+    </li>
+    <li>
+        Allow the customer to easily specify tests (spreadsheets, flat text files) and create a small tool to read the
+        input and expected output. The tool runs the input against the system and checks that the actual output matches the
+        expected output.
+    </li>
+    <li>
+        Build an input recorder to allow customers to define the tests.
+    </li>
+    <li>
+        Use simple file-based tools to check the results.
+    </li>
+</ul>
+<p>
+    It is important to build the automation simply and incrementally as you need it. It is too easy to lose control and
+    invest too much time in test automation instead of business value. Don't overdo it.
+</p></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="copyright" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="copyright">Copyright (c) 2002, 2006 IBM Corporation and Object Mentor. All rights reserved. <br />
+This program and the accompanying materials are made available under the terms of the Eclipse Public License v1.0 which
+accompanies this distribution, and is available at <a href="http://www.eclipse.org/legal/epl-v10.html" target="_blank">http://www.eclipse.org/legal/epl-v10.html</a>. <br />
+Contributors: IBM Corporation and Object Mentor - initial implementation<br /></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

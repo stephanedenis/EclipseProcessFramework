@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr" xml:lang="fr" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Concept: Continuous Integration</title>
+<meta name="uma.type" content="Concept">
+<meta name="uma.name" content="continuous_integration">
+<meta name="uma.presentationName" content="Continuous Integration">
+<meta name="element_type" content="concept">
+<meta name="filetype" content="description">
+<meta name="role" content="none">
+<link rel="StyleSheet" href="./../../../css/default.css" type="text/css">
+<script src="./../../../scripts/ContentPageResource.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSubSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageToolbar.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/contentPage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_B3xkEPD0EdqYgerqi84oCA"></div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td class="pageTitle" nowrap="true">Concept: Continuous Integration</td><td width="100%">
+<div align="right" id="contentPageToolbar"></div>
+</td><td width="100%" class="expandCollapseLink" align="right"><a name="mainIndex" href="./../../../index.htm"></a><script language="JavaScript" type="text/javascript" src="./../../../scripts/treebrowser.js"></script></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="pageTitleSeparator"><img src="./../../../images/shim.gif" alt="" title="" height="1"></td>
+</tr>
+</table>
+<div class="overview">
+<table width="97%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50"><img src="./../../../images/concept.gif" alt="" title=""></td><td>
+<table class="overviewTable" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top">This concept introduces the practice of continuously integrating completed change sets in order to reduce the effort required to merge parallel development, to find bugs earlier, and to drive a collaborative work environment.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../openup/workproducts/build_95D7D8FD.html" guid="_0YuXEMlgEdmt3adZL5Dmdw">Build</a>
+</li>
+<li>
+<a href="./../../../openup/disciplines/config_and_change_management_417EC254.html" guid="_0TwXgMlgEdmt3adZL5Dmdw">Configuration and change management</a>
+</li>
+<li>
+<a href="./../../../openup/guidances/guidelines/continuous_integration_13C1A8CA.html" guid="_i8bUEL6cEdqti4GwqTkbsQ">Continuous Integration</a>
+</li>
+<li>
+<a href="./../../../openup/guidances/concepts/design_E36137FA.html" guid="_bFjlAPTYEduDKIuqTXQ8SA">Design</a>
+</li>
+<li>
+<a href="./../../../openup/disciplines/development_B5D1D8A.html" guid="_0TeDoMlgEdmt3adZL5Dmdw">Development</a>
+</li>
+<li>
+<a href="./../../../openup/tasks/implement_solution_5D5698C8.html" guid="_0hyzgMlgEdmt3adZL5Dmdw">Implement the Solution</a>
+</li>
+<li>
+<a href="./../../../openup/tasks/integrate_and_create_build_A94C616F.html" guid="_Dq0GQAIoEdyLh7vsrHZ4YA">Integrate and Create Build</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    Continuous integration is an implementation practice where team members integrate their work with completed&nbsp;<a class="elementLink" href="./../../../openup/guidances/concepts/change_set_430BF233.html" guid="_1QU9MAIoEdyLh7vsrHZ4YA">Change Set</a>s from other developers, and test the application, before making their
+    work available to others. This&nbsp;enables detection of&nbsp;integration errors&nbsp;as&nbsp;early as possible, either
+    from compiler errors,&nbsp;configuration management&nbsp;system notifications,&nbsp;or&nbsp;failures reported by the
+    test suite. Ideally the integration is done automatically prior to <a class="elementLink" href="./../../../openup/guidances/guidelines/promoting_changes_9087B764.html" guid="_SM4YIL6dEdqti4GwqTkbsQ">Promoting Changes</a>.
+</p>
+<p>
+    Continuous integration provides the following benefits:
+</p>
+<ol>
+    <li>
+        Improved feedback. Continuous integration shows constant and demonstrable progress.
+    </li>
+    <li>
+        Improved error detection. Continuous integration enables you to detect and address errors early, often minutes
+        after they’ve been injected into the product. Effective continuous integration requires automated unit testing with
+        appropriate code coverage.
+    </li>
+    <li>
+        Improved collaboration. Continuous integration enables team members to work together safely. They know that they
+        can make a change to their code, integrate the system, and determine very quickly whether or not their change
+        conflicts with others.
+    </li>
+    <li>
+        Improved system integration. By integrating continuously throughout your project you know that you can actually
+        build the system, thereby mitigating integration surprises at the end of the lifecycle.
+    </li>
+    <li>
+        Reduced&nbsp;number of parallel changes that need to be merged and tested.
+    </li>
+    <li>
+        Reduced number of errors found during system testing. All conflicts&nbsp;are resolved prior to making new change
+        sets available, by the person who is in the best position to resolve them.
+    </li>
+    <li>
+        Reduced technical risk. You always have an up-to-date system against which to test.
+    </li>
+    <li>
+        Reduced management risk. By continuously integrating your system you know exactly how much functionality that
+        you’ve built to date, improving your ability to predict when and if you’re actually going to be able to deliver the
+        necessary functionality.
+    </li>
+</ol></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">More Information</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Concepts</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../openup/guidances/concepts/change_set_430BF233.html" guid="_1QU9MAIoEdyLh7vsrHZ4YA">Change Set</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Guidelines</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../openup/guidances/guidelines/promoting_changes_9087B764.html" guid="_SM4YIL6dEdqti4GwqTkbsQ">Promoting Changes</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table class="copyright" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+     <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License v1.0</a> which
+    accompanies this distribution.
+</p><p/><p>
+    <a class="elementLink" href="./../../../openup/guidances/supportingmaterials/openup_copyright_C3031062.html" guid="_UaGfECcTEduSX6N2jUafGA">OpenUP Copyright</a>.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

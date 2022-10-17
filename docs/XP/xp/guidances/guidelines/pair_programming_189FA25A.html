@@ -1,0 +1,428 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr" xml:lang="fr" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Guideline: Pair Programming</title>
+<meta name="uma.type" content="Guideline">
+<meta name="uma.name" content="pair_programming">
+<meta name="uma.presentationName" content="Pair Programming">
+<meta name="element_type" content="other">
+<meta name="filetype" content="description">
+<meta name="role" content="none">
+<link rel="StyleSheet" href="./../../../css/default.css" type="text/css">
+<script src="./../../../scripts/ContentPageResource.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSubSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageToolbar.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/contentPage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="3.85153041801319E-307"></div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td class="pageTitle" nowrap="true">Guideline: Pair Programming</td><td width="100%">
+<div align="right" id="contentPageToolbar"></div>
+</td><td width="100%" class="expandCollapseLink" align="right"><a name="mainIndex" href="./../../../index.htm"></a><script language="JavaScript" type="text/javascript" src="./../../../scripts/treebrowser.js"></script></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="pageTitleSeparator"><img src="./../../../images/shim.gif" alt="" title="" height="1"></td>
+</tr>
+</table>
+<div class="overview">
+<table width="97%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50"><img src="./../../../images/guidance.gif" alt="" title=""></td><td>
+<table class="overviewTable" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../xp/tasks/refactor_code_57A587FE.html" guid="{3DD335BB-45F6-49C7-B17A-90652C73A485}">Refactor Code</a>
+</li>
+<li>
+<a href="./../../../xp/tasks/write_code_1F00FE55.html" guid="{8F6CB99A-D2EA-44BB-8CE5-F97220D44088}">Write Code</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="XE_xp__pair_programming" name="XE_xp__pair_programming"></a><a id="XE_pair_programming__in_xp" name="XE_pair_programming__in_xp"></a> 
+<h3>
+    Topics
+</h3>
+<ul>
+    <li>
+        <a href="#WhatIsPair">What is pair programming?</a>
+    </li>
+    <li>
+        <a href="#WhyPair">Why Pair Program?</a>
+    </li>
+    <li>
+        <a href="#FormingPairs">How Pairs Form</a>
+    </li>
+    <li>
+        <a href="#ChangingPairs">When to Change Partners</a>
+    </li>
+    <li>
+        <a href="#WorkingAlone">Can't I work alone?</a>
+    </li>
+    <li>
+        <a href="#Productivity">Doesn't this cut my productivity in half?</a>
+    </li>
+    <li>
+        <a href="#Hygiene">Hygiene and Etiquette Issues</a>
+    </li>
+    <li>
+        <a href="#Disabilities">Disabilities and Physical Incompatibilities</a>
+    </li>
+    <li>
+        <a href="#Distributed">Our Team is Geographically Distributed</a>
+    </li>
+    <li>
+        <a href="#BossHog">My Pair Partner Hogs the Keyboard and Ignores Me</a>
+    </li>
+    <li>
+        <a href="#NoSolution">My Pair Partner and I Cannot Agree on a Solution</a>
+    </li>
+    <li>
+        <a href="#Language">My Partner and I have different First Languages</a>
+    </li>
+    <li>
+        <a href="#Schedule">How do we deal with different personal schedules?</a>
+    </li>
+    <li>
+        <a href="#OddNumber">What if we have an odd number of programmers?</a>
+    </li>
+    <li>
+        <a href="#Pathologies">Pairing Pathologies</a>
+    </li>
+</ul>
+<h3>
+    <a id="WhatIsPair" name="WhatIsPair">What is pair programming?</a>
+</h3>
+<p>
+    Pair programming is a programming discipline in which all production code is written by pairs of programmers. Each pair
+    works together at a single workstation. They share the keyboard, mouse, and monitor.
+</p>
+<p>
+    The two programmers work closely together. The keyboard moves back and forth between them frequently. Both eyes are
+    locked on the screen. Both minds are immersed in the code. The code is the product of both brains, not just one. Both
+    programmers are equally engaged in writing the code, and neither can claim authorship.
+</p>
+<p>
+    Pairs are short lived. A good pairing time is four hours. Sometimes a pair may last for a day. Very rarely they might
+    last for a week. Instead, the pairs form for a few hours and then break up and reform with different partners.
+</p>
+<p>
+    During the iteration-planning meeting, each programmer signed up for tasks to complete by the end of the iteration. The
+    programmer remains responsible for those tasks. Half of the pairs he works in will be working on his tasks, and half
+    will be working on other's tasks.
+</p>
+<h3>
+    <a id="WhyPair" name="WhyPair">Why Pair Program?</a>
+</h3>
+<p>
+    Pair programming is a form of continuous code review and usually replaces the practice of code reviews and code
+    walkthroughs. The idea is that if code reviews are a good thing, then continuously reviewing the code is better.
+</p>
+<p>
+    Even though every task is the responsibility of an individual programmer, many other programmers will have worked on
+    that task with the responsible programmer. Thus, knowledge of the system spreads through the team, and no single
+    programmer can claim ownership of any part of the code. It is likely that any programmer on the team will be able to
+    work in any module in the system.
+</p>
+<p>
+    Sometimes you get stuck on ideas and can't see past them. Your pair partner can often provide the necessary nudge to
+    get you to see a different point of view.
+</p>
+<p>
+    When new people join the team, they learn by pairing. Over the course of one iteration, they will pair with everybody
+    on the team and see every part of the system currently being worked upon. This is an excellent way to train a new team
+    member.
+</p>
+<h3>
+    <a id="FormingPairs" name="FormingPairs">How Pairs Form</a>
+</h3>
+<p>
+    You come to work in the morning and attend the stand-up meeting. Then you walk up to someone and ask him if he'll help
+    you. Or perhaps someone will walk up to you and ask you to help him. The rule is: when asked, you must say yes.
+    However, you can negotiate schedule.
+</p>
+<p>
+    Pairs form naturally. Managers do not get involved with selecting pairs. Pairing is not scheduled or controlled in any
+    formal manner. The coach or another team member or the team as a whole may notice that certain team members have
+    adopted pathological pairing activities and may intervene.
+</p>
+<h3>
+    <a id="ChangingPairs" name="ChangingPairs">When to Change Partners</a>
+</h3>
+<ul>
+    <li>
+        When you get tired of your current partner.
+    </li>
+    <li>
+        When you think your current partner is too tired or distracted to help.
+    </li>
+    <li>
+        When the two of you get stuck on a concept.
+    </li>
+    <li>
+        Lunchtime.
+    </li>
+    <li>
+        Quitting time.
+    </li>
+    <li>
+        Or generally whenever you feel like it.
+    </li>
+</ul>
+<h3>
+    <a id="WorkingAlone" name="WorkingAlone">Can't I work alone?</a>
+</h3>
+<p>
+    Yes, of course. You just can't check in production code that you've written on your own.
+</p>
+<p>
+    Often we need to hide away somewhere and think some issue through without someone else breathing down our neck or
+    distracting us with news of his sister-in-law's hypoglycemia. It is perfectly OK to hide away, and every programmer
+    should have a private place to go.
+</p>
+<p>
+    When alone, it is perfectly OK to write some code to help you think through a program. However, in an XP team, you are
+    not allowed to check that code into the production environment. Instead, you can bring that code to your next pairing
+    session and walk through it with your partner. Your partner must be given every right to modify, delete, or otherwise
+    refactor it. You should help your partner become comfortable with the code and keep an open mind to every refactoring.
+</p>
+<p>
+    Often the best approach is for the two of you to review the code you wrote and then rewrite it as a pair. Remember, the
+    value of a piece of code is not actually in that code. Rather, it is in the neurons and synapses of the programmers. It
+    is always much easier to write a module the second time, and the result is always better. So, if you program alone,
+    think of the code as a rough draft that you will throw away and rewrite with your pair partner.
+</p>
+<h3>
+    <a id="Productivity" name="Productivity">Doesn't this cut my productivity in half?</a>
+</h3>
+<p>
+    Apparently not. Teams that work in pairs do not report significant loss of productivity. Indeed, they tend to report
+    that they are more productive than when they worked alone.
+</p>
+<p>
+    This anecdotal evidence is backed up by some research studies. Some of those studies can be found at <a href="http://www.pairprogramming.com" target="_blank">www.pairprogramming.com</a>.
+</p>
+<p>
+    One might explain these results by viewing the programmers as two runners pacing each other. When one gets tired or
+    defocused, the other provides the motivation and inspiration to keep going. Also, the pair spends less time going down
+    dead ends and being blocked on ideas.
+</p>
+<p>
+    One thing seems clear. Typing is not the critical element. If it were, then pairing would certainly cut productivity in
+    half. It may be that pairing allows the two to think twice as quickly.
+</p>
+<h3>
+    <a id="Hygiene" name="Hygiene">Hygiene and Etiquette Issues</a>
+</h3>
+<p>
+    Hygiene and etiquette issues are bad breath, body odor, post-nasal drip, colds, rude noises, gas, motor mouths,
+    telephone-jockeys, day-traders, hypochondriacs, etc. Humans are a dirty species. Amazingly, we are usually able to get
+    along with each other's nasty little idiosyncrasies, but there are times when one person has certain habits that are
+    over the top. How do you pair with such a person?
+</p>
+<ul>
+    <li>
+        Grin and bear it, it'll only last for a couple of hours.
+    </li>
+    <li>
+        Bring breath mints.
+    </li>
+    <li>
+        Leave deodorant or gelucel on his desk.
+    </li>
+    <li>
+        Write anonymous letters to the offender.
+    </li>
+    <li>
+        Disconnect the phone.
+    </li>
+    <li>
+        Complain to your boss.
+    </li>
+    <li>
+        But, by far, the best advice is to tell your pair partner outright what bothers you.
+    </li>
+</ul>
+<h3>
+    <a id="Disabilities" name="Disabilities">Disabilities and Physical Incompatibilities</a>
+</h3>
+<ul>
+    <li>
+        Left handed vs. right handed mouse users.
+    </li>
+    <li>
+        Some people need special keyboards to control RSI or OOS.
+    </li>
+    <li>
+        Some people use Dvorak keyboards.
+    </li>
+    <li>
+        Some people need to special screens to be able to see.
+    </li>
+    <li>
+        Some people prefer a trackball to a mouse.
+    </li>
+</ul>
+<p>
+    Problems like these are pretty easy to overcome. Equip certain workstations with two keyboards, two mice, two monitors,
+    etc. Pairs don't have to work at the exact same keyboard, mouse, or monitor.
+</p>
+<p>
+    In fact, pairs don't really have to use the same workstation. They could use two completely independent workstations
+    sitting next to each other, connected with NetMeeting or some other kind of collaboration software.
+</p>
+<h3>
+    <a id="Distributed" name="Distributed">Our Team is Geographically Distributed</a>
+</h3>
+<p>
+    At best, pairing over geographical boundaries is difficult. The best approach is to split the project up into
+    sub-projects that can be done separately at each geographic location. That way the programmers at each location can
+    pair with each other and won't have to interact as much with the remote programmers.
+</p>
+<p>
+    Sometimes the project cannot be easily split amongst all the geographic sites. In that case, you can use NetMeeting or
+    other collaborative software to facilitate remote pairing. Remote pairing is possible but not as effective as local
+    pairing. When you pair locally, you have the advantage of body language, eye contact, and all the other nuances of
+    person-to-person communication to help you. When you pair remotely, you are forced to use a sub-optimal communication
+    channel.
+</p>
+<h3>
+    <a id="BossHog" name="BossHog">My Pair Partner Hogs the Keyboard and Ignores Me</a>
+</h3>
+<ul>
+    <li>
+        Perhaps you are outrunning him. Try to go a little slower and get him engaged.
+    </li>
+    <li>
+        Perhaps he's got personal problems that are distracting him. Suggest that this might not be a good time to pair.
+    </li>
+    <li>
+        Perhaps he thinks you aren't listening to his ideas. Make sure you talk though all ideas with him, and make sure he
+        has a chance to try as many of his ideas as you get to try of yours.
+    </li>
+    <li>
+        Perhaps he thinks you've been hogging the keyboard. Push the keyboard in his direction and ask him to drive.
+    </li>
+    <li>
+        Perhaps he is just not ever going to want to pair program, no matter what. For the moment, the best you can do is
+        dissolve the pair and choose another partner. If the behavior continues, the team will have to decide what to do
+        about it. Perhaps the team will ask him to write configuration scripts or something.
+    </li>
+</ul>
+<h3>
+    <a id="NoSolution" name="NoSolution">My Pair Partner and I Cannot Agree on a Solution</a>
+</h3>
+<ul>
+    <li>
+        Gently ask him if you can drive for a while.
+    </li>
+    <li>
+        Gently ask him to describe what he is doing.
+    </li>
+    <li>
+        Perhaps he needs time to think alone. Suggest this to him and dissolve the pair.
+    </li>
+    <li>
+        Perhaps he just can't pair program. Dissolve the pair and choose another partner. If the behavior continues, the
+        team will have to figure out what to do.
+    </li>
+</ul>
+<h3>
+    <a id="Language" name="Language">My Partner and I have different First Languages</a>
+</h3>
+<p>
+    Your only choice is to slow down and work hard to communicate. You might understand him better by writing strategic
+    notes than by talking. Work hard on helping him with pronunciation and grammar. Work hard at understanding his accent
+    and usage. It will take time, but the situation will improve. Do not give up!
+</p>
+<h3>
+    <a id="Schedule" name="Schedule">How do we deal with different personal schedules?</a>
+</h3>
+<p>
+    Some people come in early; some people stay late. How can you find pair partners if everybody has a different working
+    schedule?
+</p>
+<p>
+    Pairs only last for a few hours. All you need is enough overlap time for pairs to form and work effectively. Most
+    personal schedules allow this.
+</p>
+<p>
+    Team members may have to get creative with their scheduling to accommodate each other. Some folks may have to change
+    their schedules to make sure that others have sufficient pairing opportunity. For example, if Bill can only work in the
+    evenings, the team may decide to adopt a rotating schedule for others who can come in late one day and pair with Bill.
+</p>
+<h3>
+    <a id="OddNumber" name="OddNumber">What if we have an odd number of programmers?</a>
+</h3>
+<p>
+    Remember that pairs break up and reform frequently. The odd man out will not have to wait long before someone becomes
+    available to pair with. In the meantime, he can read his email or a trade journal or just read through some code that
+    he is unfamiliar with.
+</p>
+<h3>
+    <a id="Pathologies" name="Pathologies">Pairing Pathologies</a>
+</h3>
+<ul>
+    <li>
+        Joined at the hip. Sometimes two people decide to pair exclusively. This is not a good idea. They are missing the
+        opportunity to get the whole team's input and are isolating themselves into one part of the system. The team should
+        break them up by suggesting that they pair with others.
+    </li>
+    <li>
+        The blind leading the blind. It's not a good idea for new members of the team to pair too often with other new
+        members of the team. Newbies should pair most often with team members with more seniority.
+    </li>
+</ul>
+<p>
+    <br />
+    <br />
+</p></td>
+</tr>
+</table>
+</div>
+<table class="copyright" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="copyright">Copyright (c) 2002, 2006 IBM Corporation and Object Mentor. All rights reserved. <br />
+This program and the accompanying materials are made available under the terms of the Eclipse Public License v1.0 which
+accompanies this distribution, and is available at <a href="http://www.eclipse.org/legal/epl-v10.html" target="_blank">http://www.eclipse.org/legal/epl-v10.html</a>. <br />
+Contributors: IBM Corporation and Object Mentor - initial implementation<br /></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

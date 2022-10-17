@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr" xml:lang="fr" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Concept: Requirement Attributes</title>
+<meta name="uma.type" content="Concept">
+<meta name="uma.name" content="requirement_attributes">
+<meta name="uma.presentationName" content="Requirement Attributes">
+<meta name="element_type" content="concept">
+<meta name="filetype" content="description">
+<meta name="role" content="none">
+<link rel="StyleSheet" href="./../../../css/default.css" type="text/css">
+<script src="./../../../scripts/ContentPageResource.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSubSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageToolbar.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/contentPage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_VQ268O0KEdqHTdbLTmC5IQ"></div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td class="pageTitle" nowrap="true">Concept: Requirement Attributes</td><td width="100%">
+<div align="right" id="contentPageToolbar"></div>
+</td><td width="100%" class="expandCollapseLink" align="right"><a name="mainIndex" href="./../../../index.htm"></a><script language="JavaScript" type="text/javascript" src="./../../../scripts/treebrowser.js"></script></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="pageTitleSeparator"><img src="./../../../images/shim.gif" alt="" title="" height="1"></td>
+</tr>
+</table>
+<div class="overview">
+<table width="97%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50"><img src="./../../../images/concept.gif" alt="" title=""></td><td>
+<table class="overviewTable" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top">Requirements attributes capture additional information about each requirement. This additional information is used to help manage the project.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../openup/tasks/detail_requirements_9747F71E.html" guid="_0e1mIMlgEdmt3adZL5Dmdw">Detail Requirements</a>
+</li>
+<li>
+<a href="./../../../dsdm_openup/tasks/dsdm_detail_requirements_634A4D86.html" guid="_RJ10cFk1Edul8L-IGeA7TA">Detail Requirements</a>
+</li>
+<li>
+<a href="./../../../dsdm_openup/disciplines/dsdm_requirements_3B9AAD55.html" guid="_xoSZgFn1Edug9t_2UE7UhQ">Requirements</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    Requirement Attributes are properties of a requirement. Attributes capture important additional information about a
+    requirement. This information can subsequently be used to answer queries about the status of the development project.
+</p>
+<h4>
+    Examples of attributes
+</h4>
+<p>
+    Below is a list of attributes typically used by small projects, along with a brief description of their meaning. Some
+    attributes are best described as a number, whilst other are best described as a date, a Boolean value (true or false),
+    or a freeform text field. Other attributes can be expressed as enumerated lists. For instance, Priority may have values
+    of High, Medium, or Low.
+</p>
+<p>
+    <strong>Priority</strong> - Statement of relative importance of the requirement to stakeholders (high, medium, low).
+</p>
+<p>
+    <strong>Assigned to</strong> - Who in the organization is responsible for making sure the requirement is met (person's
+    name or organizational name).
+</p>
+<p>
+    <strong>Target Iteration</strong> – The iteration in which the requirement is planned to be implemented (number or
+    text).
+</p>
+<p>
+    <strong>Estimation of Size</strong> - gives you a high-level estimate for the effort required to implement and verify
+    the requirement, typically measured using a neutral unit such as points. (See <a class="elementLinkWithType" href="./../../../openup/guidances/guidelines/agile_estimation_A4EF42B3.html" guid="_CGHskBEdEdqY7JB6N6CW2w">Guideline: Agile Estimation</a>&nbsp;for more information).
+</p>
+<p>
+    <strong>Effort Remaining</strong> – An estimate of the remaining effort to implement and verify the requirement
+    (hours).
+</p>
+<p>
+    <strong>Completion Status</strong> – The progress of implementing a requirement. This may be captured as an enumerated
+    list (Complete, Partially Completed, Not Started) or can be inferred from the Effort Remaining attribute.
+</p>
+<p>
+    When these attributes are assigned values for each requirement, it becomes easy to answer typical queries about the
+    project such as:
+</p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+    <p>
+        <em>How many requirements are to be implemented in the current iteration?<br />
+        </em> (Query the <strong>Target Iteration</strong> attribute)
+    </p>
+    <p>
+        <em>What percentage of the high priority requirements&nbsp;is currently implemented?<br />
+        </em> (Query the <strong>Completion Status</strong> and <strong>Priority</strong> attributes)
+    </p>
+    <p>
+        <em>How many requirements assigned to the current iteration remain unimplemented?<br />
+        </em> (Query the <strong>Target Iteration</strong> and <strong>Completion Status</strong> attributes)
+    </p>
+    <p>
+        <em>Which requirements are assigned to me?<br />
+        </em> (Query the <strong>Assigned To</strong> attribute)<br />
+    </p>
+</blockquote>
+<p>
+    Examples of other useful requirements attributes include:
+</p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+    <p>
+        <strong>Source</strong> - Person, document or other origin of a given requirement. This is useful for determining
+        whom to call for questions or for grouping requirements according to the person making the demands.
+    </p>
+    <p>
+        <strong>Comments</strong> - Reviewer's or writer's comments on a requirement.
+    </p>
+    <p>
+        <strong>Difficulty</strong> - An indication of the level of effort needed or how hard it will be to implement the
+        requirement (high, medium, low).
+    </p>
+    <p>
+        <strong>Risk</strong> - Confidence measure on the likelihood of meeting (or not meeting) a requirement. Could be
+        high, medium, low or the integers one through ten.
+    </p>
+    <p>
+        <strong>Test ID</strong> - Identification of a specific test or other method of verification.
+    </p>
+</blockquote></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">More Information</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Guidelines</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../openup/guidances/guidelines/agile_estimation_A4EF42B3.html" guid="_CGHskBEdEdqY7JB6N6CW2w">Agile Estimation</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table class="copyright" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+     <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License v1.0</a> which
+    accompanies this distribution.
+</p><p/><p>
+    <a class="elementLink" href="./../../../openup/guidances/supportingmaterials/openup_copyright_C3031062.html" guid="_UaGfECcTEduSX6N2jUafGA">OpenUP Copyright</a>.
+</p><p/><p>
+    <a class="elementLink" href="./../../../dsdm_openup/guidances/supportingmaterials/copyright_dsdm_2D6C0C.html" guid="_Rph5oDGYEdyrsZhCyzLMxw">OpenUP/DSDM Copyright</a>.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

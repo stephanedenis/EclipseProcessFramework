@@ -1,0 +1,730 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr" xml:lang="fr" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Guideline: Test Driven Development (TDD)</title>
+<meta name="uma.type" content="Guideline">
+<meta name="uma.name" content="test_driven_development_tdd">
+<meta name="uma.presentationName" content="Test Driven Development (TDD)">
+<meta name="element_type" content="other">
+<meta name="filetype" content="description">
+<meta name="role" content="none">
+<link rel="StyleSheet" href="./../../../css/default.css" type="text/css">
+<script src="./../../../scripts/ContentPageResource.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSubSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageToolbar.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/contentPage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="3.9254165491375454E-306"></div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td class="pageTitle" nowrap="true">Guideline: Test Driven Development (TDD)</td><td width="100%">
+<div align="right" id="contentPageToolbar"></div>
+</td><td width="100%" class="expandCollapseLink" align="right"><a name="mainIndex" href="./../../../index.htm"></a><script language="JavaScript" type="text/javascript" src="./../../../scripts/treebrowser.js"></script></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="pageTitleSeparator"><img src="./../../../images/shim.gif" alt="" title="" height="1"></td>
+</tr>
+</table>
+<div class="overview">
+<table width="97%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50"><img src="./../../../images/guidance.gif" alt="" title=""></td><td>
+<table class="overviewTable" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../xp/tasks/write_code_1F00FE55.html" guid="{8F6CB99A-D2EA-44BB-8CE5-F97220D44088}">Write Code</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="XE_xp__test_driven_development" name="XE_xp__test_driven_development"></a><a id="XE_test_driven_development__in_xp" name="XE_test_driven_development__in_xp"></a> 
+<h3>
+    Topics
+</h3>
+<ul>
+    <li>
+        <a href="#WhatIs">What is TDD?</a>
+    </li>
+    <li>
+        <a href="#Java">A TDD Example in Java</a>
+    </li>
+    <li>
+        <a href="#Benefits">What are the benefits of TDD?</a>
+    </li>
+    <li>
+        <a href="#Costs">What are the costs of TDD?</a>
+    </li>
+    <li>
+        <a href="#Principles">What testing principles should I employ?</a>
+    </li>
+    <li>
+        <a href="#GUIS">How do I test GUIs?</a>
+    </li>
+    <li>
+        <a href="#Embedded">How do I test embedded systems?</a>
+    </li>
+    <li>
+        <a href="#Concurrency">How do I test concurrency?</a>
+    </li>
+    <li>
+        <a href="#Database">How do I test database transactions?</a>
+    </li>
+    <li>
+        <a href="#Servlets">How do I test servlets?</a>
+    </li>
+    <li>
+        <a href="#WebPages">How do I test web pages?</a>
+    </li>
+</ul>
+<h3>
+    <a id="WhatIs" name="WhatIs">What is TDD?</a>
+</h3>
+<p>
+    TDD is the practice of writing unit tests and production code concurrently and at a very fine level of granularity. A
+    pair of programmers first write a small portion of a unit test, and then they write just enough production code to make
+    that unit test compile and execute. Then they write a little bit more of the test and then add enough production code
+    to make that new bit compile and pass. This cycle lasts somewhere between 30 seconds and five minutes. Rarely does it
+    grow to ten minutes. In each cycle, the tests come first. Once a unit test is done, the pair goes on to the next test
+    until they run out of tests for the task they are currently working on.
+</p>
+<h3>
+    <a id="Java" name="Java">A TDD Example in Java</a>
+</h3>
+<p>
+    What follows is a simple example of test-driven development. The program we are writing is a text formatter that can
+    take arbitrary strings and can horizontally center them in a page. The first column shows the tests, and the second
+    column shows the production code. The test is always written first and compiled. If the compile fails, then production
+    code is added to make the compile succeed. Then the test is run to see if it passes. If the test fails, then production
+    code is added to make the test pass. If the test passes, then a new test is added.
+</p>
+<table width="100%" border="1">
+    <tbody>
+        <tr>
+            <td>
+                <div align="center">
+                    <font size="-1"><i><b>First we write the test</b></i></font>
+                </div>
+            </td>
+            <td>
+                <div align="center">
+                    <font size="-1"><i><b>Then we write the production code</b></i></font>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td>
+<pre>
+<font size="2">
+public void testCenterLine(){ 
+    Formatter f = new Formatter();
+}</font>
+</pre>
+                <div align="center">
+<pre>
+<font color="#ff0000" size="2">
+does not compile</font>
+</pre>
+                </div>
+            </td>
+            <td>
+<pre>
+<font size="2">
+class Formatter{
+}
+
+</font>
+</pre>
+                <div align="center">
+<pre>
+<font color="#008000" size="2">
+compiles and passes</font>
+</pre>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+<pre>
+<font size="2">
+public void testCenterLine(){ 
+    Formatter f = new Formatter(); 
+    f.setLineWidth(10);              
+    assertEquals("   word   ", f.center("word"));
+}
+
+
+</font>
+</pre>
+                <div align="center">
+<pre>
+<font color="#ff0000" size="2">
+does not compile</font>
+</pre>
+                </div>
+            </td>
+            <td>
+<pre>
+<font size="2">
+class Formatter{ 
+    public void setLineWidth(int width) { 
+    } 
+
+
+    public String center(String line) {<br />
+
+        return "";
+    }
+}</font>
+</pre>
+                <div align="center">
+<pre>
+<font color="#ff0000" size="2">
+compiles and fails</font>
+</pre>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <font size="2">&nbsp;</font>
+            </td>
+            <td>
+<pre>
+<font size="2">
+import java.util.Arrays;
+
+
+public class Formatter { 
+    private int width;              
+    private char spaces[]; 
+    
+    public void setLineWidth(int width) { 
+        this.width = width; 
+        spaces = new char[width]; 
+        Arrays.fill(spaces, ' '); 
+    } 
+
+   
+    public String center(String line) { 
+        StringBuffer b = new StringBuffer();
+        int padding = width/2 - line.length(); 
+        b.append(spaces, 0, padding);              
+        b.append(line); 
+        b.append(spaces, 0, padding); 
+        return b.toString();              
+    }
+}
+</font>
+</pre>
+                <div align="center">
+<pre>
+<font color="#ff0000" size="2">
+compiles and unexpectedly fails</font>
+</pre>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <font size="2">&nbsp;</font>
+            </td>
+            <td>
+<pre>
+<font size="2">
+public String center(String line) { 
+    StringBuffer b = new StringBuffer();              
+    <b>
+int padding = (width - line.length()) / 2;</b> 
+    b.append(spaces, 0, padding);              
+    b.append(line); 
+    b.append(spaces, 0, padding); 
+    return b.toString();              
+}
+
+</font>
+</pre>
+                <div align="center">
+<pre>
+<font color="#008000" size="2">
+compiles and passes</font>
+</pre>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+<pre>
+<font size="2">
+public void testCenterLine() {
+    Formatter f = new Formatter();                
+    f.setLineWidth(10); 
+    assertEquals("   word   ", f.center("word"));
+} 
+
+<b>
+public void testOddCenterLine() { 
+    Formatter f = new Formatter();
+    f.setLineWidth(10); 
+    assertEquals( "  hello    ", f.center("hello"));
+}</b>
+</font>
+</pre>
+                <div align="center">
+<pre>
+<font color="#ff0000" size="2">
+compiles and fails</font>
+</pre>
+                </div>
+            </td>
+            <td>
+<pre>
+<font size="2">
+public String center(String line) { 
+    <b>
+int remainder = 0;</b> 
+    StringBuffer b = new StringBuffer(); 
+    int padding = (width - line.length()) / 2;
+    <b>
+remainder = line.length() % 2;</b> 
+    b.append(spaces, 0, padding); 
+    b.append(line);
+    b.append(spaces, 0, padding + <b>
+remainder</b>); 
+    return b.toString(); 
+}
+
+</font>
+</pre>
+                <div align="center">
+<pre>
+<font color="#008000" size="2">
+compiles and passes</font>
+</pre>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<h3>
+    <a id="Benefits" name="Benefits">What are the benefits of TDD?</a>
+</h3>
+<ul>
+    <li>
+        <b>Test Coverage</b>. If you follow the rules of TDD, then virtually 100% of the lines of code in your production
+        program will be covered by unit tests. This does not cover 100% of the paths through the code, but it does make
+        sure that virtually every line is executed and tested.<br />
+    </li>
+    <li>
+        <b>Test Repeatability</b>. The tests can be run any time you like. This is especially useful after you've made a
+        change to the production code. You can run the tests to make sure you haven't broken anything. Having the tests to
+        back you up can give you the courage to make changes that would otherwise be too risky to make.<br />
+    </li>
+    <li>
+        <b>Documentation</b>. The tests describe your understanding of how the code should behave. They also describe the
+        API. Therefore, the tests are a form of documentation. Unit tests are typically pretty simple, so they are easy to
+        read. Moreover, they are unambiguous and executable. Finally, if the tests are run every time any change is made to
+        the code, they will never get out of date.<br />
+    </li>
+    <li>
+        <b>API Design</b>. When you write tests first, you put yourself in the position of a user of your program's API.
+        This can only help you design that API better. Your first concern, as you write the tests, is to make it easy and
+        convenient to use that API.<br />
+    </li>
+    <li>
+        <b>System Design</b>. A module that is independently testable is a module that is decoupled from the rest of the
+        system. When you write tests first, you automatically decouple the modules you are testing. This has a profoundly
+        positive effect on the overall design quality of the system.<br />
+    </li>
+    <li>
+        <b>Reduced Debugging</b>. When you move in the tiny little steps recommended by TDD, it is hardly ever necessary to
+        use the debugger. Debugging time is reduced enormously.<br />
+    </li>
+    <li>
+        <b>Your code worked a minute ago!</b> If you observe a team of developers who are practicing TDD, you will notice
+        that every pair of developer had their code working a minute ago. It doesn't matter when you make the observation!
+        A minute or so ago, each pair ran their code, and it passed all its tests. Thus, you are never very far away from
+        making the system work.<br />
+    </li>
+</ul>
+<h3>
+    <a id="Costs" name="Costs">What are the costs of TDD?</a>
+</h3>
+<ul>
+    <li>
+        Programming in tiny cycles can seem inefficient. Programmers often find it frustrating to work in increments that
+        are so small that they know the outcome of the test. It sometimes seems that such a tiny step is not worth
+        taking.<br />
+    </li>
+    <li>
+        A lot of test code is produced. It is not uncommon for the bulk of test code to exceed the bulk of production code
+        by a large amount. This code has to be maintained at a significant cost.<br />
+    </li>
+    <li>
+        A lot of time is spent keeping the tests in sync with the production code. Programmers sometimes feel that time
+        spent on keeping the tests working and well structured is time that is not being spent on the customer's
+        needs.<br />
+    </li>
+</ul>
+<h3>
+    <a id="Principles" name="Principles">What testing principles should I employ?</a>
+</h3>
+<ul>
+    <li>
+        <b>Isolation</b>. When writing a unit test for a module, consider whether you want that module to invoke other
+        modules. If not, then isolate the module with interfaces. For example, suppose you are testing a module that
+        interacts with the database. The test has nothing to do with the database; it simply tests the way that the module
+        manipulates the database. So you isolate the module from the database by creating an interface that represents the
+        database and that the module uses. Then, for the purposes of the test, you implement that interface with a test
+        stub. This kind of isolation greatly decreases the amount of coupling in the overall system.
+    </li>
+</ul>
+<p>
+    <img height="166" alt="" src="./../../../xp/guidances/guidelines/resources/xp_tdd_guid_database.jpg" width="403" />
+</p>
+<ul>
+    <li>
+        <b>Simplicity</b>. Keep your edit/compile/test cycles extremely short: less than five minutes on average. Write
+        only enough production code to make the current tests pass. Try not to write code that will make future tests pass.
+        At every edit/compile/test cycle, keep the code as simple as it can be.<br />
+    </li>
+    <li>
+        <b>Increase Generality</b>. As you add test cases, the production code should become more and more general. Always
+        try to increase generality. For example, consider the following test case:<br />
+         
+        <blockquote>
+            <blockquote>
+<pre>
+ public testThreeSquared() {     assertEquals(9, MyClass.square(3)); }
+</pre>
+            </blockquote>
+        </blockquote>
+        <p>
+            We might make this test pass by writing:
+        </p>
+    </li>
+</ul>
+<blockquote>
+    <blockquote>
+<pre>
+     public class MyClass {  public static int square(int n) {      return 9;  }               }
+</pre>
+    </blockquote>
+    <p>
+        This conforms to the simplicity principle. If <font size="3"><tt>testThreeSquared</tt></font> were the only test
+        case that mattered, then this implementation would be correct. Of course, we know that it is incorrect, but in its
+        current form it verifies that the test case actually passes when it is supposed to. Now suppose that we add a new
+        test case:
+    </p>
+    <blockquote>
+        <blockquote>
+<pre>
+ public testFourSquared() {      assertEquals(16, MyClass.square(4));  }         
+</pre>
+        </blockquote>
+    </blockquote>
+    <p>
+        We could make this pass by changing the square function as follows:
+    </p>
+    <blockquote>
+        <blockquote>
+<pre>
+ public static int square(int n) {      if (n == 3)  return 9;      else  return 16;  }
+</pre>
+        </blockquote>
+    </blockquote>
+    <p>
+        While this would pass the test, it violates the rule to make the code more general. To make the code more general,
+        we have to return the square of the argument.
+    </p>
+    <blockquote>
+        <blockquote>
+<pre>
+ public static int square(int n) {       return n*n;  }
+</pre>
+        </blockquote>
+    </blockquote>
+    <p>
+        This solution passes all the tests, is simple, and increases the generality of the solution.
+    </p>
+</blockquote>
+<ul>
+    <li>
+        <b>Corner Cases and Boundary Conditions</b>. Corner cases and boundary conditions are implemented in the production
+        code with if statements or other similar decision structures. Don't write these statements unless you have a unit
+        test that is failing because they don't exist. For example, let's say you are calculating weekly pay for an hourly
+        employee. 
+        <blockquote>
+            <blockquote>
+<pre>
+ public void testHourlyPay() {      double hourlyRate = 10.00;      double hoursWorked = 8;      Employee e = new Employee(hourlyRate);      assertEquals(80.00, e.calculatePay(hoursWorked));           }
+</pre>
+            </blockquote>
+        </blockquote>
+        <p>
+            The code that makes this pass looks like this:
+        </p>
+    </li>
+</ul>
+<blockquote>
+    <blockquote>
+        <blockquote>
+<pre>
+ public class Employee {      private double hourlyRate;        public Employee(double hourlyRate) {  this.hourlyRate = hourlyRate;      }        public double calculatePay(double hoursWorked) {  return hourlyRate * hoursWorked;      }  }
+</pre>
+        </blockquote>
+    </blockquote>
+    <p>
+        Now let's say we want to calculate overtime pay. Any hours over eight are charged at time-and-a-half. The first
+        thing we do is add the new failing test case:
+    </p>
+    <blockquote>
+        <blockquote>
+<pre>
+ public void testOvertime() {      double hourlyRate = 10.00;      double hoursWorked = 10;      Employee e = new Employee(hourlyRate);      assertEquals(110.00, e.calculatePay(hoursWorked); }
+</pre>
+        </blockquote>
+    </blockquote>
+    <p>
+        <i>Then</i> we make the test case pass by changing the production code.
+    </p>
+    <blockquote>
+        <blockquote>
+<pre>
+ public double calculatePay(double hoursWorked) {      double overtimeRate = hourlyRate * 1.5;      double normalHours = Math.min(hoursWorked, 8.0);                   double overtimeHours = hoursWorked ̵; normalHours;      return (normalHours * hourlyRate) + (overtimeHours * overtimeRate);  }
+</pre>
+        </blockquote>
+    </blockquote>
+    <p>
+        Avoid adding any <font size="3"><tt>if, while, for, do,</tt></font> or any other type of conditional without a
+        failing test case. Remember to add test cases for each such boundary condition.
+    </p>
+</blockquote>
+<ul>
+    <li>
+        <b>Test Anything That Could Possibly Break</b>. By the same token, don't bother to test things that cannot possibly
+        break. For example, it is usually fruitless to test simple accessors and mutators. 
+        <blockquote>
+            <blockquote>
+<pre>
+ public void testAccessorAndMutator() {      X x = new X();      x.setField(3);               assertEquals(3, x.getField());  }
+</pre>
+            </blockquote>
+        </blockquote>
+        <p>
+            Accessors and mutators cannot reasonably break. So there's no point in testing them. Judgment clearly has to be
+            applied to use this rule. You will be tempted to avoid a necessary unit test by claiming that the code cannot
+            possibly break. You'll know you've fallen into this habit when you start finding bugs in methods you thought
+            couldn't break.
+        </p>
+    </li>
+    <li>
+        <b>Keep Test Data in the Code</b>. It is sometimes tempting to put test data into a file, especially when the input
+        to a module is a file. However, the best place for test data is in the unit test code itself. For example, assume
+        we have a function that counts the number of characters in a file. The signature for this function is: 
+        <blockquote>
+            <blockquote>
+<pre>
+ public int count(String fileName).
+</pre>
+            </blockquote>
+        </blockquote>
+        <p>
+            In order to keep the test data in the unit test code, the test should be written this way:
+        </p>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <blockquote>
+            <blockquote>
+<pre>
+ public testCount() {      File testFile = new File("testFile");               FileOutputStream fos = new FileOutputStream(testFile);      PrintStream ps = new PrintStream(fos);      ps.print("Oh, you Idiots!");      ps.close();               assertEquals(15, FileUtil.count("testFile"));      testFile.delete();           }
+</pre>
+            </blockquote>
+        </blockquote>
+    </li>
+</ul>
+<blockquote>
+    <p>
+        This keeps all the data relevant to the test in one place.
+    </p>
+</blockquote>
+<ul>
+    <li>
+        <b>Test Pruning</b>. Sometimes you'll write tests that are useful for a time but become redundant as other tests
+        take over their role. Don't be afraid to remove old redundant tests. Keep the test suite as small as possible
+        without compromising coverage.
+    </li>
+</ul>
+<ul>
+    <li>
+        <b>Keep Test Time Short</b>. The effectiveness of the tests depends upon convenience. The more convenient it is to
+        run the tests, the more often they will be run. Thus, it is very important to keep the test run time very short. In
+        a large system, this means partitioning the tests.<br />
+        <br />
+         When working on a particular module, you'll want to choose the tests that are relevant to that module and the
+        surrounding modules. Keep the test time well under a minute. Ten seconds is often too long.<br />
+        <br />
+         When checking in a module, run a test suite that tests the whole system but takes no more than 10 minutes to run.
+        This may mean you'll have to pull out some of the longer running tests.<br />
+        <br />
+         Every night, run all the tests in the system. Keep the running time small enough so that they can be run more than
+        once before morning just in case there is a problem that forces a rerun.
+    </li>
+</ul>
+<h3>
+    <a id="GUIS" name="GUIS">How do I test GUIs?</a>
+</h3>
+<p>
+    The trick to writing unit tests for GUIs is separation and decoupling. Separate the GUI code into three layers,
+    typically called <b>Model</b>, <b>View</b>, and <b>Presenter</b>:
+</p>
+<ul>
+    <li>
+        The <b>Model</b> understands the business rules of the items that are to be displayed on the screen. All relevant,
+        business-related policies are implemented in this module. Therefore, this module is easy to test based solely on
+        its inputs and outputs.<br />
+    </li>
+    <li>
+        The <b>Presenter</b> understands how the data is to be presented and how the user will interact with that data. It
+        knows that there are buttons, check boxes, text fields, etc. It knows that sometimes the buttons need to be
+        disabled (grayed), and it knows sometimes text fields are not editable. It knows, at a mechanical level, how the
+        data are displayed and how the interactions take place. However, it does not know anything about the actual GUI
+        API. For example, if you are writing a Java Swing GUI, the Presenter does not use any of the swing classes. Rather,
+        it sends messages to the View to take care of the actual display and interaction. Thus, the Presenter can be
+        tested, again, based solely on its inputs from the Model and its outputs to the View.<br />
+    </li>
+    <li>
+        The <b>View</b> understands the GUI API. It makes no policy, selection, or validation decisions. It has virtually
+        zero intelligence. It is simply a shim that ties the interface used by the Presenter to the GUI API. It can be
+        tested by writing tests that check the wiring. The tests walk through the GUI data structures, making sure that the
+        appropriate button, text fields, and check boxes have been created. The tests send events to the GUI widgets and
+        make sure the appropriate callbacks are invoked.
+    </li>
+</ul>
+<h3>
+    <a id="Embedded" name="Embedded">How do I test embedded systems?</a>
+</h3>
+<p>
+    Some software is written to control hardware. You can test this software by writing a hardware simulator. The tests set
+    the hardware simulator up into various states and then drive the system to manipulate that hardware. Finally, the tests
+    query the simulation to ensure that the hardware was driven to the correct final state.
+</p>
+<h3>
+    <a id="Concurrency" name="Concurrency">How do I test concurrency?</a>
+</h3>
+<p>
+    Some software is reentrant or concurrent. Race conditions can make the software behavior non-deterministic. There are
+    failure modes that can be both severe and strongly dependent upon timing and order of events. Software that works
+    99.999% of the time can fail that last .001% of the time due to concurrency problems. Finding these problems is a
+    challenge.
+</p>
+<p>
+    Usually exhaustive Monte Carlo testing is used to attempt to drive the system through as many states as possible.
+</p>
+<p>
+    Once concurrency problems are discovered, tests can be written that drive the system to the failure state and then
+    prove the failure. Thereafter, the problem can be repaired, and the test remains in the test suite as a regression
+    test.
+</p>
+<h3>
+    <a id="Database" name="Database">How do I test database transactions?</a>
+</h3>
+<p>
+    Almost always the best way to do this is to create an interface that represents the database. Each test case can
+    implement that interface and pretend to be the database, supplying its own data and interpreting the calls made by the
+    module under test. This prevents test data from actually being written and read from the database. It also allows the
+    test code to force failure conditions that are otherwise hard to simulate.
+</p>
+<p>
+    See: <a href="http://c2.com/cgi/wiki?MockObject" target="_blank">http://c2.com/cgi/wiki?MockObject</a>
+</p>
+<h3>
+    <a id="Servlets" name="Servlets">How do I test Servlets?</a>
+</h3>
+<p>
+    Servlets are simply pipes through which form data passes into a program and HTML passes out. The trick to testing a
+    servlet is to separate the program from the pipe. Keep the servlet code as thin as possible. Put your program in plain
+    old classes that don't derive from Servlet. Then you can test those plain old classes as usual. If the servlet itself
+    is thin enough, it may be too simple to bother testing.
+</p>
+<p>
+    Of course, you can also set up your own little servlet invoker or use one of the open source versions. These programs
+    act like a web server and fire servlets for you. You pass the form data to them, and they pass the HTML back to you.
+</p>
+<p>
+    See:
+</p>
+<blockquote>
+    <a href="http://c2.com/cgi/wiki?JunitServlet" target="_blank">http://c2.com/cgi/wiki?JunitServlet</a><br />
+     <a href="http://c2.com/cgi/wiki?ServletTesting" target="_blank">http://c2.com/cgi/wiki?ServletTesting</a><br />
+     <a href="http://strutstestcase.sourceforge.net/" target="_blank">http://strutstestcase.sourceforge.net/</a>
+</blockquote>
+<h3>
+    <a id="WebPages" name="WebPages">How do I test web pages?</a>
+</h3>
+<p>
+    An HTML document is almost an XML document. There is a tool that allows you to query an HTML document as though it were
+    an XML document. That tool is called HTTPUnit. Using this tool, you can write tests that inspect the innards of an HTML
+    document without worrying about white space or formatting issues. Another tool called HTMLUnit also does something
+    similar. HTMLUnit includes support for testing HTML pages with embedded JavaScript.
+</p>
+<p>
+    See:
+</p>
+<blockquote>
+    <a href="http://httpunit.sourceforge.net/" target="_blank">http://httpunit.sourceforge.net/</a><br />
+     <a href="http://htmlunit.sourceforge.net/" target="_blank">http://htmlunit.sourceforge.net/</a><br />
+</blockquote>
+<p>
+    <br />
+     &nbsp;
+</p></td>
+</tr>
+</table>
+</div>
+<table class="copyright" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="copyright">Copyright (c) 2002, 2006 IBM Corporation and Object Mentor. All rights reserved. <br />
+This program and the accompanying materials are made available under the terms of the Eclipse Public License v1.0 which
+accompanies this distribution, and is available at <a href="http://www.eclipse.org/legal/epl-v10.html" target="_blank">http://www.eclipse.org/legal/epl-v10.html</a>. <br />
+Contributors: IBM Corporation and Object Mentor - initial implementation<br /></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

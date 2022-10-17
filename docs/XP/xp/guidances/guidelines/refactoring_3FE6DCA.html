@@ -1,0 +1,744 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr" xml:lang="fr" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Guideline: Refactoring</title>
+<meta name="uma.type" content="Guideline">
+<meta name="uma.name" content="refactoring">
+<meta name="uma.presentationName" content="Refactoring">
+<meta name="element_type" content="other">
+<meta name="filetype" content="description">
+<meta name="role" content="none">
+<link rel="StyleSheet" href="./../../../css/default.css" type="text/css">
+<script src="./../../../scripts/ContentPageResource.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSubSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageToolbar.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/contentPage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="8.137126904637637E-306"></div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td class="pageTitle" nowrap="true">Guideline: Refactoring</td><td width="100%">
+<div align="right" id="contentPageToolbar"></div>
+</td><td width="100%" class="expandCollapseLink" align="right"><a name="mainIndex" href="./../../../index.htm"></a><script language="JavaScript" type="text/javascript" src="./../../../scripts/treebrowser.js"></script></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="pageTitleSeparator"><img src="./../../../images/shim.gif" alt="" title="" height="1"></td>
+</tr>
+</table>
+<div class="overview">
+<table width="97%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50"><img src="./../../../images/guidance.gif" alt="" title=""></td><td>
+<table class="overviewTable" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../xp/tasks/refactor_code_57A587FE.html" guid="{3DD335BB-45F6-49C7-B17A-90652C73A485}">Refactor Code</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Topics
+</h3>
+<ul>
+    <li>
+        <a href="#WhatIs">What is refactoring?</a>
+    </li>
+    <li>
+        <a href="#Why">Why should I refactor?</a>
+    </li>
+    <li>
+        <a href="#When">When should I refactor?</a>
+    </li>
+    <li>
+        <a href="#Example">An example of refactoring</a>
+    </li>
+</ul>
+<h3>
+    <a id="WhatIs" name="WhatIs">What is refactoring?</a>
+</h3>
+<p>
+    Refactoring is the act of improving the structure of a program without changing its behavior. Refactoring is done in
+    tiny little steps, each barely worth doing. In between each step, we run the relevant unit tests to make sure that the
+    changes we made have not broken anything. The edit/compile/test cycle is usually between 30 seconds and five minutes.
+</p>
+<h3>
+    <a id="Why" name="Why">Why should I refactor?</a>
+</h3>
+<p>
+    The purpose of refactoring is to improve the design and readability of the code. There are several specific goals:
+</p>
+<ul>
+    <li>
+        The code should pass all its tests.
+    </li>
+    <li>
+        It should be as expressive as it is possible for you to make it.
+    </li>
+    <li>
+        It should be as simple as it is possible for you to make it.
+    </li>
+    <li>
+        It should have no redundancy.
+    </li>
+</ul>
+<h3>
+    <a id="When" name="When">When should I refactor?</a>
+</h3>
+<p>
+    Refactoring is not something that we schedule. There is no line item in the schedule for it. There is no particular
+    time when we do it. Refactoring is done all the time. As you and your pair partner work on a task, such as writing
+    tests and code, you will notice that the code and tests are not as clean and simple as they could be. That is the time
+    to stop and refactor that code.
+</p>
+<p>
+    The rule is: <b>Don't let the sun set on bad code.</b>
+</p>
+<h3>
+    <a id="Example" name="Example">An Example of Refactoring</a>
+</h3>
+<p>
+    Consider the two unit tests and the <font size="3"><tt>Formatter</tt></font> class shown below. The <font     size="3"><tt>Formatter</tt></font> class works but is not as expressive as I'd like it to be. So I'll refactor it in
+    stages.
+</p>
+<table width="100%" border="1">
+    <tbody>
+        <tr>
+            <td>
+<pre>
+  public void testCenterLine()
+</pre>
+<pre>
+     {    
+</pre>
+<pre>
+   Formatter f = new Formatter();                    
+</pre>
+<pre>
+  f.setLineWidth(10);     
+</pre>
+<pre>
+    assertEquals("   word   ", f.center("word"));                
+</pre>
+<pre>
+ }
+</pre>
+<pre>
+  public void testOddCenterLine() throws Exception
+</pre>
+<pre>
+   {     
+</pre>
+<pre>
+  Formatter f = new Formatter();     
+</pre>
+<pre>
+ f.setLineWidth(10);     
+</pre>
+<pre>
+    assertEquals("  hello   ", f.center("hello"));
+</pre>
+<pre>
+  }
+</pre>
+            </td>
+        </tr>
+    </tbody>
+</table><br />
+<br />
+<table width="100%" border="1">
+    <tbody>
+        <tr>
+            <td>
+<pre>
+  import java.util.Arrays;
+</pre>
+<pre>
+  public class Formatter
+</pre>
+<pre>
+ {   
+</pre>
+<pre>
+    private int width;   
+</pre>
+<pre>
+   private char spaces[];    
+</pre>
+<pre>
+  public void setLineWidth(int width)
+</pre>
+<pre>
+     {        
+</pre>
+<pre>
+       this.width = width;        
+</pre>
+<pre>
+     spaces = new char[width];        
+</pre>
+<pre>
+       Arrays.fill(spaces, ' ');    
+</pre>
+<pre>
+       }       
+</pre>
+<pre>
+    public String center(String line)
+</pre>
+<pre>
+       {        
+</pre>
+<pre>
+       int remainder = 0;        
+</pre>
+<pre>
+      StringBuffer b = new StringBuffer();        
+</pre>
+<pre>
+        int padding = (width - line.length()) / 2;        
+</pre>
+<pre>
+      remainder = line.length() % 2;        
+</pre>
+<pre>
+      b.append(spaces, 0, padding);        
+</pre>
+<pre>
+       b.append(line);                       
+</pre>
+<pre>
+      b.append(spaces, 0, padding + remainder);        
+</pre>
+<pre>
+       return b.toString();     
+</pre>
+<pre>
+       }
+</pre>
+<pre>
+   }
+</pre>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    The <font size="3"><tt>setLineWidth</tt></font> function is a little mysterious. What is this <font     size="3"><tt>spaces</tt></font> array and why is it being filled with blanks? By looking ahead into the <font     size="3"><tt>center</tt></font> function, we see that the <font size="3"><tt>spaces</tt></font> array is just a
+    convenience to allow us to move a number of blanks into a <font size="3"><tt>StringBuffer</tt></font>. I wonder if we
+    really need this convenience array.
+</p>
+<p>
+    For the moment, I'm going to pull the initialization of the array out into its own function named <font     size="3"><tt>buildArrayOfSpaces</tt></font>. That way, it's all in one place, and I can think about it a little more
+    clearly.
+</p>
+<table width="100%" border="1">
+    <tbody>
+        <tr>
+            <td>
+<pre>
+public void setLineWidth(int width)
+</pre>
+<pre>
+{    
+</pre>
+<pre>
+   this.width = width;        
+</pre>
+<pre>
+<b>
+buildArrayOfSpaces(width);</b>  
+</pre>
+<pre>
+}  
+</pre>
+<pre>
+private void <b>
+buildArrayOfSpaces(int width)</b>
+</pre>
+<pre>
+{        
+</pre>
+<pre>
+   spaces = new char[width];        
+</pre>
+<pre>
+   Arrays.fill(spaces, ' ');  
+</pre>
+<pre>
+} 
+</pre>
+<pre>
+<font size="3">
+<b>
+<i>
+Run the tests: the tests pass</i></b></font>
+</pre>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    I don't like the way <font size="3"><tt>center</tt></font> function is constructed. There is math scattered all through
+    it. I think we can rearrange the math to make things clearer.
+</p>
+<table width="100%" border="1">
+    <tbody>
+        <tr>
+            <td>
+<pre>
+public String center(String line)
+</pre>
+<pre>
+{        
+</pre>
+<pre>
+<b>
+int remainder = line.length() % 2;</b>        
+</pre>
+<pre>
+<b>
+int numberOfBlanksInFront = (width - line.length()) / 2;</b>        
+</pre>
+<pre>
+   <b>
+int numberOfBlanksAtEnd = (width - line.length()) / 2 + remainder;</b>    
+</pre>
+<pre>
+   StringBuffer b = new StringBuffer();        
+</pre>
+<pre>
+   b.append(spaces, 0, <b>
+numberOfBlanksInFront</b>);        
+</pre>
+<pre>
+   b.append(line);        
+</pre>
+<pre>
+   b.append(spaces, 0, <b>
+numberOfBlanksAtEnd</b>);        
+</pre>
+<pre>
+   return b.toString();  
+</pre>
+<pre>
+}
+<font size="3">
+<b>
+<i>
+Run the tests: the tests pass</i></b></font><br />
+
+</pre>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    This looks good, but we can reduce the clutter by changing some of the variables into functions.
+</p>
+<table width="100%" border="1">
+    <tbody>
+        <tr>
+            <td>
+<pre>
+public String center(String line)
+</pre>
+<pre>
+{        
+</pre>
+<pre>
+   StringBuffer b = new StringBuffer();        
+</pre>
+<pre>
+   b.append(spaces, 0, <b>
+numberOfBlanksInFront(line)</b>);        
+</pre>
+<pre>
+   b.append(line);        
+</pre>
+<pre>
+   b.append(spaces, 0, <b>
+numberOfBlanksBehind(line)</b>);        
+</pre>
+<pre>
+   return b.toString();   
+}    
+</pre>
+<pre>
+<b>
+private int numberOfBlanksBehind(String line)</b>
+</pre>
+<pre>
+<b>
+{</b>        
+</pre>
+<pre>
+   <b>
+int extraBlankIfOdd = line.length() % 2;</b>        
+</pre>
+<pre>
+   <b>
+return (width - line.length()) / 2 + extraBlankIfOdd;</b>  
+</pre>
+<pre>
+<b>
+}</b>    
+</pre>
+<pre>
+<b>
+private int numberOfBlanksInFront(String line)</b>
+</pre>
+<pre>
+<b>
+{</b>        
+ <b>
+return (width - line.length()) / 2;</b>  
+</pre>
+<pre>
+<b>
+}</b>  
+<font size="3">
+<b>
+<i>
+Run the tests: the tests pass</i></b></font>
+</pre>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    This makes the <font size="3"><tt>center</tt></font> function read a little better. However, the use of the <font     size="3"><tt>StringBuffer.append</tt></font> function is a little confusing. We might be able to improve it a little by
+    creating a more explicit function.
+</p>
+<table width="100%" border="1">
+    <tbody>
+        <tr>
+            <td>
+<pre>
+public String center(String line)
+</pre>
+<pre>
+{    
+</pre>
+<pre>
+   StringBuffer b = new StringBuffer();                    
+</pre>
+<pre>
+<b>
+appendBlanks(b, numberOfBlanksInFront(line));</b>     
+</pre>
+<pre>
+   b.append(line);     
+</pre>
+<pre>
+<b>
+appendBlanks(b, numberOfBlanksBehind(line));</b>     
+</pre>
+<pre>
+   return b.toString(); 
+</pre>
+<pre>
+}   
+</pre>
+<pre>
+<strong>
+private void appendBlanks(StringBuffer b, int numberOfBlanks)</strong>
+</pre>
+<pre>
+<strong>
+{</strong>     
+</pre>
+<pre>
+   <strong>
+b.append(spaces, 0, numberOfBlanks);</strong> 
+</pre>
+<pre>
+<strong>
+}</strong> 
+<font size="3">
+<b>
+<i>
+Run the tests: the tests pass</i></b></font>
+</pre>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    Now we can rewrite <font size="3"><tt>appendBlanks</tt></font> to avoid using the <font size="3"><tt>spaces</tt></font>
+    array.
+</p>
+<table width="100%" border="1">
+    <tbody>
+        <tr>
+            <td>
+<pre>
+import java.util.Arrays;  
+</pre>
+<pre>
+public class Formatter
+</pre>
+<pre>
+{     
+</pre>
+<pre>
+   private int width;                       
+</pre>
+<pre>
+   public void setLineWidth(int width)
+</pre>
+<pre>
+   { 
+</pre>
+<pre>
+      this.width = width;     
+</pre>
+<pre>
+   }       
+</pre>
+<pre>
+   public String center(String line)
+</pre>
+<pre>
+   { 
+</pre>
+<pre>
+      StringBuffer b = new StringBuffer();              
+</pre>
+<pre>
+      appendBlanks(b, numberOfBlanksInFront(line)); 
+</pre>
+<pre>
+      b.append(line); 
+</pre>
+<pre>
+      appendBlanks(b, numberOfBlanksBehind(line)); 
+</pre>
+<pre>
+      return b.toString();     
+</pre>
+<pre>
+   }       
+</pre>
+<pre>
+   private void appendBlanks(StringBuffer b, int numberOfBlanks)
+</pre>
+<pre>
+   {
+</pre>
+<pre>
+<b>
+ while(numberOfBlanks-- &gt; 0)</b>     
+</pre>
+<pre>
+<b>
+    b.append(' ');</b>     
+</pre>
+<pre>
+   }      
+</pre>
+<pre>
+   private int numberOfBlanksBehind(String line)
+</pre>
+<pre>
+   { 
+</pre>
+<pre>
+      int extraBlankIfOdd = line.length() % 2; 
+</pre>
+<pre>
+      return (width - line.length()) / 2 + extraBlankIfOdd;                  
+</pre>
+<pre>
+   }      
+</pre>
+<pre>
+   private int numberOfBlanksInFront(String line)
+</pre>
+<pre>
+   { 
+</pre>
+<pre>
+      return (width - line.length()) / 2; }    
+</pre>
+<pre>
+   } 
+</pre>
+<pre>
+}<font size="3">
+<b>
+<i>
+Run the tests: the tests pass</i></b></font><br />
+
+</pre>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    The names of functions like <font size="3"><tt>numberOfBlanksBehind</tt></font> imply that the reader knows that these
+    will be called from the <font size="3"><tt>center</tt></font> function. We should eliminate this implication by
+    renaming those functions.
+</p>
+<table width="100%" border="1">
+    <tbody>
+        <tr>
+            <td>
+<pre>
+import java.util.Arrays;
+</pre>
+<pre>
+public class Formatter    
+</pre>
+<pre>
+{     
+</pre>
+<pre>
+   private int width;       
+</pre>
+<pre>
+   public void setLineWidth(int width)
+</pre>
+<pre>
+   { 
+</pre>
+<pre>
+      this.width = width;     
+</pre>
+<pre>
+   }       
+</pre>
+<pre>
+   public String center(String line)
+</pre>
+<pre>
+   { 
+</pre>
+<pre>
+      StringBuffer b = new StringBuffer(); 
+</pre>
+<pre>
+      appendBlanks(b, <b>
+numberOfBlanksToLeftOfCenter</b>(line));                
+</pre>
+<pre>
+      b.append(line); 
+</pre>
+<pre>
+      appendBlanks(b, <b>
+numberOfBlanksToRightOfCenter</b>(line));                
+</pre>
+<pre>
+      return b.toString();     
+</pre>
+<pre>
+   }       
+</pre>
+<pre>
+   private void appendBlanks(StringBuffer b, int numberOfBlanks)
+</pre>
+<pre>
+   { 
+</pre>
+<pre>
+      while(numberOfBlanks-- &gt; 0)     
+</pre>
+<pre>
+         b.append(' ');     
+</pre>
+<pre>
+   }      
+</pre>
+<pre>
+   private int <b>
+numberOfBlanksToRightOfCenter</b>(String line)
+</pre>
+<pre>
+   { 
+</pre>
+<pre>
+      int extraBlankIfOdd = line.length() % 2; 
+</pre>
+<pre>
+      return (width - line.length()) / 2 + extraBlankIfOdd;     
+</pre>
+<pre>
+   }       
+
+   private int <b>
+numberOfBlanksToLeftOfCenter</b>(String line)
+</pre>
+<pre>
+   { 
+</pre>
+<pre>
+      return (width - line.length()) / 2;     
+</pre>
+<pre>
+   }
+</pre>
+<pre>
+} 
+<font size="3">
+<b>
+<i>
+Run the tests: the tests pass</i></b></font>
+</pre>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    And I think we are done. You might find other refactorings to do, or you might not agree with all of the refactorings
+    I've done. That's to be expected. The point is, however, that I have put a lot of effort into the readability and
+    simplicity of this class. That effort will help others understand this class and make it easier for them to change the
+    class when the time comes.
+</p></td>
+</tr>
+</table>
+</div>
+<table class="copyright" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="copyright">Copyright (c) 2002, 2006 IBM Corporation and Object Mentor. All rights reserved. <br />
+This program and the accompanying materials are made available under the terms of the Eclipse Public License v1.0 which
+accompanies this distribution, and is available at <a href="http://www.eclipse.org/legal/epl-v10.html" target="_blank">http://www.eclipse.org/legal/epl-v10.html</a>. <br />
+Contributors: IBM Corporation and Object Mentor - initial implementation<br /></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

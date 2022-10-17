@@ -1,0 +1,366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr" xml:lang="fr" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Guideline: Planning Game</title>
+<meta name="uma.type" content="Guideline">
+<meta name="uma.name" content="planning_game">
+<meta name="uma.presentationName" content="Planning Game">
+<meta name="element_type" content="other">
+<meta name="filetype" content="description">
+<meta name="role" content="none">
+<link rel="StyleSheet" href="./../../../css/default.css" type="text/css">
+<script src="./../../../scripts/ContentPageResource.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSubSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageToolbar.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/contentPage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="6.7335956461328426E-307"></div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td class="pageTitle" nowrap="true">Guideline: Planning Game</td><td width="100%">
+<div align="right" id="contentPageToolbar"></div>
+</td><td width="100%" class="expandCollapseLink" align="right"><a name="mainIndex" href="./../../../index.htm"></a><script language="JavaScript" type="text/javascript" src="./../../../scripts/treebrowser.js"></script></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="pageTitleSeparator"><img src="./../../../images/shim.gif" alt="" title="" height="1"></td>
+</tr>
+</table>
+<div class="overview">
+<table width="97%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50"><img src="./../../../images/guidance.gif" alt="" title=""></td><td>
+<table class="overviewTable" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../xp/tasks/update_iteration_plan_9CD15DDA.html" guid="{653F1EF4-2BE5-4CCB-80E7-17CE02B081DC}">Adjust Iteration Scope</a>
+</li>
+<li>
+<a href="./../../../xp/tasks/define_iteration_plan_7C7CAB3.html" guid="{849E3635-6FCD-4FAD-A007-CA34B9998622}">Define Iteration</a>
+</li>
+<li>
+<a href="./../../../xp/tasks/define_release_plan_61480A42.html" guid="{D755C076-8E63-4A24-89AA-A7D64E368B90}">Define Release</a>
+</li>
+<li>
+<a href="./../../../xp/tasks/update_release_plan_4C2AF338.html" guid="{18BF87E6-5849-4091-AFE2-FC4F0C3887B1}">Revise Release Plan</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="XE_xp__planning_game" name="XE_xp__planning_game"></a><a id="XE_planning__in_xp" name="XE_planning__in_xp"></a> 
+<h3>
+    Topics
+</h3>
+<ul>
+    <li>
+        <a href="#Overview">XP Planning Overview</a>
+    </li>
+    <li>
+        <a href="#Iterations">Iterations</a>
+    </li>
+    <li>
+        <a href="#Stories">User Stories</a>
+    </li>
+    <li>
+        <a href="#ReleasePlanning">Release Planning</a>
+    </li>
+    <li>
+        <a href="#IterationPlanning">Iteration Planning</a>
+    </li>
+    <li>
+        <a href="#TaskPlanning">Task Planning</a>
+    </li>
+    <li>
+        <a href="#Recovery">Recovery</a>
+    </li>
+    <li>
+        <a href="#Feedback">Feedback</a>
+    </li>
+    <li>
+        <a href="#AcceptanceTests">Acceptance Tests</a>
+    </li>
+    <li>
+        <a href="#First">How do we create budgets for the first iteration and release?</a>
+    </li>
+    <li>
+        <a href="#Velocity">How do changes in the team affect velocity?</a>
+    </li>
+</ul>
+<h3>
+    <a id="Overview" name="Overview">XP Planning Overview</a>
+</h3>
+<p>
+    An XP project is broken down into a set of two-week iterations. Each iteration follows the next in a linear sequence.
+    Executable code that passes unit tests and acceptance tests is the core deliverable beginning with the first iteration.
+</p>
+<p>
+    Planning an XP project is a continuous activity. There is no master plan that is decided upon at the start of the
+    project and that is followed until the end. An XP project is planned in detail, one iteration at a time. The plan for
+    an iteration is created at the beginning of that iteration. The plan is then checked and adjusted continuously
+    throughout the iteration.
+</p>
+<p>
+    Iterations are grouped into larger milestones called releases. A typical release spans two to three months. At the
+    beginning, the release plan is created. This is a very rough plan that tentatively describes the features that the
+    project team believes can and should be implemented during that time. The release plan is continuously updated as each
+    iteration within the release provides more data.
+</p>
+<p>
+    The overriding principle of XP planning is feedback. Every iteration provides data about the velocity of the team. That
+    data is used to continuously calibrate the plan. Measuring the results of each iteration generates a continuous stream
+    of data. The team and its managers use that data to make decisions and take actions that will improve the project
+    outcome.
+</p>
+<h3>
+    <a id="Iterations" name="Iterations">Iterations</a>
+</h3>
+<p>
+    An iteration is simply a span of time in which the team implements a set of features. In an XP project, this time is
+    typically two weeks and should never be longer than four. The team should decide how long its iterations should be and
+    then stick to that time. It is not wise to continuously change the duration of the iterations because that makes
+    determination of a team's velocity more complicated.
+</p>
+<p>
+    When an iteration is over, it is over, irrespective of how much the iteration accomplished. It is never wise to extend
+    an iteration in order to provide more time to finish the planned deliverables. The ability to plan an XP project
+    depends strongly on fixed-length iterations of consistent duration and ruthless termination of each iteration
+    irrespective of whether the planned tasks are complete to allow the velocity to be measured.
+</p>
+<h3>
+    <a id="Stories" name="Stories">User Stories</a>
+</h3>
+<p>
+    The content or scope of an XP project is described in user stories. User stories are very simple descriptions of the
+    features to be developed. Each story is typically written on a single index card and contains virtually no detail. The
+    card contains little more than the name of the feature.
+</p>
+<p>
+    Stories are the tokens of planning. When we create a release plan or an iteration plan, we select the stories we want
+    in that release or iteration and schedule them. Once a story is scheduled for an iteration, two things must happen in
+    that iteration. First, the details of the story must be fleshed out, resulting in the creation of appropriate
+    acceptance tests. Second, the story must be implemented so that it passes those acceptance tests.
+</p>
+<p>
+    In order to choose which stories to schedule for an iteration, we need to know two things: how important is the story
+    and how long will the story take to implement. The first comes from the judgment of the customers/stakeholders, and the
+    second comes from the judgment of the developers.
+</p>
+<p>
+    Developers estimate the stories. The estimate for a user story should neither be too big nor too small. Those that are
+    too big should be split into multiple stories, and those that are too small should be merged. A good guideline is to
+    keep the size of a user story between two days and a week of team effort. The customer/stakeholders and the developers
+    will negotiate over the stories, splitting and merging as necessary, until they are appropriately sized.
+</p>
+<p>
+    Estimates are written on the story cards as numbers. We refer to these numbers as story points. It doesn't matter what
+    units were originally used to create the estimates. It might have been man-days or man weeks or something else. Once
+    the estimates are made, we forget the units and simply refer to them as story points.
+</p>
+<h3>
+    <a id="ReleasePlanning" name="ReleasePlanning">Release Planning</a>
+</h3>
+<p>
+    The customer/stakeholders know what features they want completed for the next release. The developers know how much
+    they can get done in the next release. The developers give the customer/stakeholders a budget for the release based
+    upon how much the developers got done in the previous release. If the developers finished 720 story points in the last
+    release, then it is safe to say that they'll finish about 720 in this release.
+</p>
+<p>
+    The customer/stakeholders choose stories that add up to this number. They choose the stories that are most critical and
+    have the most business value. They lay them out in roughly the order in which they'd like to see them implemented. This
+    selection and ordering of the stories becomes the release plan.
+</p>
+<p>
+    Any stakeholder can look at the release plan and see about when a particular feature will be implemented. They know
+    that, if the feature is listed early, then it is likely to be completed. If a story is listed late in the plan, then
+    the risk is higher. The release plan is not static. Any time priorities change, the customer/stakeholders can change
+    the plan by reordering stories, adding new stories, removing existing stories, and so on. Thus, the release plan is
+    always changing in response to the changing business.
+</p>
+<h3>
+    <a id="IterationPlanning" name="IterationPlanning">Iteration Planning</a>
+</h3>
+<p>
+    At the beginning of each iteration, we take a half day to plan that iteration. The developers supply the
+    customer/stakeholders with a budget for the iteration based upon what they finished in the last iteration. If they got
+    68 story points done in the last iteration, then it is safe to plan for 68 in this iteration.
+</p>
+<p>
+    The customer/stakeholders select the stories from the release plan that they feel are most important for this
+    iteration. The sum of the selected story points cannot exceed the budget given by the developers.
+</p>
+<p>
+    Though the customer/stakeholders can suggest an ordering for the stories in an iteration, the developers are not bound
+    to that ordering. The developers are free to rearrange the stories within the iteration in any manner that makes sense.
+</p>
+<p>
+    Once the iteration has begun, the customer/stakeholders cannot make arbitrary changes to the stories in that iteration.
+    Any change has to be carefully negotiated with the developers. If the customer/stakeholders want to remove a story and
+    replace it with another, they must check with the developers to see if that will fit in the iteration. If the
+    developers agree, then the change can be made. If the developers do not agree then the customer/stakeholder may decide
+    to wait until the next iteration or may decide to completely abort the current iteration and plan a new iteration.
+</p>
+<h3>
+    <a id="TaskPlanning" name="TaskPlanning">Task Planning</a>
+</h3>
+<p>
+    Once the stories have been selected for the iteration, then the developers break the stories down into programming
+    tasks. The tasks are recorded on a whiteboard or a flip chart.
+</p>
+<p>
+    Tasks are simple units of work that accomplish a particular goal within a story. One task might be to set up the
+    database schema for a story. Another might be to create the HTML pages for a story. Still another task might be to
+    write a servlet that checks passwords. A task should be on the order of a man-day of effort.
+</p>
+<p>
+    The breakdown of stories into tasks is a design activity. The developers consider how the stories will be developed and
+    whether or not there are any design options that allow the stories to share tasks.
+</p>
+<p>
+    Once the list of tasks is complete, the developers take turns signing up for the tasks. Each developer puts his or her
+    initials next to a task and then estimates that task. The estimate is typically in hours.
+</p>
+<p>
+    Each developer has a budget of hours that he keeps in the back of his head. This budget represents the number of hours
+    he believes he will have for the development of his tasks in this iteration. Each time a developer signs up for a task,
+    he deducts his estimate from that budget. When a developer's budget goes to zero, he stops signing up for tasks.
+</p>
+<p>
+    Ideally, at the end of sign up, all the tasks would have initials, and every developer's budget would be at zero. But
+    this is seldom the case. There are two much more likely scenarios:
+</p>
+<ul>
+    <li>
+        Everybody's budget is at zero, and there are tasks left. In this case, the developers need to work together to find
+        a better division of tasks. If a GUI guy signed up for a database task just to get some new experience, then
+        perhaps he should swap with someone who could do that task more quickly. If after such trading there are still
+        tasks left over, then the team has to ask the customer/stakeholder to remove some stories or tasks.
+    </li>
+    <li>
+        The tasks are all signed up, but some people still have budget left. In this case, the team needs to ask the
+        customer/stakeholders to give them a few more stories.
+    </li>
+</ul>
+<h3>
+    <a id="Recovery" name="Recovery">Recovery</a>
+</h3>
+<p>
+    On the day that marks the halfway point of the iteration, the team has another short meeting. Half the tasks should be
+    complete. More importantly, half the stories should be complete. More precisely, a set of stories whose points add up
+    to half the iteration budget should be complete. The nightmare we are trying to avoid is that the iteration ends with
+    all the stories 95% complete. We'd rather that 95% of the stories be complete.
+</p>
+<p>
+    If half the stories are not complete, then the team asks the customer to remove some stories from the iteration. This
+    same kind of check is made towards the end of the iteration. The team assesses how much they have working and how much
+    is left. If it appears that they may not complete all the promised stories, then they ask the customer/stakeholders to
+    remove some.
+</p>
+<p>
+    By the same token, if more than half the stories are complete by the midpoint, the developers ask the
+    customer/stakeholder for more work. Likewise, as the iteration gets close to the end, any idle developers should help
+    others complete their tasks. If it appears that all tasks will be completed early, the developers should ask the
+    customer/stakeholders for more stories.
+</p>
+<h3>
+    <a id="Feedback" name="Feedback">Feedback</a>
+</h3>
+<p>
+    The number of story points completed in the previous iteration is the team's current velocity. This velocity is used as
+    the budget for the next iteration. Thus we only commit to doing what we know we did in the last iteration.
+</p>
+<p>
+    The same is true for releases. When we plan the next release, we use the number of story points we finished in the
+    previous release.
+</p>
+<p>
+    Individual developers use the same technique for their task budgets. If they got 22 hours worth of tasks finished in
+    the last iteration, they should only sign up for 22 hours of tasks this time.
+</p>
+<h3>
+    <a id="AcceptanceTests" name="AcceptanceTests">Acceptance Tests</a>
+</h3>
+<p>
+    After the iteration-planning meeting is over, the customer/stakeholders must provide the developers with acceptance
+    tests for the stories that were selected for the iteration. Typically, these tests will be created with the help of the
+    Q/A or testing groups. These tests specify exactly to the developers what the stories being implemented must do, so
+    they must be given to the developers as early as possible.
+</p>
+<p>
+    Some XP teams manage to write their acceptance tests an iteration early. The Q/A or testing group works with the
+    customer/stakeholders during the current iteration to determine which stories are most likely to be selected for the
+    next iteration. Together, they define the set of acceptance tests that will be given to the developers during the next
+    iteration planning meeting. By planning ahead like this, the developers can have the acceptance tests for an
+    iteration's stories immediately.
+</p>
+<h3>
+    <a id="First" name="First">How do we create budgets for the first iteration and release?</a>
+</h3>
+<p>
+    If you have history from other projects, then make use of that. Otherwise, you have to guess. A good way to guess is to
+    spend a day or two trying to implement one or two stories. This should give you an inkling of your velocity.
+</p>
+<h3>
+    <a id="Velocity" name="Velocity">How do changes in the team affect velocity?</a>
+</h3>
+<p>
+    If the change is small, then it's probably best to allow the velocity to change by itself. If you got 52 story points
+    done last iteration, but this iteration you have a new team member, it's probably best to keep your velocity at 52 and
+    commit do doing just 52 story points in the next iteration. At the end of that iteration, you may find that you've done
+    a little more than 52, and you can adjust your velocity accordingly.
+</p>
+<p>
+    On the other hand, if 30% of the team is going on vacation for the next iteration, then it's probably wise to reduce
+    your velocity accordingly.
+</p>
+<p>
+    <br />
+     &nbsp;
+</p></td>
+</tr>
+</table>
+</div>
+<table class="copyright" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="copyright">Copyright (c) 2002, 2006 IBM Corporation and Object Mentor. All rights reserved. <br />
+This program and the accompanying materials are made available under the terms of the Eclipse Public License v1.0 which
+accompanies this distribution, and is available at <a href="http://www.eclipse.org/legal/epl-v10.html" target="_blank">http://www.eclipse.org/legal/epl-v10.html</a>. <br />
+Contributors: IBM Corporation and Object Mentor - initial implementation<br /></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

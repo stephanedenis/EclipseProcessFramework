@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr" xml:lang="fr" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Task: Refactor Code</title>
+<meta name="uma.type" content="Task">
+<meta name="uma.name" content="refactor_code">
+<meta name="uma.presentationName" content="Refactor Code">
+<meta name="element_type" content="activity">
+<meta name="filetype" content="description">
+<meta name="role" content="XP Programmer">
+<link rel="StyleSheet" href="./../../css/default.css" type="text/css">
+<script src="./../../scripts/ContentPageResource.js" type="text/javascript" language="JavaScript"></script><script src="./../../scripts/ContentPageSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../scripts/ContentPageSubSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../scripts/ContentPageToolbar.js" type="text/javascript" language="JavaScript"></script><script src="./../../scripts/contentPage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo, '', true, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top">
+<div id="page-guid" value="{3DD335BB-45F6-49C7-B17A-90652C73A485}"></div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td class="pageTitle" nowrap="true">Task: Refactor Code</td><td width="100%">
+<div align="right" id="contentPageToolbar"></div>
+</td><td width="100%" class="expandCollapseLink" align="right"><a name="mainIndex" href="./../../index.htm"></a><script language="JavaScript" type="text/javascript" src="./../../scripts/treebrowser.js"></script></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="pageTitleSeparator"><img src="./../../images/shim.gif" alt="" title="" height="1"></td>
+</tr>
+</table>
+<div class="overview">
+<table width="97%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50"><img src="./../../images/task.gif" alt="" title=""></td><td>
+<table class="overviewTable" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Purpose</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="XE_refactor_code__activity_definition" name="XE_refactor_code__activity_definition"></a> 
+<ul>
+    <li>
+        To keep the design of the system clear and ready for change.
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Roles</th><td class="sectionTableCell" width="42%"><span class="sectionTableCellHeading">Primary Performer:
+								</span>
+<ul>
+<li>
+<a href="./../../xp/roles/xp_programmer_D005E927.html" guid="{08A6AF28-69B1-42DC-A957-2E6CDCB436C1}">XP Programmer</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Additional Performers:
+								</span></td>
+</tr>
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Inputs</th><td class="sectionTableCell" width="42%"><span class="sectionTableCellHeading">Mandatory:
+								</span>
+<ul>
+<li>
+<a href="./../../xp/workproducts/xp_production_code_C5E0E348.html" guid="{3EDA30A8-932C-4EC2-B9AB-A840304C5BC1}">Production Code</a>
+</li>
+</ul>
+<ul></ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Optional:
+								</span>
+<ul>
+<li>
+<a href="./../../xp/workproducts/xp_metaphor_7F035F47.html" guid="{7C34EE96-C3EA-49FD-A53C-7C113B86AE01}">Metaphor (System of Names)</a>
+</li>
+<li>
+<a href="./../../xp/workproducts/xp_unit_test_5497C933.html" guid="{D156652E-7C52-4EBD-8F23-F38169877A57}">XP Unit Test</a>
+</li>
+</ul>
+<ul></ul>
+</td>
+</tr>
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Outputs</th><td class="sectionTableCell" colspan="2">
+<ul>
+<li>
+<a href="./../../xp/workproducts/xp_production_code_C5E0E348.html" guid="{3EDA30A8-932C-4EC2-B9AB-A840304C5BC1}">Production Code</a>
+</li>
+<li>
+<a href="./../../xp/workproducts/xp_unit_test_5497C933.html" guid="{D156652E-7C52-4EBD-8F23-F38169877A57}">XP Unit Test</a>
+</li>
+</ul>
+<ul></ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Steps</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="sectionTableSingleCell">
+<div class="stepHeading">Identify Poor Design </div>
+<div class="stepContent">
+<table class="stepTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td><a id="Step1" name="Step1"></a> 
+<p>
+    While developing, requirements change and previous design decisions can be invalidated. A new feature is added, you get
+    it to work, but the structure and clarity of the code can degrade. You could leave it, and the design will slowly rot,
+    or you could improve the design on the spot. Refactoring is about improving the design.
+</p>
+<p>
+    A simple design has these four characteristics, listed in priority order:
+</p>
+<ul>
+    <li>
+        The system runs all the tests.
+    </li>
+    <li>
+        It contains no duplicate code.
+    </li>
+    <li>
+        The code states the programmers' intent very clearly.
+    </li>
+    <li>
+        It contains the fewest possible number of classes and methods.
+    </li>
+</ul>
+<p>
+    A good resource for gaining refactoring knowledge is Martin Fowler's book: <i>Refactoring - Improving the Design of
+    Existing Code</i> [<a class="elementLinkWithUserText" href="./../../xp/guidances/supportingmaterials/xp_and_agile_process_references_BA6A741C.html#FOW99" guid="6.191633934532389E-306">FOW99</a>]. Martin discusses the idea of bad code smells, how to detect them, what harm
+    they will do to your software, and how to fix them.
+</p>
+<p>
+    During development, you should look at the code refactoring with an open mind and find its weaknesses. Clarify the
+    code; fix what needs to be fixed. As you discover these smells, you should work to eliminate them before proceeding to
+    the next test case. Save some time before you check-in your code to step back and look it over. Identify duplicate code
+    sections and places where the design intent is not clear.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Refactor </div>
+<div class="stepContent">
+<table class="stepTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td><a id="Step2" name="Step2"></a> 
+<p>
+    Refactoring involves making changes to your code which improve its structure without modifying its behavior. Martin
+    Fowler's Refactoring book lists over sixty refactorings to handle particular code situations. The goal of each of them
+    is to reduce duplication in the code base and increase clarity. Leave your code clean, simple, and free from
+    duplication.
+</p>
+<p>
+    As the structure of your code base evolves, you choose names which aid your understanding of the functionality
+    specified by the code. This system of names becomes the vocabulary for your team's discussion of design.
+</p></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">More Information</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Guidelines</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../xp/guidances/guidelines/pair_programming_189FA25A.html" guid="3.85153041801319E-307">Pair Programming</a>
+</li>
+<li>
+<a href="./../../xp/guidances/guidelines/refactoring_3FE6DCA.html" guid="8.137126904637637E-306">Refactoring</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table class="copyright" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="copyright">Copyright (c) 2002, 2006 IBM Corporation and Object Mentor. All rights reserved. <br />
+This program and the accompanying materials are made available under the terms of the Eclipse Public License v1.0 which
+accompanies this distribution, and is available at <a href="http://www.eclipse.org/legal/epl-v10.html" target="_blank">http://www.eclipse.org/legal/epl-v10.html</a>. <br />
+Contributors: IBM Corporation and Object Mentor - initial implementation<br /></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

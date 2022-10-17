@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr" xml:lang="fr" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Concept: Test Driven Development</title>
+<meta name="uma.type" content="Concept">
+<meta name="uma.name" content="test_driven_development">
+<meta name="uma.presentationName" content="Test Driven Development">
+<meta name="element_type" content="concept">
+<meta name="filetype" content="description">
+<meta name="role" content="none">
+<link rel="StyleSheet" href="./../../../css/default.css" type="text/css">
+<script src="./../../../scripts/ContentPageResource.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSubSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageToolbar.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/contentPage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.620567348185129E-306"></div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td class="pageTitle" nowrap="true">Concept: Test Driven Development</td><td width="100%">
+<div align="right" id="contentPageToolbar"></div>
+</td><td width="100%" class="expandCollapseLink" align="right"><a name="mainIndex" href="./../../../index.htm"></a><script language="JavaScript" type="text/javascript" src="./../../../scripts/treebrowser.js"></script></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="pageTitleSeparator"><img src="./../../../images/shim.gif" alt="" title="" height="1"></td>
+</tr>
+</table>
+<div class="overview">
+<table width="97%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50"><img src="./../../../images/concept.gif" alt="" title=""></td><td>
+<table class="overviewTable" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../xp/workproducts/xp_production_code_C5E0E348.html" guid="{3EDA30A8-932C-4EC2-B9AB-A840304C5BC1}">Production Code</a>
+</li>
+<li>
+<a href="./../../../xp/roles/xp_programmer_D005E927.html" guid="{08A6AF28-69B1-42DC-A957-2E6CDCB436C1}">XP Programmer</a>
+</li>
+<li>
+<a href="./../../../xp/workproducts/xp_unit_test_5497C933.html" guid="{D156652E-7C52-4EBD-8F23-F38169877A57}">XP Unit Test</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="XE_xp__test_driven_development" name="XE_xp__test_driven_development"></a><a id="XE_test_driven_development__practice_of" name="XE_test_driven_development__practice_of"></a><a id="XE_engineering_practices__test_driven_development" name="XE_engineering_practices__test_driven_development"></a> 
+<h3>
+    Description
+</h3>
+<p>
+    Test-Driven Development is one of the core programming practices of XP. Many of us have learned over the years the
+    value of writing automated tests for our code. Many of us have also learned the difficulty of writing tests after code
+    is already in place. Test-Driven Development takes a different, extreme approach to ensure that we test all code, all
+    the time.
+</p>
+<p>
+    The practice of Test-Driven Development requires a change in how you program and in how you think. You won't write
+    tests as an afterthought. You won't be trying to see if the code you have written works. Instead, you will write tests
+    as part of the everyday, every minute way of building software. Instead of writing detailed design specifications on
+    paper, write the spec in code. Instead of first striving to perfectly design a system on paper, use tests to guide your
+    design. Instead of coding for hours at a stretch only to find that the planning went awry, use Test-Driven Development
+    to pace yourself, always assuring forward progress with the firm foundation of an ever-growing suite of running tests.
+</p>
+<p>
+    The steps:
+</p>
+<ul>
+    <li>
+        Have an idea where you are going.
+    </li>
+    <li>
+        Write a test that specifies a tiny bit of functionality.
+    </li>
+    <li>
+        Ensure that the test fails (you haven't built the functionality yet!).
+    </li>
+    <li>
+        Write only the code necessary to make the test pass.
+    </li>
+    <li>
+        Refactor the code, ensuring that it has the clear and simple design for the functionality built to date.
+    </li>
+    <li>
+        Repeat until you have the desired functionality.
+    </li>
+</ul>
+<p>
+    The rules:
+</p>
+<ul>
+    <li>
+        Test everything that can possibly break.
+    </li>
+    <li>
+        Tests come first.
+    </li>
+    <li>
+        All tests run at 100% all the time.
+    </li>
+</ul>
+<p>
+    Test-Driven Development is infectious! Developers swear by it. Developers do not seem to abandon it after giving it an
+    honest trial.
+</p>
+<h3>
+    Benefits
+</h3>
+<ul>
+    <li>
+        Testable modules are decoupled from other complex classes, resulting in <b>loosely coupled modules</b>. Loosely
+        coupled modules are a sign of good design.
+    </li>
+    <li>
+        Code is written so that <b>modules are testable in isolation</b>. Code written without tests in mind is often
+        highly coupled, a big hint that you have a poor object-oriented design. If you have to write tests first, you'll
+        devise ways of minimizing dependencies in your system in order to write your tests.
+    </li>
+    <li>
+        The <b>tests act as documentation,</b> providing concrete examples of how to use the module being tested.
+    </li>
+    <li>
+        The tests are the first client of your classes; they <b>show how the developer intended the class to be used</b>.
+    </li>
+    <li>
+        The <b>tests act as a safety net</b>. Notifying the programmer immediately when a side-effect defect is introduced
+        into the system.
+    </li>
+    <li>
+        <b>Development is paced</b>. You can stop at anytime with the tests describing the progress so far. Each
+        programming session gives a sense of satisfaction with getting some of the code working.
+    </li>
+</ul>
+<h3>
+    Related Information
+</h3>
+<p>
+    For more information, see <a class="elementLinkWithUserText" href="./../../../xp/guidances/guidelines/test_driven_development_tdd_D7F1F440.html" guid="3.9254165491375454E-306">Test Driven Development Guidelines</a>.
+</p></td>
+</tr>
+</table>
+</div>
+<table class="copyright" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="copyright">Copyright (c) 2002, 2006 IBM Corporation and Object Mentor. All rights reserved. <br />
+This program and the accompanying materials are made available under the terms of the Eclipse Public License v1.0 which
+accompanies this distribution, and is available at <a href="http://www.eclipse.org/legal/epl-v10.html" target="_blank">http://www.eclipse.org/legal/epl-v10.html</a>. <br />
+Contributors: IBM Corporation and Object Mentor - initial implementation<br /></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

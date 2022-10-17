@@ -1,0 +1,51 @@
+!SESSION 2022-10-17 12:08:57.889 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=19
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data @user.home/EPF/workspace.152
+
+!ENTRY org.eclipse.osgi 4 0 2022-10-17 12:08:58.302
+!MESSAGE error loading hook: org.eclipse.osgi.internal.baseadaptor.BaseHookConfigurator
+!STACK 0
+java.lang.reflect.InaccessibleObjectException: Unable to make protected void java.net.URLClassLoader.addURL(java.net.URL) accessible: module java.base does not "opens java.net" to unnamed module @62043840
+	at java.base/java.lang.reflect.AccessibleObject.throwInaccessibleObjectException(AccessibleObject.java:387)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:363)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:311)
+	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:201)
+	at java.base/java.lang.reflect.Method.setAccessible(Method.java:195)
+	at org.eclipse.osgi.internal.baseadaptor.BaseStorage.findMethod(BaseStorage.java:174)
+	at org.eclipse.osgi.internal.baseadaptor.BaseStorage.findMethod(BaseStorage.java:181)
+	at org.eclipse.osgi.internal.baseadaptor.BaseStorage.findAddURLMethod(BaseStorage.java:165)
+	at org.eclipse.osgi.internal.baseadaptor.BaseStorage.<init>(BaseStorage.java:135)
+	at org.eclipse.osgi.internal.baseadaptor.BaseHookConfigurator.addHooks(BaseHookConfigurator.java:24)
+	at org.eclipse.osgi.baseadaptor.HookRegistry.loadConfigurators(HookRegistry.java:178)
+	at org.eclipse.osgi.baseadaptor.HookRegistry.initialize(HookRegistry.java:100)
+	at org.eclipse.osgi.baseadaptor.BaseAdaptor.<init>(BaseAdaptor.java:98)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.createAdaptor(EclipseStarter.java:737)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:258)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:176)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+
+!ENTRY org.eclipse.osgi 4 0 2022-10-17 12:08:58.339
+!MESSAGE Startup error
+!STACK 1
+java.lang.NullPointerException: Cannot invoke "org.eclipse.osgi.internal.baseadaptor.BaseStorage.initialize(org.eclipse.osgi.baseadaptor.BaseAdaptor)" because "this.storage" is null
+	at org.eclipse.osgi.baseadaptor.BaseAdaptor.initializeStorage(BaseAdaptor.java:123)
+	at org.eclipse.osgi.framework.internal.core.Framework.<init>(Framework.java:192)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:262)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:176)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)

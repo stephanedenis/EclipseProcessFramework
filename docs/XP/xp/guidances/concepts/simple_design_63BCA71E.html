@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr" xml:lang="fr" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Concept: Simple Design</title>
+<meta name="uma.type" content="Concept">
+<meta name="uma.name" content="simple_design">
+<meta name="uma.presentationName" content="Simple Design">
+<meta name="element_type" content="concept">
+<meta name="filetype" content="description">
+<meta name="role" content="none">
+<link rel="StyleSheet" href="./../../../css/default.css" type="text/css">
+<script src="./../../../scripts/ContentPageResource.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSubSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageToolbar.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/contentPage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.6109092258980447E-306"></div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td class="pageTitle" nowrap="true">Concept: Simple Design</td><td width="100%">
+<div align="right" id="contentPageToolbar"></div>
+</td><td width="100%" class="expandCollapseLink" align="right"><a name="mainIndex" href="./../../../index.htm"></a><script language="JavaScript" type="text/javascript" src="./../../../scripts/treebrowser.js"></script></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="pageTitleSeparator"><img src="./../../../images/shim.gif" alt="" title="" height="1"></td>
+</tr>
+</table>
+<div class="overview">
+<table width="97%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50"><img src="./../../../images/concept.gif" alt="" title=""></td><td>
+<table class="overviewTable" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../xp/roles/xp_programmer_D005E927.html" guid="{08A6AF28-69B1-42DC-A957-2E6CDCB436C1}">XP Programmer</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="XE_xp__simple_design" name="XE_xp__simple_design"></a><a id="XE_simple_design__practice_of" name="XE_simple_design__practice_of"></a><a id="XE_engineering_practices__simple_design" name="XE_engineering_practices__simple_design"></a> 
+<h3>
+    Description
+</h3>
+<p>
+    The design strategy in XP is to create the simplest design that meets your current requirements, as reflected in the
+    current test cases. In many domains, "simplest design" is ambiguous, but it is a well-defined term in XP. A simple
+    design has these four characteristics, listed in priority order:
+</p>
+<ul>
+    <li>
+        The system runs all the tests.
+    </li>
+    <li>
+        It contains no duplicate code.
+    </li>
+    <li>
+        The code states the programmers's intent very clearly.
+    </li>
+    <li>
+        It contains the fewest possible number of classes and methods.
+    </li>
+</ul>
+<p>
+    Design in Extreme Programming is much more incremental than in any other methodology. The practice of Test-Driven
+    Development describes how the system is created in many small steps, driven by tests that programmers write. Each of
+    these tests is a probe into the design of the system, allowing the developers to explore the system as it is being
+    created. This is quite a contrast to other methodologies where design is a separate phase of either the project or the
+    iteration. In XP, design quite literally happens all the time.
+</p>
+<p>
+    It takes a tremendous amount of courage to stop designing and start coding. Almost all developers are taught that they
+    should understand everything about the system before committing that knowledge to code. The reason, they've always been
+    told, is that code is hard to change. Once it is laid on its virtual paper, changing it involves understanding the
+    hidden assumptions of the original developer, unseen couplings, months-long validation and verification procedures,
+    etc. But if code could be changed with impunity, developers could afford to defer design decisions until later,
+    understand the system incrementally, and implement in pieces.
+</p>
+<p>
+    The strategy of building software in this manner is based on the following reasoning:
+</p>
+<ul>
+    <li>
+        Given that all requirements aren't known on the first day of the project, the development style must be adjusted to
+        accommodate new understanding from customers and changes in the business climate.
+    </li>
+    <li>
+        If a design decision does not have to be made now, avoid guessing by deferring the decision until it is needed. By
+        that time, there is a better chance that enough understanding will exist to support a better decision.
+    </li>
+    <li>
+        Change happens during the lifetime of a project. Decisions made once will be changed. The software must be designed
+        and implemented in such a way that changes can be accommodated easily.
+    </li>
+    <li>
+        Designs seldom survive their first skirmish with code. The act of coding provides feedback to the developer about
+        the system. This learning must be reflected in the design. If the design is already cast before coding begins, this
+        feedback is more difficult and costly to put back into the design.
+    </li>
+</ul>
+<p>
+    Here are some guidelines to help in arriving at a simple design:
+</p>
+<ul>
+    <li>
+        Look for a simple way to solve a problem. Software is hard, so there will be plenty of time for complexity later.
+        For now, keep it simple. Simple, however, does not mean stupid. Pay attention to good design principles when
+        forming a system incrementally.
+    </li>
+    <li>
+        Resist the temptation to add infrastructure or other features that might be needed later. Chances are they won't be
+        (YAGNI: You Aren't Going to Need It). Let the user stories force you to change the design.
+    </li>
+    <li>
+        Don't generalize a solution until it is needed in at least two places. Follow the first rule above and keep
+        implementation simple. Let the second user pay for the generality.
+    </li>
+    <li>
+        Seek out and destroy duplication. The practice of <a class="elementLink" href="./../../../xp/guidances/concepts/refactoring_xp_programming_6368BEEC.html" guid="1.4410217108363206E-306">Refactoring</a> is the most powerful tool in the arsenal. It is through removing
+        duplication that new classes, methods, and larger scale systems are born.
+    </li>
+    <li>
+        Remember that it is just code. If it is getting overly complex and painful, delete it. It can always be recreated
+        again in less time and better than the first time by leveraging what was learned the first time.
+    </li>
+</ul>
+<h3>
+    Benefits
+</h3>
+<ul>
+    <li>
+        <b>Small initial investment</b>: There is no need to invest in frameworks or generality that might be or might not
+        be required in the future.
+    </li>
+    <li>
+        <b>Maintainability</b>: Simple design will keep the design from rotting and dying prematurely. The more complex the
+        design is, the harder it is to understand and preserve and the more rapidly it will decay.
+    </li>
+    <li>
+        <b>Flexibility</b>: Simple systems are always easier to change than more complex systems.
+    </li>
+    <li>
+        <b>Agility</b>: Simple systems are faster to change than more complex systems.
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<table class="copyright" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="copyright">Copyright (c) 2002, 2006 IBM Corporation and Object Mentor. All rights reserved. <br />
+This program and the accompanying materials are made available under the terms of the Eclipse Public License v1.0 which
+accompanies this distribution, and is available at <a href="http://www.eclipse.org/legal/epl-v10.html" target="_blank">http://www.eclipse.org/legal/epl-v10.html</a>. <br />
+Contributors: IBM Corporation and Object Mentor - initial implementation<br /></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

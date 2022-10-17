@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr" xml:lang="fr" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Checklist: Architecture Notebook</title>
+<meta name="uma.type" content="Checklist">
+<meta name="uma.name" content="architecture_notebook">
+<meta name="uma.presentationName" content="Architecture Notebook">
+<meta name="element_type" content="Checklist">
+<meta name="filetype" content="description">
+<meta name="role" content="none">
+<link rel="StyleSheet" href="./../../../css/default.css" type="text/css">
+<script src="./../../../scripts/ContentPageResource.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSubSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageToolbar.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/contentPage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', true, false, false);
+					
+					//override the subsection text
+					contentPage.subSection.expandAllText = 'Expand All Check Items';
+					contentPage.subSection.collapseAllText = 'Collapse All Check Items';					
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_17PYUNd6EdmIm-bsRSNCgw"></div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td class="pageTitle" nowrap="true">Checklist: Architecture Notebook</td><td width="100%">
+<div align="right" id="contentPageToolbar"></div>
+</td><td width="100%" class="expandCollapseLink" align="right"><a name="mainIndex" href="./../../../index.htm"></a><script language="JavaScript" type="text/javascript" src="./../../../scripts/treebrowser.js"></script></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="pageTitleSeparator"><img src="./../../../images/shim.gif" alt="" title="" height="1"></td>
+</tr>
+</table>
+<div class="overview">
+<table width="97%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50"><img src="./../../../images/checklist.gif" alt="" title=""></td><td>
+<table class="overviewTable" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top">This checklist provides questions to help in evaluating whether architectural decisions have been captured appropriately.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../openup/disciplines/architecture_1F9C65DA.html" guid="_0TX9AMlgEdmt3adZL5Dmdw">Architecture</a>
+</li>
+<li>
+<a href="./../../../openup/workproducts/architecture_notebook_9BB92433.html" guid="_0XAf0MlgEdmt3adZL5Dmdw">Architecture Notebook</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p> The items in this checklist represent good practices for creating and communicating 
+  a robust architecture. It may not be possible to address every item, and you 
+  may be able to address some items to only a limited extent. In these cases, 
+  be sure that there are good reasons for only partially addressing an item or 
+  not addressing an item at all. </p>
+<p> Architectural revisions can occur every day. Use this checklist regularly 
+  to ensure that the results are robust, consistent, and understandable. Make 
+  the architecture good enough for the specific goals being addressed by using 
+  this checklist to identify areas that have been skipped, ignored, or not sufficiently 
+  addressed. </p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Check Items</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading">Is the overall structure of the architecture clear?</div>
+<div class="stepContent">
+<table class="stepTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td><ul>
+    <li>
+        Are the key abstractions adequately defined?
+    </li>
+    <li>
+        Have&nbsp;necessary&nbsp;<a class="elementLink" href="./../../../openup/guidances/concepts/arch_mech_2932DFB6.html" guid="_mzxI0A4LEduibvKwrGxWxA">Architectural Mechanism</a>s been identified and described?
+    </li>
+    <li style="list-style: none">
+        <ul>
+            <li>
+                Is it clear when&nbsp;each mechanism should be applied?
+            </li>
+            <li>
+                Is there a clearly defined design pattern in place to support&nbsp;each mechanism?
+            </li>
+            <li>
+                Does each mechanism adequately address the requirements it is intended to meet?
+            </li>
+        </ul>
+    </li>
+    <li>
+        Does the architecture divide the system’s responsibilities into well-defined subsystems with well-defined
+        interfaces?
+    </li>
+    <li>
+        Does the packaging approach reduce complexity and improve understanding?
+    </li>
+    <li>
+        Is subsystem and package partitioning and layering logically consistent?
+    </li>
+    <li>
+        Are packages defined to be highly cohesive within the package, while the packages themselves are loosely coupled?
+    </li>
+    <li>
+        Are all of the subsystem components for the iteration identified?
+    </li>
+    <li>
+        Do the dependencies between subsystems and packages correspond to dependency relationships between the contained
+        classes?
+    </li>
+    <li>
+        Do the classes in a subsystem support the services identified for the subsystem?
+    </li>
+    <li>
+        Are the number and types of components reasonable?
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Have the supporting requirements been adequately addressed?</div>
+<div class="stepContent">
+<table class="stepTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td><ul>
+    <li>
+        Does the architecture adequately address&nbsp;the global Functional requirements?
+    </li>
+    <li>
+        Does the architecture adequately address&nbsp;the&nbsp;Usability requirements?
+    </li>
+    <li>
+        Does the architecture adequately address&nbsp;the&nbsp;Reliability requirements?
+    </li>
+    <li>
+        Does the architecture adequately address&nbsp;the&nbsp;Performance requirements?
+    </li>
+    <li>
+        Does the architecture adequately address&nbsp;the&nbsp;Supportability requirements?
+    </li>
+    <li>
+        Does the architecture adequately address&nbsp;the other needs identified in the&nbsp;<a class="elementLink" href="./../../../openup/workproducts/supporting_requirements_spec_7D9DD47C.html" guid="_BVh9cL-CEdqb7N6KIeDL8Q">Supporting Requirements Specification</a>?
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Can the architecture be delivered by the team?</div>
+<div class="stepContent">
+<table class="stepTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td><ul>
+    <li>
+        Does the component architecture provide a suitable basis for organizing the development teams?
+    </li>
+    <li>
+        Does each team have the skills required to implement their allocated components?
+    </li>
+    <li>
+        Are responsibilities divided well between teams?
+    </li>
+    <li>
+        Do all team members share the same understanding of the architecture as the one presented by the architect?
+    </li>
+    <li>
+        Can team members understand enough from the architecture to successfully design and code their allocated
+        components?
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Is architecture showing appropriate stability?</div>
+<div class="stepContent">
+<table class="stepTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td><ul>
+    <li>
+        If in Inception, is&nbsp;a candidate&nbsp;architecture emerging?
+    </li>
+    <li>
+        If in Elaboration, is the architecture beginning to stabilize?
+    </li>
+    <li>
+        If in Construction, is the architecture generally stable?
+    </li>
+    <li>
+        If in Transition, is the architecture very stable?
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">In general, does the architecture seem sensible?</div>
+<div class="stepContent">
+<table class="stepTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td><ul class="noindent">
+    <li>
+        Is the&nbsp;architecture&nbsp;at an appropriate level of detail, given the objectives?
+    </li>
+    <li>
+        Are concepts&nbsp;handled in the simplest way possible?
+    </li>
+    <li>
+        Can the&nbsp;architecture easily evolve,&nbsp;so that&nbsp;expected changes can be easily accommodated?
+    </li>
+    
+  <li> Has the&nbsp;architecture been overly structured to handle unlikely change 
+    at the expense of simplicity and comprehensibility? (Hint: "Yes" to this question 
+    is not good.)</li>
+    
+  <li> Are the key assumptions and decisions that the&nbsp;architecture is based 
+    on documented and visible to reviewers and those who will use the architecture? 
+  </li>
+    <li>
+        Is the architecture description current?
+    </li>
+    <li>
+        Have the design guidelines been followed?
+    </li>
+    <li>
+        Are all technical risks either mitigated or addressed in a contingency plan?
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">More Information</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Concepts</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../openup/guidances/concepts/arch_mech_2932DFB6.html" guid="_mzxI0A4LEduibvKwrGxWxA">Architectural Mechanism</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table class="copyright" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+     <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License v1.0</a> which
+    accompanies this distribution.
+</p><p/><p>
+    <a class="elementLink" href="./../../../openup/guidances/supportingmaterials/openup_copyright_C3031062.html" guid="_UaGfECcTEduSX6N2jUafGA">OpenUP Copyright</a>.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

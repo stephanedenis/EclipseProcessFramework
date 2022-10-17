@@ -1,0 +1,659 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr" xml:lang="fr" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Practice: Agile Business Rule Development</title>
+<meta name="uma.type" content="Practice">
+<meta name="uma.name" content="abrd">
+<meta name="uma.presentationName" content="Agile Business Rule Development">
+<meta name="element_type" content="Practice">
+<meta name="filetype" content="description">
+<meta name="role" content="none">
+<link rel="StyleSheet" href="./../../../css/default.css" type="text/css">
+<script src="./../../../scripts/ContentPageResource.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSubSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageToolbar.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/contentPage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_MuX6YKcnEd-VK6zqjMaiPQ"></div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td class="pageTitle" nowrap="true">Practice: Agile Business Rule Development</td><td width="100%">
+<div align="right" id="contentPageToolbar"></div>
+</td><td width="100%" class="expandCollapseLink" align="right"><a name="mainIndex" href="./../../../index.htm"></a><script language="JavaScript" type="text/javascript" src="./../../../scripts/treebrowser.js"></script></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="pageTitleSeparator"><img src="./../../../images/shim.gif" alt="" title="" height="1"></td>
+</tr>
+</table>
+<div class="overview">
+<table width="97%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50"><img src="./../../../images/practice.gif" alt="" title=""></td><td>
+<table class="overviewTable" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top">Agile Business Rule Development is a practice to implement business application using business rule management system and rule engine technology.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Content References</th><td class="sectionTableCell">
+<ul>
+<li>
+<img src="./../../../images/roadmap.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/roadmaps/how_to_adopt_abrd_9F1F2254.html" guid="_lV38AFUdEd2sDeWJVZ0Ifg">How to Adopt Agile Business Rule Development Practice</a>
+</li>
+</ul>
+<ul>
+<li>
+<img src="./../../../practice.tech.abrd.base/guidances/concepts/resources/abrdl.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/concepts/cycle_approach_7FA44D8F.html" guid="_ftAoIAjrEdyj5bYZ0eCR5g">Cycle Approach to Rules Development</a>
+</li>
+</ul>
+<ul>
+<li>
+<img src="./../../../images/concept.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/concepts/rdf_owl_9CAAB467.html" guid="_gPfSoIpzEd2gksNyFVJN4g">RDF and OWL</a>
+</li>
+</ul>
+<ul>
+<li>Work Products</li>
+<ul>
+<li>
+<img src="./../../../images/artifact.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/workproducts/brms_organization_chart_A4F7B0F3.html" guid="__hcZYGDrEdyKlZvvtnMrMg">Organization Chart</a>
+</li>
+<li>
+<img src="./../../../images/artifact.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/workproducts/business_event_description_7FE21401.html" guid="_HSrrgGhiEd-FVuzXjnvIWA">Business Event Description</a>
+</li>
+<li>
+<img src="./../../../images/artifact.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/workproducts/business_process_map_CCE8B402.html" guid="_Uw8aYBDGEdyJtJ3PbfdVDw">Business Process Map</a>
+</li>
+<li>
+<img src="./../../../images/artifact.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/workproducts/business_terms_glossary_4D80D2A8.html" guid="_srklygjqEdyj5bYZ0eCR5g">Business Terms Glossary</a>
+</li>
+<li>
+<img src="./../../../images/artifact.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/workproducts/conceptual_data_model_8EB4D2AF.html" guid="_hYc8UHr9Ed2l9d4UccBrvQ">Conceptual Data Model</a>
+</li>
+<li>
+<img src="./../../../images/artifact.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/workproducts/decision_point_table_5C48ED46.html" guid="_SlELAAsbEdyPCr4G1Tb79A">Decision Point Table</a>
+</li>
+<li>
+<img src="./../../../images/artifact.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/workproducts/decision_service_architecture_C5E6C6D4.html" guid="_6BE7QAp_EdyPCr4G1Tb79A">Decision Service Architecture</a>
+</li>
+<li>
+<img src="./../../../images/artifact.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/workproducts/discovery_workshop_itinerary_D5C3FA54.html" guid="_srklwQjqEdyj5bYZ0eCR5g">Rule Discovery Workshop Itinerary</a>
+</li>
+<li>
+<img src="./../../../images/artifact.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/workproducts/executable_object_model_7E98C5C6.html" guid="_U003IIm4Ed2cL6yqw-_-uA">Executable Object Model</a>
+</li>
+<li>
+<img src="./../../../images/artifact.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/workproducts/fact_model_98CA2C53.html" guid="_csL3wHrMEd2o_5d3MWaNxQ">Fact Model</a>
+</li>
+<li>
+<img src="./../../../images/artifact.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/workproducts/logical_data_model_FD2C82CA.html" guid="_sruW2AjqEdyj5bYZ0eCR5g">Logical Data Model</a>
+</li>
+<li>
+<img src="./../../../images/artifact.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/workproducts/rsm_report_18BCBA30.html" guid="_arqeoEtZEdyEE-k1R6LmOA">RSM Report</a>
+</li>
+<li>
+<img src="./../../../images/artifact.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/workproducts/rule_description_doc_F66376F0.html" guid="_sruW2gjqEdyj5bYZ0eCR5g">Rule Description Document</a>
+</li>
+<li>
+<img src="./../../../images/artifact.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/workproducts/rule_discovery_roadmap_433880BB.html" guid="_sruW1QjqEdyj5bYZ0eCR5g">Rule Discovery Roadmap</a>
+</li>
+<li>
+<img src="./../../../images/artifact.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/workproducts/rule_governance_actors_CDC58A91.html" guid="_VzXG0GDtEdyKlZvvtnMrMg">Rule Governance Actors</a>
+</li>
+<li>
+<img src="./../../../images/artifact.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/workproducts/rule_life_cycle_5E96654F.html" guid="_DmUjsFH8Edy72tV0zV7--Q">Rule Life Cycle</a>
+</li>
+<li>
+<img src="./../../../images/artifact.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/workproducts/rule_meta_properties_77D00814.html" guid="_oz2LcDmsEdy8N6BRpa8ByQ">Rule Meta Properties</a>
+</li>
+<li>
+<img src="./../../../images/artifact.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/workproducts/rule_report_235A9A40.html" guid="_arqeoUtZEdyEE-k1R6LmOA">Rule Report</a>
+</li>
+<li>
+<img src="./../../../images/artifact.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/workproducts/rule_repository_49A3EF6C.html" guid="_BMI-QDmoEdy8N6BRpa8ByQ">Rule Repository</a>
+</li>
+<li>
+<img src="./../../../images/artifact.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/workproducts/rule_repository_in_db_81E51684.html" guid="_jqxtYFttEdykEsBjRsVfZw">Rule Repository in DB</a>
+</li>
+<li>
+<img src="./../../../images/artifact.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/workproducts/rule_set_life_cycle_EF9A7559.html" guid="_GkaEUKR5Ed2fX-RO52WAtA">Rule Set Life Cycle</a>
+</li>
+<li>
+<img src="./../../../images/artifact.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/workproducts/ruleset_1EDB7D5F.html" guid="_vjWPcDzEEdyA6a_I80swHw">Ruleset</a>
+</li>
+<li>
+<img src="./../../../images/artifact.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/workproducts/ruleset_table_826DE824.html" guid="_oz2LcTmsEdy8N6BRpa8ByQ">Ruleset Table</a>
+</li>
+<li>
+<img src="./../../../images/artifact.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/workproducts/sme_recommendations_389A4ED5.html" guid="_BnlgsEtaEdyEE-k1R6LmOA">SME Recommendations</a>
+</li>
+</ul>
+</ul>
+<ul>
+<li>Tasks</li>
+<ul>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/build_object_models_80AFC0E8.html" guid="_ZffcIDmiEdy8N6BRpa8ByQ">Build Object Models</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/build_rule_project_structure_CE883E4A.html" guid="_O92DQDV5EdyTBtGu8YeFfg">Build Rule Project Structure</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/build_test_scenario_E7046AFC.html" guid="_1dlWkH3GEd2sJcA0evSBQw">Build Test Scenarios</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/define_data_scenario_5B25E5E9.html" guid="_eAWtgFv3EdykEsBjRsVfZw">Define Data Scenarios to Test Rule</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/define_discovery_roadmap_88EEF089.html" guid="_srklxgjqEdyj5bYZ0eCR5g">Define Discovery Roadmap</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/define_policy_change_templates_B3E7CD7A.html" guid="_tzUvgKv7Ed2Pv_z50upsAg">Define Business Policy Change Templates</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/define_rule_life_cycle_74D403D6.html" guid="_RBu1YFH7Edy72tV0zV7--Q">Define Rule Life Cycle</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/define_ruleset_50D1FBA7.html" guid="_7L2MIDyOEdyA6a_I80swHw">Define Rule Set</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/define_ruleset_life_cycle_7F71E3E6.html" guid="_RBu1YVH7Edy72tV0zV7--Q">Define Rule Set Life Cycle </a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/define_ruleset_ownership_8DA45458.html" guid="_O93X4KvzEd2Pv_z50upsAg">Define Rule Set Ownership and Access Control</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/define_ruleset_testing_C45D0426.html" guid="_mDL5YGhkEd-FVuzXjnvIWA">Define Rule Testing Approach</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/deploy_rules_D22C6410.html" guid="_AgQVAD5QEdyA6a_I80swHw">Deploy Rules</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/design_models_for_bre_29D43E0E.html" guid="_lYC2IGDAEdyKlZvvtnMrMg">Design Business Object Models for Rule Engine Processing</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/design_reference_data_integration_163455A2.html" guid="_HMQasGDFEdyKlZvvtnMrMg">Design Integration to Reference Data</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/determine_rule_implementation_D2C55F25.html" guid="_qzveUBk5Edyoe_hnDlTB5A">Determine Rule Implementation</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/develop_architecture_120E9F23.html" guid="_nOQHsAp6EdyPCr4G1Tb79A">Develop Business Rule Application Architecture</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/develop_organization_map_EE17D859.html" guid="_IFeJQKveEd2Pv_z50upsAg">Develop Organization Map</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/develop_process_maps_BEEE7E2D.html" guid="_deyUkKv8Ed2Pv_z50upsAg">Develop Process Maps</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/develop_rules_2121AC3E.html" guid="_Y2CxEDzEEdyA6a_I80swHw">Develop Rules</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/develop_unit_tests_94F8205D.html" guid="_ioCPkDzEEdyA6a_I80swHw">Develop Rule Unit Tests</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/enhance_object_models_248BE892.html" guid="_UXrv8Eb3EdySHMdInS9eGA">Enhance Object Models</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/execute_rule_discovery_roadmap_C1BE64E9.html" guid="_sruW3AjqEdyj5bYZ0eCR5g">Execute Rule Discovery Roadmap</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/execute_rule_set_A0502B8C.html" guid="_JCHfMEXhEdy14e5PT9v3HQ">Execute Rule Set</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/execute_ruleset_functional_test_DCF99DB4.html" guid="_euAb8FtuEdykEsBjRsVfZw">Execute Rule Set Functional Tests</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/extract_rule_meaning_C06825E.html" guid="_o19QgF2BEd2T6cNSe41mOg">Extract Rule Meaning</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/get_rule_set_reports_32626785.html" guid="_LGd_MFtvEdykEsBjRsVfZw">Get Rule Set Reports</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/get_sme_feedback_B6BE7F3A.html" guid="_CmBe4EtaEdyEE-k1R6LmOA">Get SME Feedback</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/identify_decision_point_458DF25B.html" guid="_A2d5sCyQEd-ER8gMc_Ftrw">Identify Decision Points</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/integrate_bre_B4CC01BC.html" guid="_6-p2EH_BEd2YWI_0AZcMOA">Integrate BRE within Service Layer</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/log_issue_72E525DC.html" guid="_yGbYIEb0EdySHMdInS9eGA">Log Issue</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/maintain_rules_8C8F6A7B.html" guid="_z9ORcKnrEdyzmOHu2kw1UA">Maintain Rules</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/monitor_improve_process_A2CCE039.html" guid="_w0x40KzAEd2aLdlF48Bk1g">Monitor and Improve Process</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/organise_workshop_BD105744.html" guid="_sruWxAjqEdyj5bYZ0eCR5g">Organize Workshop</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/plan_deployment_1EE76270.html" guid="_E5968Kv8Ed2Pv_z50upsAg">Plan Deployment</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/prototype_rules_9FE6439.html" guid="_dds-IDmiEdy8N6BRpa8ByQ">Prototype Rules</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/review_decision_point_table_46341B82.html" guid="_sruWzAjqEdyj5bYZ0eCR5g">Review Decision Point Table, Business Process Map, Use Case Model</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/synchronize_data_model_CC81CE27.html" guid="_prtzIDmiEdy8N6BRpa8ByQ">Synchronize Data Models</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/synchronize_with_wrms_97A3C2.html" guid="_YkGwYFtsEdykEsBjRsVfZw">Synchronize with Web-Based Rule Management System</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/test_analysis_E451C415.html" guid="_cik88EtZEdyEE-k1R6LmOA">Test Analysis</a>
+</li>
+<li>
+<img src="./../../../images/task.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/tasks/transform_rules_C949D6A1.html" guid="_8mZw8DmhEdy8N6BRpa8ByQ">Transform Rules</a>
+</li>
+</ul>
+</ul>
+<ul>
+<li>Guidance</li>
+<ul>
+<li>Examples</li>
+<ul>
+<li>
+<img src="./../../../images/example.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/examples/discover_decision_points_5208FABC.html" guid="_ZDdmQDSmEdyTBtGu8YeFfg">Discover Decision Points</a>
+</li>
+<li>
+<img src="./../../../images/example.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/examples/discovery_output_357E30A7.html" guid="_j4-ukDS3EdyTBtGu8YeFfg">Discovery Output</a>
+</li>
+<li>
+<img src="./../../../images/example.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/examples/rule_atomicity_FBD9D573.html" guid="_K6-3kDmnEdy8N6BRpa8ByQ">Rule Atomicity</a>
+</li>
+</ul>
+<li>Supporting Materials</li>
+<ul>
+<li>
+<img src="./../../../images/supportingmaterial.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/supportingmaterials/phase1_diagram_FBC2773D.html" guid="_JepaYBXiEdy4jPxXJJCIUg">Phase 1 Diagram</a>
+</li>
+<li>
+<img src="./../../../images/supportingmaterial.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/supportingmaterials/phase2_diagram_660574D.html" guid="_JepaYRXiEdy4jPxXJJCIUg">Phase 2 Diagram</a>
+</li>
+<li>
+<img src="./../../../images/supportingmaterial.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/supportingmaterials/phase3_diagram_F4F96B63.html" guid="_JepaYhXiEdy4jPxXJJCIUg">Phase 3 Diagram</a>
+</li>
+<li>
+<img src="./../../../images/supportingmaterial.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/supportingmaterials/phase4_diagram_FF974B73.html" guid="_JepaYxXiEdy4jPxXJJCIUg">Phase 4 Diagram</a>
+</li>
+<li>
+<img src="./../../../images/supportingmaterial.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/supportingmaterials/phase5_diagram_C054595C.html" guid="_JepaZBXiEdy4jPxXJJCIUg">Phase 5 Diagram</a>
+</li>
+<li>
+<img src="./../../../practice.tech.abrd.base/guidances/supportingmaterials/resources/whats_new.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/supportingmaterials/release_info_abrd_2505ED01.html" guid="_5B4dUMVPEd2pfdXgw7I2qQ">Practice: Agile Business Rule Development</a>
+</li>
+</ul>
+<li>Templates</li>
+<ul>
+<li>
+<img src="./../../../images/template.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/templates/bom_6D3FB2B2.html" guid="_sruW0gjqEdyj5bYZ0eCR5g">Business Object Model</a>
+</li>
+<li>
+<img src="./../../../images/template.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/templates/business_glossary_3C6F74E1.html" guid="_sruW1wjqEdyj5bYZ0eCR5g">Business Terms Glossary</a>
+</li>
+<li>
+<img src="./../../../images/template.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/templates/decision_point_table_AB877257.html" guid="_kRoWgBDFEdyJtJ3PbfdVDw">Decision Point Table</a>
+</li>
+<li>
+<img src="./../../../images/template.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/templates/rule_discovery_invite_77DD92C2.html" guid="_sruW0wjqEdyj5bYZ0eCR5g">Rule Discovery Workshop Invite</a>
+</li>
+<li>
+<img src="./../../../images/template.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/templates/rule_discovery_roadmap_7CA62DA.html" guid="_sruW2QjqEdyj5bYZ0eCR5g">Rule Discovery Roadmap</a>
+</li>
+<li>
+<img src="./../../../images/template.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/templates/rule_set_table_ADD6B542.html" guid="_mqnOETmsEdy8N6BRpa8ByQ">Rule Set Table</a>
+</li>
+<li>
+<img src="./../../../images/template.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/templates/rule_template_for_workflow_project_8FB7FC63.html" guid="_srklxAjqEdyj5bYZ0eCR5g">Rule Template for Workflow Project</a>
+</li>
+<li>
+<img src="./../../../images/template.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/templates/rule_templates_9A55DC73.html" guid="_srklxQjqEdyj5bYZ0eCR5g">Rule Templates</a>
+</li>
+</ul>
+<li>Guidelines</li>
+<ul>
+<li>
+<img src="./../../../images/guidance.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/guidelines/boolean_logic_83969317.html" guid="_x_5XgH9iEd26h9j0X6pKmw">Boolean logic or algebra</a>
+</li>
+<li>
+<img src="./../../../images/guidance.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/guidelines/bpmn_guide_3E23D1CF.html" guid="_eORS8GhhEd-FVuzXjnvIWA">BPMN</a>
+</li>
+<li>
+<img src="./../../../images/guidance.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/guidelines/business_rule_classification_B0FD9A03.html" guid="_Fpgz4HqsEd2o_5d3MWaNxQ">Business Rule Classification</a>
+</li>
+<li>
+<img src="./../../../images/guidance.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/guidelines/decision_point_D9DB66F4.html" guid="_yNUigIMUEd-68ahhmSUqHw">Decision Point Discovery Guidance</a>
+</li>
+<li>
+<img src="./../../../images/guidance.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/guidelines/define_rule_implementation_A1EF15C7.html" guid="_x-GVQIsqEd2gksNyFVJN4g">Define Rule Implementation</a>
+</li>
+<li>
+<img src="./../../../images/guidance.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/guidelines/discover_fact_model_2B0A07B3.html" guid="_8_mWgH3GEd2sJcA0evSBQw">Discover fact model</a>
+</li>
+<li>
+<img src="./../../../images/guidance.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/guidelines/execute_rule_discovery_workshop_31D194D1.html" guid="_sruW1gjqEdyj5bYZ0eCR5g">Execute Rule Discovery Workshop</a>
+</li>
+<li>
+<img src="./../../../images/guidance.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/guidelines/jsr94_8E50FF6A.html" guid="_IuFgEIm-Ed2dvb7--2nAHw">JSR94</a>
+</li>
+<li>
+<img src="./../../../images/guidance.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/guidelines/organise_rule_discovery_workshop_7EA69E9C.html" guid="_sruW0QjqEdyj5bYZ0eCR5g">Organise Rule Discovery Workshop</a>
+</li>
+<li>
+<img src="./../../../images/guidance.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/guidelines/rule_delta_testing_FEAFB951.html" guid="_OmI3QEtZEdyEE-k1R6LmOA">Delta-Testing</a>
+</li>
+<li>
+<img src="./../../../images/guidance.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/guidelines/rule_governance_actors_25099D72.html" guid="_npFyQGDtEdyKlZvvtnMrMg">Rule Governance Actors</a>
+</li>
+<li>
+<img src="./../../../images/guidance.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/guidelines/rule_management_team_mission_5BFCE35B.html" guid="_fCRxoGDmEdyKlZvvtnMrMg">Rule Management Team Mission</a>
+</li>
+<li>
+<img src="./../../../images/guidance.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/guidelines/sbvr_B1044036.html" guid="_1ZyHAHrZEd2l9d4UccBrvQ">Semantics of Business Vocabulary and Business Rules</a>
+</li>
+<li>
+<img src="./../../../images/guidance.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/guidelines/types_of_rule_discovery_7AD92D89.html" guid="_sruWygjqEdyj5bYZ0eCR5g">Different Rule Discovery Types</a>
+</li>
+<li>
+<img src="./../../../images/guidance.gif" height="16" width="16"><a href="./../../../practice.tech.abrd.base/guidances/guidelines/web_service_design_C66A66A2.html" guid="_YRiuIItDEd2gksNyFVJN4g">Web Service Design</a>
+</li>
+</ul>
+</ul>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Purpose</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td class="sectionTableCell">The Agile Business Rule Development&nbsp;presents a pragmatic approach <a id="XE_ABRD__introduction" name="XE_ABRD__introduction"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'; mso-bidi-language: AR-SA; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US"><font  face="Arial" size="2">(</font></span></a><a class="elementLink" href="./../../../practice.tech.abrd.base/guidances/concepts/cycle_approach_7FA44D8F.html" guid="_ftAoIAjrEdyj5bYZ0eCR5g">Cycle Approach to Rules Development</a>) to the development of a Business Rule Application
+using Rule Engine and BRMS (<a class="elementLink" href="./../../../practice.tech.abrd.base/guidances/termdefinitions/brms_1E9B6D88.html" guid="_19DpgBCQEdyJtJ3PbfdVDw">Business Rule Management System</a>) technology such as WebSphere ILOG JRules, ILOG Rules
+for .Net,&nbsp;Fair Isaac Blaze Advisor, Drools&nbsp;or any other <a class="elementLink" href="./../../../practice.tech.abrd.base/guidances/termdefinitions/rule_engine_A66B71B3.html" guid="_QQcSoEXXEdy14e5PT9v3HQ">Rule engine</a> and BRMS on the market. This methodology supports the rule governance
+process description, and the architecture disciplines to deploy a Business Rule Engine into a Service Oriented Architecture
+and Business Process Management System.</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Goals</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td class="sectionTableCell"><p>
+    ABRD applies the agile manifesto to efficiently implement business policies as executable rules. The goal is not having
+    a team spending months to document thousand of rules, where those rules can be implemented, executed, tested in less
+    time.
+</p>
+<p class="MsoNormal" style="MARGIN: 3pt 0in">
+    The Agile Business Rule Development methodology addresses in more detail the following goals:
+</p>
+<p class="MsoNormal" style="MARGIN: 3pt 0in 3pt 36.3pt; TEXT-INDENT: -0.25in; tab-stops: list 36.3pt; mso-list: l1 level1 lfo2">
+    <span     style="FONT-FAMILY: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; mso-bidi-font-size: 10.0pt"><span      style="mso-list: Ignore">·</span></span> Separate rules as a manageable artifact using discovery, analysis and
+    authoring activities and work products
+</p>
+<p class="MsoNormal" style="MARGIN: 3pt 0in 3pt 36.3pt; TEXT-INDENT: -0.25in; tab-stops: list 36.3pt; mso-list: l1 level1 lfo2">
+    <span style="FONT-SIZE: 11pt; FONT-FAMILY: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol"><span     style="mso-list: Ignore">·</span></span> Trace rules during their full life cycle from requirement to deployment and
+    maintenance
+</p>
+<p class="MsoNormal" style="MARGIN: 3pt 0in 3pt 36.3pt; TEXT-INDENT: -0.25in; tab-stops: list 36.3pt; mso-list: l1 level1 lfo2">
+    <span style="FONT-FAMILY: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol"><span     style="mso-list: Ignore">·</span></span> Link rules to business context and motivation
+</p>
+<p class="MsoNormal" style="MARGIN: 3pt 0in 3pt 36.3pt; TEXT-INDENT: -0.25in; tab-stops: list 36.3pt; mso-list: l1 level1 lfo2">
+    <span style="FONT-FAMILY: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol"><span     style="mso-list: Ignore">·</span></span> Develop the rule description using business terms and high level rule language
+</p>
+<p class="MsoNormal" style="MARGIN: 3pt 0in 3pt 36.3pt; TEXT-INDENT: -0.25in; tab-stops: list 36.3pt; mso-list: l1 level1 lfo2">
+    <span style="FONT-FAMILY: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol"><span     style="mso-list: Ignore">·</span></span> Prepare the logical data model for the rule engine&nbsp;
+</p>
+<p class="MsoNormal" style="MARGIN: 3pt 0in 3pt 36.3pt; TEXT-INDENT: -0.25in; tab-stops: list 36.3pt; mso-list: l1 level1 lfo2">
+    <span style="FONT-FAMILY: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol"><span     style="mso-list: Ignore">·</span></span> Prepare the Rule set implementation and deployment as decision services in a
+    SOA or BPM application
+</p>
+<p class="MsoNormal" style="MARGIN: 3pt 0in 3pt 36.3pt; TEXT-INDENT: -0.25in; tab-stops: list 36.3pt; mso-list: l1 level1 lfo2">
+    <span style="FONT-FAMILY: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol"><span     style="mso-list: Ignore">·</span></span> Articulate the rule governance processes
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Background</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td class="sectionTableCell"><p class="MsoNormal" style="MARGIN: 3pt 0in">
+    ABRD was developed by ILOG to support implementation and deployment of BRMS by its customers and professional services.
+    It has hundreds of deployments world wide for many different industries. The polytechnic school of Singapore is using
+    it in its curriculum. It is now offered as a free open source methodology as part of the Eclipse Process Framework
+    plug-in library.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td class="sectionTableCell"><p style="MARGIN: 3pt 0in" class="MsoNormal">
+    Business rules are an expression of business policy in a form that is both comprehensible to business users and
+    executable by a rule engine. From a business perspective, a business rule is a precise statement that describes,
+    constrains, or controls some aspect of the business.
+</p>
+<p style="MARGIN: 3pt 0in" class="MsoNormal">
+    Let's illustrate this concept with a simple example coming from the lending industry. The following business policy can
+    be established to limit the loan amount a bank can purchase:<br />
+</p>
+<div style="BORDER-BOTTOM: medium none; BORDER-LEFT: gray 1.5pt solid; PADDING-BOTTOM: 0in; PADDING-LEFT: 3pt; PADDING-RIGHT: 0in; BACKGROUND: #f3f3f3; MARGIN-LEFT: 0.5in; BORDER-TOP: medium none; MARGIN-RIGHT: 0in; BORDER-RIGHT: medium none; PADDING-TOP: 0in; mso-element: para-border-div">
+    <br />
+    <p style="MARGIN: 0in 0in 0pt; BACKGROUND: #f3f3f3; mso-add-space: auto" class="ISISCodeParagraphCxSpMiddle">
+        <span         style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt; mso-bidi-language: AR-SA; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US"><font          face="Courier">Only prime loans are eligible for purchase</font></span>
+    </p><br />
+</div>
+<p style="MARGIN: 3pt 0in" class="MsoNormal">
+    This policy may be split into two implemented rules, one defining what a prime loan is and the second taking the
+    decision on purchasing it or not.&nbsp;
+</p>
+<div style="BORDER-BOTTOM: medium none; BORDER-LEFT: gray 1.5pt solid; PADDING-BOTTOM: 0in; PADDING-LEFT: 3pt; PADDING-RIGHT: 0in; BACKGROUND: #f3f3f3; MARGIN-LEFT: 0.5in; BORDER-TOP: medium none; MARGIN-RIGHT: 0in; BORDER-RIGHT: medium none; PADDING-TOP: 0in; mso-element: para-border-div">
+    <br />
+    <p style="MARGIN: 0in 0in 0pt; BACKGROUND: #f3f3f3; mso-add-space: auto" class="ISISCodeParagraphCxSpMiddle">
+        <span         style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt; mso-bidi-language: AR-SA; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US"><font          face="Courier">If the loan amount is less than the prime loan limit, then the loan type is Prime</font></span><br         style="MARGIN: 0in 0in 0pt; BACKGROUND: #f3f3f3; mso-add-space: auto" class="ISISCodeParagraphCxSpMiddle" />
+        <br />
+    </p>
+    <p style="MARGIN: 0in 0in 0pt; BACKGROUND: #f3f3f3; mso-add-space: auto" class="ISISCodeParagraphCxSpMiddle">
+        <span         style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt; mso-bidi-language: AR-SA; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US"><font          face="Courier">If the loan type is not Prime then reject the loan</font></span>
+    </p><br />
+</div><br style="MARGIN: 3pt 0in" class="MsoNormal" />
+<br />
+<p style="MARGIN: 3pt 0in" class="MsoNormal">
+    Implementing these rules using an Object Oriented Language may look like two if statements testing conditions on
+    objects, and applying actions on the same or other objects
+</p><br style="MARGIN: 3pt 0in" class="MsoNormal" />
+<br />
+<div style="BORDER-BOTTOM: medium none; BORDER-LEFT: gray 1.5pt solid; PADDING-BOTTOM: 0in; PADDING-LEFT: 3pt; PADDING-RIGHT: 0in; BACKGROUND: #f3f3f3; MARGIN-LEFT: 0.5in; BORDER-TOP: medium none; MARGIN-RIGHT: 0in; BORDER-RIGHT: medium none; PADDING-TOP: 0in; mso-element: para-border-div">
+    <br style="MARGIN: 6pt 0in 0pt; BACKGROUND: #f3f3f3; mso-add-space: auto" class="ISISCodeParagraphCxSpFirst" />
+    <br />
+    <p style="MARGIN: 0in 0in 0pt; BACKGROUND: #f3f3f3; mso-add-space: auto" class="ISISCodeParagraphCxSpMiddle">
+        <span         style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt; mso-bidi-language: AR-SA; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US"><font          face="Courier">if (loan.amount &lt; PrimeLoanLimit) {</font></span>
+    </p>
+    <p style="MARGIN: 0in 0in 0pt; BACKGROUND: #f3f3f3; mso-add-space: auto" class="ISISCodeParagraphCxSpMiddle">
+        <span         style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt; mso-bidi-language: AR-SA; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US"><font          face="Courier">loan.type = PrimeType;</font></span>
+    </p>
+    <p style="MARGIN: 0in 0in 0pt; BACKGROUND: #f3f3f3; mso-add-space: auto" class="ISISCodeParagraphCxSpMiddle">
+        <span         style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt; mso-bidi-language: AR-SA; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US"><font          face="Courier">}</font></span>
+    </p><br style="MARGIN: 0in 0in 0pt; BACKGROUND: #f3f3f3; mso-add-space: auto" class="ISISCodeParagraphCxSpMiddle" />
+    <br />
+    <p style="MARGIN: 0in 0in 0pt; BACKGROUND: #f3f3f3; mso-add-space: auto" class="ISISCodeParagraphCxSpMiddle">
+        <span         style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt; mso-bidi-language: AR-SA; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US"><font          face="Courier">if (loan.type != PrimeType) {</font></span>
+    </p>
+    <p style="MARGIN: 0in 0in 0pt; BACKGROUND: #f3f3f3; mso-add-space: auto" class="ISISCodeParagraphCxSpMiddle">
+        <span         style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt; mso-bidi-language: AR-SA; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US"><font          face="Courier">case = new Case("Loan is not Prime");</font></span>
+    </p>
+    <p style="MARGIN: 0in 0in 0pt; BACKGROUND: #f3f3f3; mso-add-space: auto" class="ISISCodeParagraphCxSpMiddle">
+        <span         style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt; mso-bidi-language: AR-SA; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US"><font          face="Courier">loan.status = REJECT;</font></span>
+    </p>
+    <p style="MARGIN: 0in 0in 0pt; BACKGROUND: #f3f3f3; mso-add-space: auto" class="ISISCodeParagraphCxSpMiddle">
+        <span         style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt; mso-bidi-language: AR-SA; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US"><font          face="Courier">}</font></span><br />
+    </p>
+</div><br />
+<p>
+    The concept of business rules is not new, and for decades analysts and developers were implementing them within
+    business applications. What is more recent is the introduction of a Business Rule Management System application which
+    provides tools to manage the rule as a standalone element, outside of the core business application, and in a form
+    which is executable by a rule engine.
+</p>
+<p>
+    Business rules are packaged as a Rule Set which can be considered as a piece of software executed by a rule engine.
+    Integrated in a business application, the rule set implements a sub-set of the business logic. This logic is
+    externalized from the traditional code and can be easily changed, and maintained by business analysts instead of
+    developers.
+</p>
+<p>
+    As opposed to business logic embedded and hidden in functions, procedures, macros or databases, business rules are
+    clearly separated from the rule engine, a software component which executes and activates rules based on matching
+    conditions on a set of data.
+</p>
+<p>
+    Figure 1 below illustrates this fundamental approach in implementing business logic, with the old embedded model on the
+    left and the new architecture on the right. In many ways the approach is similar to the separation of code and data
+    which Data Base Management Systems (DBMS) brought in the 1970s.<br />
+    &nbsp;
+</p>
+<p>
+    &nbsp;<img alt="" src="./../../../practice.tech.abrd.base/guidances/practices/resources/legacy2bre.jpg" width="599" height="386" />
+</p>
+<p>
+    <span style="mso-ansi-language: EN-GB" lang="EN-GB">A piece of business logic or rule embedded in code will be more
+    difficult to identify, locate, and change, therefore increases costs of maintenance.</span>
+</p>
+<p style="MARGIN: 3pt 0in" class="MsoNormal">
+    <span style="mso-ansi-language: EN-GB" lang="EN-GB">A rule which is externalized in a BRMS platform, and whose versions
+    are controlled in a rule repository and deployed and executed in a rule engine, will be much easier to modify, thus
+    reducing dramatically the time and cost to implement changes required by the business.</span>
+</p>
+<p style="MARGIN: 3pt 0in" class="MsoNormal">
+    <span style="mso-ansi-language: EN-GB" lang="EN-GB">Traditional software life cycles such as the V cycle or waterfall
+    model are notorious for leading to systems which costs more than expected, come to market later than planned and with
+    outcomes not matching the clients' initial expectations. With such approaches, the business users have little ownership
+    of the solution, and the time required to implement changes can easily range from 3 to 6 months if not more. As a
+    result, policy owners don't feel comfortable with change which translates into a loss of agility to respond to new
+    business and competitive situations: too much time passes between policy owners submitting requirements to IT and the
+    actual deployment of new rules.</span>
+</p>
+<p style="MARGIN: 3pt 0in" class="MsoNormal">
+    <span style="mso-ansi-language: EN-GB" lang="EN-GB">Also, with all the fine tuning and iterations, policy owners cannot
+    really be sure that the policy is being implemented according to their needs. The only way to actually know is to keep
+    performing tests and hope that all the cases are covered in such tests.</span>
+</p>
+<p style="MARGIN: 3pt 0in" class="MsoNormal">
+    As important element of the business decision, the business rules need strong management processes and tools to support
+    their life cycle.
+</p>
+<p style="MARGIN: 3pt 0in" class="MsoNormal">
+    A BRMS provides solutions to make this management more efficient, both for developers and for the business users of the
+    applications. Obviously tooling is not the single answer to the software and business challenges behind the development
+    of decision-support systems. Deploying BRMS, BRE, and BPM components into business applications requires to modify
+    current development methodologies and practices in order to take into account new concepts as well as providing a
+    better collaboration framework between IT and business.
+</p>
+<p style="MARGIN: 3pt 0in" class="MsoNormal">
+    The Agile Business Rule Development methodology corresponds to such a need. It is an incremental and iterative software
+    development process leveraging the Agile Alliance manifesto (<a href="http://agilemanifesto.org/" target="_blank">Agile
+    Manifesto</a>). Here are some of the Agile development values particularly relevant to the implementation of a rule set
+    using the ABRD approach:
+</p>
+<p style="TEXT-INDENT: -0.25in; MARGIN: 3pt 0in 3pt 36.3pt; tab-stops: list 36.3pt; mso-list: l0 level1 lfo1" class="MsoNormal">
+    <span style="FONT-FAMILY: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol"><span     style="mso-list: Ignore">·</span></span> <i>Individuals and interactions over processes and tools</i>. The rule
+    discovery, analysis and validation activities require an active and efficient communication between the rule developer
+    and the Subject Matter Experts (SMEs). Such processes are defined as light as possible.
+</p>
+<p style="TEXT-INDENT: -0.25in; MARGIN: 3pt 0in 3pt 36.3pt; tab-stops: list 36.3pt; mso-list: l0 level1 lfo1" class="MsoNormal">
+    <span style="FONT-FAMILY: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol"><span     style="mso-list: Ignore">·</span></span> <i>Working software over comprehensive documentation</i>. The proposed rule
+    set development done per iteration, with its validation step, is based on the evidence that a working and executable
+    rule set has much more business value than a rule description manual. All the project stakeholders benefit from such a
+    principle but in particular the business users who are then sure that what they see (the rules) is what gets executed
+    in the deployed system.
+</p>
+<p style="TEXT-INDENT: -0.25in; MARGIN: 3pt 0in 3pt 36.3pt; tab-stops: list 36.3pt; mso-list: l0 level1 lfo1" class="MsoNormal">
+    <span style="FONT-FAMILY: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol"><span     style="mso-list: Ignore">·</span></span> <i>Customer collaboration over contract negotiation</i>. Subject Matter
+    Experts who define the business policies and the business rules are strongly involved in the development process. They
+    are the customers of the final system, owners of the policies and are conveniently co-located with the development team
+    during the project.
+</p>
+<p style="TEXT-INDENT: -0.25in; MARGIN: 3pt 0in 3pt 36.3pt; tab-stops: list 36.3pt; mso-list: l0 level1 lfo1" class="MsoNormal">
+    <span style="FONT-FAMILY: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol"><span     style="mso-list: Ignore">·</span></span> <i>Responding to change over following a plan</i>. Business rules evolve, more
+    often and faster than other standard pieces of software. This is actually one of the key values of the business rule
+    approach. For this fundamental reason the methodology to support the rule set development has to be tailored to such
+    rapid life cycle and include the appropriate activities, processes, best practices and work products to support such
+    changes efficiently.
+</p><br />
+<p style="MARGIN: 3pt 0in" class="MsoNormal">
+    Two fundamental drivers govern successful rule set developments:
+</p>
+<p style="TEXT-INDENT: -0.25in; MARGIN: 3pt 0in 3pt 36.3pt; tab-stops: list 36.3pt; mso-list: l2 level1 lfo3" class="MsoNormal">
+    <span     style="FONT-FAMILY: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; mso-bidi-font-size: 10.0pt"><span      style="mso-list: Ignore">·</span></span> The unforgiving honesty of executable rules
+</p>
+<p style="TEXT-INDENT: -0.25in; MARGIN: 3pt 0in 3pt 36.3pt; tab-stops: list 36.3pt; mso-list: l2 level1 lfo3" class="MsoNormal">
+    <span style="FONT-FAMILY: Symbol; COLOR: navy; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol"><span     style="mso-list: Ignore">·</span></span> The effectiveness of people working together with goodwill, shared vision and
+    common interests (the business user and the development team).
+</p>
+<p style="MARGIN: 3pt 0in" class="MsoNormal">
+    Executable or working rules tell the developers and the Subject Matter Expert what they really do as opposed to promise
+    through a paper-based design or specification.
+</p><span style="FONT-FAMILY: 'Arial','sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: AR-SA; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 12.0pt">ABRD
+is a practice and extends other element of EPF practice library to avoid redefining some standard roles, tasks, work
+products, guidelines and processes which are also relevant to rule development. As an EPF plug-in, development teams can
+leverage it for their own purpose and tailor it to the specific context of their own project, leveraging the EPF Composer
+tool.</span><br /></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">How to read this practice</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td class="sectionTableCell">The best way to read this practice is to follow the proposed cycle approach process definition, or to go through the
+disciplines.</td>
+</tr>
+</table>
+</div>
+<table class="copyright" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+    <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License V1.0</a>, which
+    accompanies this distribution.
+</p>
+<p>
+    <a class="elementLink" href="./../../../core.default.release_copyright.base/guidances/supportingmaterials/epf_copyright_C3031062.html" guid="_UaGfECcTEduSX6N2jUafGA">EPF Copyright</a>.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr" xml:lang="fr" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Checklist: Test Script</title>
+<meta name="uma.type" content="Checklist">
+<meta name="uma.name" content="test_script">
+<meta name="uma.presentationName" content="Test Script">
+<meta name="element_type" content="Checklist">
+<meta name="filetype" content="description">
+<meta name="role" content="none">
+<link rel="StyleSheet" href="./../../../css/default.css" type="text/css">
+<script src="./../../../scripts/ContentPageResource.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageSubSection.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/ContentPageToolbar.js" type="text/javascript" language="JavaScript"></script><script src="./../../../scripts/contentPage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', true, false, false);
+					
+					//override the subsection text
+					contentPage.subSection.expandAllText = 'Expand All Check Items';
+					contentPage.subSection.collapseAllText = 'Collapse All Check Items';					
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_0Z9tMMlgEdmt3adZL5Dmdw"></div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td class="pageTitle" nowrap="true">Checklist: Test Script</td><td width="100%">
+<div align="right" id="contentPageToolbar"></div>
+</td><td width="100%" class="expandCollapseLink" align="right"><a name="mainIndex" href="./../../../index.htm"></a><script language="JavaScript" type="text/javascript" src="./../../../scripts/treebrowser.js"></script></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="pageTitleSeparator"><img src="./../../../images/shim.gif" alt="" title="" height="1"></td>
+</tr>
+</table>
+<div class="overview">
+<table width="97%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50"><img src="./../../../images/checklist.gif" alt="" title=""></td><td>
+<table class="overviewTable" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top">This checklist provides questions to verify that tests are created in a consistent and complete manner.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th class="sectionTableHeading" scope="row">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../dsdm_openup/disciplines/dsdm_test_4654149E.html" guid="_34GgwFqwEduPD_03X_F_pA">Test</a>
+</li>
+<li>
+<a href="./../../../openup/workproducts/test_script_39A30BA2.html" guid="_0ZfMEMlgEdmt3adZL5Dmdw">Test Script</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Check Items</div>
+<div class="sectionContent">
+<table class="sectionTable" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading">Does the test script have a unique name that identifies the condition that the script evaluates?</div>
+<div class="stepContent">
+<table class="stepTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td><p>
+    Does the name clearly indicate the condition evaluated or the expected result? For example, "ABC99" might be unique,
+    but it is not clear what condition it evaluates. In contrast, "UI99 Unauthenticated users are prompted for login" or
+    "BR27 Alphanumeric characters are not permitted in US zip codes"&nbsp;indicate both the test conditions and the
+    expected results.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Does the test script conform to the related test case?</div>
+<div class="stepContent">
+<table class="stepTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td><p>
+    Does the test script identify the test case or cases that it implements? Ensure that the test script conforms to the
+    specification established in the test case. The test case captures the logical conditions of satisfaction for test, and
+    the test script must implement this intent.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Is the test script prescriptive and unambiguous?</div>
+<div class="stepContent">
+<table class="stepTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td><ul>
+    <li>
+        Does the test script have clear&nbsp;pass or fail criteria? (Is it binary?)
+    </li>
+    <li>
+        Does the script use a request-response style in its steps? (Is it procedural?)
+    </li>
+    <li>
+        Does each specific input have a specific expected result? (Is it declarative?)
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Is all required data specified?</div>
+<div class="stepContent">
+<table class="stepTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td><p> Ensure that the test script contains or references all of the test data required 
+  to actually run the script. </p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Is each post-condition of the related test case evaluated by a step in the test script?</div>
+<div class="stepContent">
+<table class="stepTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Does the test script set up and tear down appropriately?</div>
+<div class="stepContent">
+<table class="stepTable" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td><ul>
+    <li>
+        Does the test script identify the preconditions that must be true before the test script starts?
+    </li>
+    <li>
+        Does the test script restore the system's state after it runs, regardless of whether it passes or fails?
+    </li>
+    <li>
+        Can the test script be executed without affecting the results of other test scripts? In other words, can the test
+        script be run in any sequence? If not, is the sequence dependency identified? The dependency might be identified in
+        the test script, in a test suite, or in some other manner (such as by using a test tool).
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="copyright" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+     <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License v1.0</a> which
+    accompanies this distribution.
+</p><p/><p>
+    <a class="elementLink" href="./../../../openup/guidances/supportingmaterials/openup_copyright_C3031062.html" guid="_UaGfECcTEduSX6N2jUafGA">OpenUP Copyright</a>.
+</p><p/><p>
+    <a class="elementLink" href="./../../../dsdm_openup/guidances/supportingmaterials/copyright_dsdm_2D6C0C.html" guid="_Rph5oDGYEdyrsZhCyzLMxw">OpenUP/DSDM Copyright</a>.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>
